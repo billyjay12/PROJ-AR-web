@@ -1,0 +1,18 @@
+﻿#tbl_lst_accounts , #tbl_lst_eMAT, #tbl_lst_accounts1 {color:black;font-size:11px;}
+#tbl_lst_accounts th, #tbl_lst_eMAT th{background:#ebf5fc;padding:3px;}
+#tbl_lst_accounts td, #tbl_lst_eMAT td{padding:3px 5px 3px 5px;}
+#tbl_lst_accounts td a, #tbl_lst_eMAT td a{color:#da4707;font-weight:bold;text-decoration:none;}
+#tbl_lst_mrktPrgm td a, #tbl_lst_mrktPrgm td a{color:#da4707;font-weight:bold;text-decoration:none;}
+#tbl_lst_busReview td a, #tbl_lst_busReview td a{color:#da4707;font-weight:bold;text-decoration:none;}
+#tbl_lst_Users td a, #tbl_lst_Users td a, #tbl_lst_Users1 td a{color:#da4707;font-weight:bold;text-decoration:none;}
+#tbl_lst_mrktngReqList td a, #tbl_lst_mrktngReqList td a, #tbl_lst_accounts1 td a,#tbl_lst_mrktngReqList1 td a{color:#da4707;font-weight:bold;text-decoration:none;}
+#tbl_lst_accounts td a, #tbl_lst_eMAT1 td a{color:#da4707;font-weight:bold;text-decoration:none;}
+#tbl_lst_busReview1 td a, #tbl_lst_busReview td1 a{color:#da4707;font-weight:bold;text-decoration:none;}
+#sub_tab .ui-widget-content { padding:2px; font-size:11px; font-family:Arial; }
+#sub_tab .ui-state-default a { font-size:11px; font-family:Arial; }
+#sub_tab .ui-tabs-panel { padding:1px; }
+input[type=text] { border:1px solid #bcbcbc; font-size:10px; font-family:verdana; }
+.required_fields { background-color:#fff7dd; border:1px solid #4e4e4e; }
+.readonly_fields { background-color:#cfcfcf; }
+.div_page_navigator{background:#ebf5fc;padding:2px;text-align:center;font-size:11px;font-family:Arial;}
+.div_page_navigator img { border:0px; }

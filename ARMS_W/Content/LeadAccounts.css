@@ -1,0 +1,50 @@
+﻿#tbl_lst_accounts 
+{
+    color:Black;
+    font-size:11px;
+}
+
+#tbl_lst_accounts th
+{
+    background:#ebf5fc;
+    padding:3px;
+}
+
+#tbl_lst_accounts td
+{
+    padding:3px 5px 3px 5px;
+}
+
+#tbl_lst_accounts td a, #tbl_lst_accounts1 td a
+{
+    color:#da4707;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+#sub_tab .ui-widget-content { padding:2px; font-size:11px; font-family:Arial; }
+#sub_tab .ui-state-default a { font-size:11px; font-family:Arial; }
+#sub_tab .ui-tabs-panel { padding:1px; }
+
+.required_fields { background-color:#fff7dd; border:1px solid #4e4e4e; }
+/* .required_fields { background-color:#ffcaca; border:1px solid #ee2d1e; } */
+.readonly_fields { background-color:#cfcfcf; }
+
+.page_header a 
+{
+    text-decoration:none;
+    font-size:11px;
+    color:#da4707;
+    font-weight:bold;
+}
+
+.div_page_navigator
+{
+    background:#ebf5fc;
+    padding:2px;
+    text-align:center;
+    font-size:11px;
+    font-family:Arial;
+}
+
+.div_page_navigator img { border:0px; }

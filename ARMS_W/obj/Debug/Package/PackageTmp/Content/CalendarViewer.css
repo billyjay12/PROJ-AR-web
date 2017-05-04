@@ -1,0 +1,69 @@
+﻿.choose_months { text-align:center; cursor:pointer;}
+    
+.choose_months td:hover { background-color:rgb(204,229,255); }
+.Active { background-color:rgb(204,229,255); }
+.simple_box { font-size:11px;}
+.fc-header-title h2{ font-size: 20px; }
+    
+.arrow {
+    display:inline-block;
+    width:7px;
+    height:7px;
+    line-height:7px;
+    border-top:3px solid #aaa;
+    border-right:3px solid #aaa;
+    -ms-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg);
+    cursor: pointer; 
+}
+.arrow-down {
+    -ms-transform:rotate(135deg);
+    -moz-transform:rotate(135deg);
+    -webkit-transform:rotate(135deg);
+    transform:rotate(135deg);
+}
+.arrow-left {
+    -ms-transform:rotate(225deg);
+    -moz-transform:rotate(225deg);
+    -webkit-transform:rotate(225deg);
+    transform:rotate(225deg);
+}
+.arrow-up{
+    -ms-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+}
+.arrow:hover {
+    border-color:#444;
+}
+    
+td[mrk="lud_table_tr_td"]:hover {  background-color:#ededed;   }
+span[id="lbl_status"] { color:Red; }
+#txt_year {  font-size:23px }
+    
+.preventhightlight
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor:default;
+}
+    
+.legend  
+{
+    border-color: rgb(237, 237, 237);  
+    color: black; padding:0 1px; 
+}
+.legend-header { font-size:20px; font-weight:bolder; }
+.legend-planned {  background-color: rgb(146, 208, 80); }
+.legend-unplanned { background-color: rgb(0, 191, 255); }
+.legend-edited { background-color: rgb(204, 255, 204); }
+.legend-visited { background-color: rgb(255, 192, 0); }
+.legend-invtycount { background-color: rgb(255, 192, 203); }
+.legend-deleted { background-color: rgb(248, 248, 248);  }

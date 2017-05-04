@@ -1,0 +1,20 @@
+﻿
+#sub_tab .ui-widget-content { padding:2px; font-size:11px; font-family:Arial; }
+#sub_tab .ui-state-default a { font-size:11px; font-family:Arial; }
+#sub_tab .ui-tabs-panel { padding:1px; }
+
+.ui-datepicker-title select { font-size:11px; font-family:Arial; margin:1px; }
+.ui-datepicker-title select option { font-size:12px; font-family:Arial; margin:1px; }
+
+input[type=text]
+{
+    font-size:10px;
+    font-family:verdana;
+    border:1px solid #bcbcbc;
+    height:14px;
+    padding:2px;
+    width:150px;
+}
+.required_fields { background-color:#fff7dd; border:1px solid #4e4e4e; }
+/* .required_fields { background-color:#ffcaca; border:1px solid #ee2d1e; } */
+.readonly_fields { background-color:#cfcfcf; }

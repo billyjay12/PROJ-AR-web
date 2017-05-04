@@ -1,0 +1,14 @@
+.field-validation-error{ color: #ff0000; }
+.field-validation-valid{display: none;}
+.input-validation-error{border: 1px solid #ff0000;background-color: #ffeeee;}
+.validation-summary-errors{font-weight: bold;color: #ff0000;}
+.validation-summary-valid{display: none;}
+#TableContainer PHeader{height:120px;}
+#TableContainer PFooter{height:120px;}
+.div_blinker {padding:5px;border:2px solid #ffffff;}
+.div_blinker:hover{background:#f9f9f9;border:2px solid #f7f7f7;}
+.div_blinker1 {padding:10px;background:#f9f9f9;border:2px solid #ffffff;}
+html  { height: 98%; } 
+body  { height: 100%; } 
+.blinker {border:1px solid #f6f6f6;padding:5px;}
+.blinker:hover{background:#f6f6f6;}

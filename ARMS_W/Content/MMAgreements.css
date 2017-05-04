@@ -1,0 +1,42 @@
+﻿.page_header a 
+{
+    text-decoration:none;
+    color:#da4707;
+    font-size:11px;
+    font-weight:bold;
+}
+
+#tbl_lst_mma 
+{
+    color:black;
+    font-size:11px;
+}
+
+#tbl_lst_mma th
+{
+    background:#ebf5fc;
+    padding:3px;
+}
+
+#tbl_lst_mma td
+{
+    padding:3px 5px 3px 5px;
+}
+
+#tbl_lst_mma td a
+{
+    color:#da4707;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.div_page_navigator
+{
+    background:#ebf5fc;
+    padding:2px;
+    text-align:center;
+    font-size:11px;
+    font-family:Arial;
+}
+
+.div_page_navigator img { border:0px; }

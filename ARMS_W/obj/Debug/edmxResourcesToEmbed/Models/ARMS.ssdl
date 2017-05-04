@@ -1,0 +1,2836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ARMSTestModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ARMSTestModelStoreContainer">
+    <EntitySet Name="approvalState" EntityType="ARMSTestModel.Store.approvalState" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="apprvrDesig" EntityType="ARMSTestModel.Store.apprvrDesig" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="apprvrdesig_bak" EntityType="ARMSTestModel.Store.apprvrdesig_bak" store:Type="Tables" store:Schema="dbo" store:Name="apprvrdesig_bak">
+      <DefiningQuery>SELECT 
+      [apprvrdesig_bak].[desigID] AS [desigID], 
+      [apprvrdesig_bak].[roleID] AS [roleID], 
+      [apprvrdesig_bak].[name] AS [name], 
+      [apprvrdesig_bak].[email] AS [email], 
+      [apprvrdesig_bak].[branch] AS [branch], 
+      [apprvrdesig_bak].[counterId] AS [counterId], 
+      [apprvrdesig_bak].[brand] AS [brand], 
+      [apprvrdesig_bak].[channel] AS [channel], 
+      [apprvrdesig_bak].[area] AS [area]
+      FROM [dbo].[apprvrdesig_bak] AS [apprvrdesig_bak]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="apprvrRole" EntityType="ARMSTestModel.Store.apprvrRole" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChannelGroup" EntityType="ARMSTestModel.Store.ChannelGroup" store:Type="Tables" store:Schema="dbo" store:Name="ChannelGroup">
+      <DefiningQuery>SELECT 
+      [ChannelGroup].[id] AS [id], 
+      [ChannelGroup].[area] AS [area], 
+      [ChannelGroup].[channel] AS [channel], 
+      [ChannelGroup].[grp_name] AS [grp_name]
+      FROM [dbo].[ChannelGroup] AS [ChannelGroup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CollectionPendingAccounts" EntityType="ARMSTestModel.Store.CollectionPendingAccounts" store:Type="Tables" store:Schema="dbo" store:Name="CollectionPendingAccounts">
+      <DefiningQuery>SELECT 
+      [CollectionPendingAccounts].[transid] AS [transid], 
+      [CollectionPendingAccounts].[docnum] AS [docnum], 
+      [CollectionPendingAccounts].[cardcode] AS [cardcode], 
+      [CollectionPendingAccounts].[actdeldate] AS [actdeldate], 
+      [CollectionPendingAccounts].[duedate] AS [duedate], 
+      [CollectionPendingAccounts].[balance] AS [balance]
+      FROM [dbo].[CollectionPendingAccounts] AS [CollectionPendingAccounts]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CoverageDataChanges" EntityType="ARMSTestModel.Store.CoverageDataChanges" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CoverageDtl1" EntityType="ARMSTestModel.Store.CoverageDtl1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CoverageDtls" EntityType="ARMSTestModel.Store.CoverageDtls" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CoverageHdr" EntityType="ARMSTestModel.Store.CoverageHdr" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CoverageLogChanges" EntityType="ARMSTestModel.Store.CoverageLogChanges" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="custAttachment" EntityType="ARMSTestModel.Store.custAttachment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="customerAccStatus" EntityType="ARMSTestModel.Store.customerAccStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="customerHeader" EntityType="ARMSTestModel.Store.customerHeader" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="custOutletIncharge" EntityType="ARMSTestModel.Store.custOutletIncharge" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="custOutlets" EntityType="ARMSTestModel.Store.custOutlets" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="dayCycle" EntityType="ARMSTestModel.Store.dayCycle" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="documentTypes" EntityType="ARMSTestModel.Store.documentTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="empInventory" EntityType="ARMSTestModel.Store.empInventory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EventDtl1" EntityType="ARMSTestModel.Store.EventDtl1" store:Type="Tables" store:Schema="dbo" store:Name="EventDtl1">
+      <DefiningQuery>SELECT 
+      [EventDtl1].[EventID] AS [EventID], 
+      [EventDtl1].[LineNum] AS [LineNum], 
+      [EventDtl1].[Day] AS [Day], 
+      [EventDtl1].[AccountCode] AS [AccountCode], 
+      [EventDtl1].[ObjectiveCode] AS [ObjectiveCode], 
+      [EventDtl1].[Brand] AS [Brand], 
+      [EventDtl1].[Amount] AS [Amount], 
+      [EventDtl1].[CounterClerk] AS [CounterClerk]
+      FROM [dbo].[EventDtl1] AS [EventDtl1]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="EventDtls" EntityType="ARMSTestModel.Store.EventDtls" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EventHdr" EntityType="ARMSTestModel.Store.EventHdr" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InventoryCountAuditDtl" EntityType="ARMSTestModel.Store.InventoryCountAuditDtl" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InventoryCountAuditHdr" EntityType="ARMSTestModel.Store.InventoryCountAuditHdr" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InventoryCountDtl" EntityType="ARMSTestModel.Store.InventoryCountDtl" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InventoryCountHdr" EntityType="ARMSTestModel.Store.InventoryCountHdr" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="inventoryCountStatusDtl" EntityType="ARMSTestModel.Store.inventoryCountStatusDtl" store:Type="Tables" store:Schema="dbo" store:Name="inventoryCountStatusDtl">
+      <DefiningQuery>SELECT 
+      [inventoryCountStatusDtl].[in_statusId] AS [in_statusId], 
+      [inventoryCountStatusDtl].[custOutletsID] AS [custOutletsID], 
+      [inventoryCountStatusDtl].[ch_empIDNo] AS [ch_empIDNo], 
+      [inventoryCountStatusDtl].[ch_status] AS [ch_status], 
+      [inventoryCountStatusDtl].[inventoryCountId] AS [inventoryCountId]
+      FROM [dbo].[inventoryCountStatusDtl] AS [inventoryCountStatusDtl]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="inventoryCountStatusHdr" EntityType="ARMSTestModel.Store.inventoryCountStatusHdr" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InventoryProducts" EntityType="ARMSTestModel.Store.InventoryProducts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LogChanges" EntityType="ARMSTestModel.Store.LogChanges" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="majorCustomer" EntityType="ARMSTestModel.Store.majorCustomer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="nextInventoryCountDtl" EntityType="ARMSTestModel.Store.nextInventoryCountDtl" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="nextInventoryCountHdr" EntityType="ARMSTestModel.Store.nextInventoryCountHdr" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ObjectiveHdr" EntityType="ARMSTestModel.Store.ObjectiveHdr" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Objectives" EntityType="ARMSTestModel.Store.Objectives" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RouteChanges" EntityType="ARMSTestModel.Store.RouteChanges" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RouteRmrks" EntityType="ARMSTestModel.Store.RouteRmrks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SalesTarget" EntityType="ARMSTestModel.Store.SalesTarget" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SalesTargetMaintenance" EntityType="ARMSTestModel.Store.SalesTargetMaintenance" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SapItemsAvailableQty" EntityType="ARMSTestModel.Store.SapItemsAvailableQty" store:Type="Tables" store:Schema="dbo" store:Name="SapItemsAvailableQty">
+      <DefiningQuery>SELECT 
+      [SapItemsAvailableQty].[ItemCode] AS [ItemCode], 
+      [SapItemsAvailableQty].[ItemName] AS [ItemName], 
+      [SapItemsAvailableQty].[whs] AS [whs], 
+      [SapItemsAvailableQty].[qty] AS [qty], 
+      [SapItemsAvailableQty].[U_Brand] AS [U_Brand], 
+      [SapItemsAvailableQty].[ProductGrp] AS [ProductGrp], 
+      [SapItemsAvailableQty].[DateAsOf] AS [DateAsOf]
+      FROM [dbo].[SapItemsAvailableQty] AS [SapItemsAvailableQty]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TempUploadCoveragePlan" EntityType="ARMSTestModel.Store.TempUploadCoveragePlan" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UploadedPricelist" EntityType="ARMSTestModel.Store.UploadedPricelist" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="userHeader" EntityType="ARMSTestModel.Store.userHeader" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VisitLogs" EntityType="ARMSTestModel.Store.VisitLogs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="app_vw_itemBrand" EntityType="ARMSTestModel.Store.app_vw_itemBrand" store:Type="Views" store:Schema="dbo" store:Name="app_vw_itemBrand">
+      <DefiningQuery>SELECT 
+      [app_vw_itemBrand].[TableID] AS [TableID], 
+      [app_vw_itemBrand].[FieldID] AS [FieldID], 
+      [app_vw_itemBrand].[IndexID] AS [IndexID], 
+      [app_vw_itemBrand].[FldValue] AS [FldValue], 
+      [app_vw_itemBrand].[Descr] AS [Descr], 
+      [app_vw_itemBrand].[FldDate] AS [FldDate]
+      FROM [dbo].[app_vw_itemBrand] AS [app_vw_itemBrand]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="app_vw_itemgroup" EntityType="ARMSTestModel.Store.app_vw_itemgroup" store:Type="Views" store:Schema="dbo" store:Name="app_vw_itemgroup">
+      <DefiningQuery>SELECT 
+      [app_vw_itemgroup].[Code] AS [Code], 
+      [app_vw_itemgroup].[Name] AS [Name], 
+      [app_vw_itemgroup].[U_CATEGORY] AS [U_CATEGORY], 
+      [app_vw_itemgroup].[U_UOM] AS [U_UOM]
+      FROM [dbo].[app_vw_itemgroup] AS [app_vw_itemgroup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arm2_view_Userview" EntityType="ARMSTestModel.Store.arm2_view_Userview" store:Type="Views" store:Schema="dbo" store:Name="arm2_view_Userview">
+      <DefiningQuery>SELECT 
+      [arm2_view_Userview].[empIDNo] AS [empIDNo], 
+      [arm2_view_Userview].[lastName] AS [lastName], 
+      [arm2_view_Userview].[firstName] AS [firstName], 
+      [arm2_view_Userview].[position] AS [position], 
+      [arm2_view_Userview].[branch] AS [branch], 
+      [arm2_view_Userview].[channel] AS [channel], 
+      [arm2_view_Userview].[area] AS [area], 
+      [arm2_view_Userview].[brand] AS [brand], 
+      [arm2_view_Userview].[roleCode] AS [roleCode], 
+      [arm2_view_Userview].[roleName] AS [roleName], 
+      [arm2_view_Userview].[SlpCode] AS [SlpCode], 
+      [arm2_view_Userview].[U_area] AS [U_area]
+      FROM [dbo].[arm2_view_Userview] AS [arm2_view_Userview]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Arms_vw_SOLookUps" EntityType="ARMSTestModel.Store.Arms_vw_SOLookUps" store:Type="Views" store:Schema="dbo" store:Name="Arms_vw_SOLookUps">
+      <DefiningQuery>SELECT 
+      [Arms_vw_SOLookUps].[EmpidNo] AS [EmpidNo], 
+      [Arms_vw_SOLookUps].[Name] AS [Name], 
+      [Arms_vw_SOLookUps].[position] AS [position], 
+      [Arms_vw_SOLookUps].[area] AS [area], 
+      [Arms_vw_SOLookUps].[status] AS [status], 
+      [Arms_vw_SOLookUps].[territory] AS [territory], 
+      [Arms_vw_SOLookUps].[region] AS [region]
+      FROM [dbo].[Arms_vw_SOLookUps] AS [Arms_vw_SOLookUps]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_AccountInCoverage" EntityType="ARMSTestModel.Store.arms2_vw_AccountInCoverage" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_AccountInCoverage">
+      <DefiningQuery>SELECT 
+      [arms2_vw_AccountInCoverage].[AccountCode] AS [AccountCode], 
+      [arms2_vw_AccountInCoverage].[EmpIdNo] AS [EmpIdNo], 
+      [arms2_vw_AccountInCoverage].[Month] AS [Month], 
+      [arms2_vw_AccountInCoverage].[Day] AS [Day], 
+      [arms2_vw_AccountInCoverage].[Year] AS [Year], 
+      [arms2_vw_AccountInCoverage].[EventID] AS [EventID], 
+      [arms2_vw_AccountInCoverage].[DoctypeId] AS [DoctypeId], 
+      [arms2_vw_AccountInCoverage].[DocumentStatusId] AS [DocumentStatusId], 
+      [arms2_vw_AccountInCoverage].[LineNum] AS [LineNum], 
+      [arms2_vw_AccountInCoverage].[ContactPerson] AS [ContactPerson], 
+      [arms2_vw_AccountInCoverage].[ContactPersonNo] AS [ContactPersonNo], 
+      [arms2_vw_AccountInCoverage].[StoreChecking] AS [StoreChecking], 
+      [arms2_vw_AccountInCoverage].[StoreCheckingResult] AS [StoreCheckingResult], 
+      [arms2_vw_AccountInCoverage].[ProductPresentationResult] AS [ProductPresentationResult], 
+      [arms2_vw_AccountInCoverage].[TotalAmount] AS [TotalAmount], 
+      [arms2_vw_AccountInCoverage].[CompetitorActivities] AS [CompetitorActivities], 
+      [arms2_vw_AccountInCoverage].[WithOrder] AS [WithOrder], 
+      [arms2_vw_AccountInCoverage].[NextCallDate] AS [NextCallDate], 
+      [arms2_vw_AccountInCoverage].[PONum] AS [PONum], 
+      [arms2_vw_AccountInCoverage].[IssuesAndConcerns] AS [IssuesAndConcerns], 
+      [arms2_vw_AccountInCoverage].[Delivery] AS [Delivery], 
+      [arms2_vw_AccountInCoverage].[Orders] AS [Orders], 
+      [arms2_vw_AccountInCoverage].[SummaryLackingItems] AS [SummaryLackingItems], 
+      [arms2_vw_AccountInCoverage].[MobileNo] AS [MobileNo], 
+      [arms2_vw_AccountInCoverage].[Recommendation] AS [Recommendation], 
+      [arms2_vw_AccountInCoverage].[TimeTable] AS [TimeTable], 
+      [arms2_vw_AccountInCoverage].[Remarks] AS [Remarks], 
+      [arms2_vw_AccountInCoverage].[cFullCollection] AS [cFullCollection], 
+      [arms2_vw_AccountInCoverage].[cPartialCollection] AS [cPartialCollection], 
+      [arms2_vw_AccountInCoverage].[cNoCollection] AS [cNoCollection], 
+      [arms2_vw_AccountInCoverage].[OtherInformation] AS [OtherInformation], 
+      [arms2_vw_AccountInCoverage].[acctName] AS [acctName], 
+      [arms2_vw_AccountInCoverage].[acctClassfxn] AS [acctClassfxn], 
+      [arms2_vw_AccountInCoverage].[bussAdd] AS [bussAdd], 
+      [arms2_vw_AccountInCoverage].[FileAttachment] AS [FileAttachment], 
+      [arms2_vw_AccountInCoverage].[HotelName] AS [HotelName], 
+      [arms2_vw_AccountInCoverage].[HotelContactNumber] AS [HotelContactNumber]
+      FROM [dbo].[arms2_vw_AccountInCoverage] AS [arms2_vw_AccountInCoverage]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_ActivityLogs" EntityType="ARMSTestModel.Store.arms2_vw_ActivityLogs" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_ActivityLogs">
+      <DefiningQuery>SELECT 
+      [arms2_vw_ActivityLogs].[empName] AS [empName], 
+      [arms2_vw_ActivityLogs].[datetimestamp] AS [datetimestamp], 
+      [arms2_vw_ActivityLogs].[field] AS [field], 
+      [arms2_vw_ActivityLogs].[activity] AS [activity], 
+      [arms2_vw_ActivityLogs].[acctName] AS [acctName], 
+      [arms2_vw_ActivityLogs].[acctcode] AS [acctcode], 
+      [arms2_vw_ActivityLogs].[Location] AS [Location], 
+      [arms2_vw_ActivityLogs].[bussAdd] AS [bussAdd]
+      FROM [dbo].[arms2_vw_ActivityLogs] AS [arms2_vw_ActivityLogs]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_actveBusPrtnr" EntityType="ARMSTestModel.Store.arms2_vw_actveBusPrtnr" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_actveBusPrtnr">
+      <DefiningQuery>SELECT 
+      [arms2_vw_actveBusPrtnr].[CardCode] AS [CardCode], 
+      [arms2_vw_actveBusPrtnr].[CardName] AS [CardName], 
+      [arms2_vw_actveBusPrtnr].[Address] AS [Address], 
+      [arms2_vw_actveBusPrtnr].[Phone1] AS [Phone1], 
+      [arms2_vw_actveBusPrtnr].[CntctPrsn] AS [CntctPrsn], 
+      [arms2_vw_actveBusPrtnr].[acctClassfxn] AS [acctClassfxn], 
+      [arms2_vw_actveBusPrtnr].[U_ACCTTYPE] AS [U_ACCTTYPE], 
+      [arms2_vw_actveBusPrtnr].[U_CHANNEL] AS [U_CHANNEL], 
+      [arms2_vw_actveBusPrtnr].[U_AREA] AS [U_AREA], 
+      [arms2_vw_actveBusPrtnr].[Territory] AS [Territory], 
+      [arms2_vw_actveBusPrtnr].[SOCode] AS [SOCode], 
+      [arms2_vw_actveBusPrtnr].[empIdNo] AS [empIdNo], 
+      [arms2_vw_actveBusPrtnr].[Pareto] AS [Pareto], 
+      [arms2_vw_actveBusPrtnr].[TerritoryName] AS [TerritoryName], 
+      [arms2_vw_actveBusPrtnr].[FirstName] AS [FirstName], 
+      [arms2_vw_actveBusPrtnr].[LastName] AS [LastName], 
+      [arms2_vw_actveBusPrtnr].[ccanum] AS [ccanum]
+      FROM [dbo].[arms2_vw_actveBusPrtnr] AS [arms2_vw_actveBusPrtnr]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_asmListofSO" EntityType="ARMSTestModel.Store.arms2_vw_asmListofSO" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_asmListofSO">
+      <DefiningQuery>SELECT 
+      [arms2_vw_asmListofSO].[slpcode] AS [slpcode], 
+      [arms2_vw_asmListofSO].[empidno] AS [empidno], 
+      [arms2_vw_asmListofSO].[slpname] AS [slpname], 
+      [arms2_vw_asmListofSO].[u_position] AS [u_position], 
+      [arms2_vw_asmListofSO].[U_area] AS [U_area], 
+      [arms2_vw_asmListofSO].[EventId] AS [EventId], 
+      [arms2_vw_asmListofSO].[Year] AS [Year], 
+      [arms2_vw_asmListofSO].[Month] AS [Month], 
+      [arms2_vw_asmListofSO].[DoctypeId] AS [DoctypeId], 
+      [arms2_vw_asmListofSO].[documentstatusId] AS [documentstatusId], 
+      [arms2_vw_asmListofSO].[statedesc] AS [statedesc]
+      FROM [dbo].[arms2_vw_asmListofSO] AS [arms2_vw_asmListofSO]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_asmViewSoCoverage" EntityType="ARMSTestModel.Store.arms2_vw_asmViewSoCoverage" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_asmViewSoCoverage">
+      <DefiningQuery>SELECT 
+      [arms2_vw_asmViewSoCoverage].[EventID] AS [EventID], 
+      [arms2_vw_asmViewSoCoverage].[EmpIdNo] AS [EmpIdNo], 
+      [arms2_vw_asmViewSoCoverage].[LastName] AS [LastName], 
+      [arms2_vw_asmViewSoCoverage].[FirstName] AS [FirstName], 
+      [arms2_vw_asmViewSoCoverage].[Year] AS [Year], 
+      [arms2_vw_asmViewSoCoverage].[Month] AS [Month], 
+      [arms2_vw_asmViewSoCoverage].[DoctypeId] AS [DoctypeId], 
+      [arms2_vw_asmViewSoCoverage].[DocumentStatusId] AS [DocumentStatusId], 
+      [arms2_vw_asmViewSoCoverage].[roleId] AS [roleId], 
+      [arms2_vw_asmViewSoCoverage].[stateDesc] AS [stateDesc], 
+      [arms2_vw_asmViewSoCoverage].[position] AS [position], 
+      [arms2_vw_asmViewSoCoverage].[branch] AS [branch], 
+      [arms2_vw_asmViewSoCoverage].[channel] AS [channel], 
+      [arms2_vw_asmViewSoCoverage].[U_area] AS [U_area], 
+      [arms2_vw_asmViewSoCoverage].[brand] AS [brand], 
+      [arms2_vw_asmViewSoCoverage].[RoleCode] AS [RoleCode], 
+      [arms2_vw_asmViewSoCoverage].[RoleName] AS [RoleName], 
+      [arms2_vw_asmViewSoCoverage].[SlpCode] AS [SlpCode], 
+      [arms2_vw_asmViewSoCoverage].[ASM_ID] AS [ASM_ID], 
+      [arms2_vw_asmViewSoCoverage].[CHM_ID] AS [CHM_ID], 
+      [arms2_vw_asmViewSoCoverage].[VPSALES_ID] AS [VPSALES_ID]
+      FROM [dbo].[arms2_vw_asmViewSoCoverage] AS [arms2_vw_asmViewSoCoverage]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_coveragechanges" EntityType="ARMSTestModel.Store.arms2_vw_coveragechanges" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_coveragechanges">
+      <DefiningQuery>SELECT 
+      [arms2_vw_coveragechanges].[EventID] AS [EventID], 
+      [arms2_vw_coveragechanges].[EmpIdNo] AS [EmpIdNo], 
+      [arms2_vw_coveragechanges].[lastName] AS [lastName], 
+      [arms2_vw_coveragechanges].[firstname] AS [firstname], 
+      [arms2_vw_coveragechanges].[branch] AS [branch], 
+      [arms2_vw_coveragechanges].[Year] AS [Year], 
+      [arms2_vw_coveragechanges].[Month] AS [Month], 
+      [arms2_vw_coveragechanges].[DoctypeId] AS [DoctypeId], 
+      [arms2_vw_coveragechanges].[AcctStatus] AS [AcctStatus], 
+      [arms2_vw_coveragechanges].[stateDesc] AS [stateDesc], 
+      [arms2_vw_coveragechanges].[LineNum] AS [LineNum], 
+      [arms2_vw_coveragechanges].[Day] AS [Day], 
+      [arms2_vw_coveragechanges].[AccountCode] AS [AccountCode], 
+      [arms2_vw_coveragechanges].[AcctClassfxn] AS [AcctClassfxn], 
+      [arms2_vw_coveragechanges].[AcctName] AS [AcctName], 
+      [arms2_vw_coveragechanges].[bussAdd] AS [bussAdd], 
+      [arms2_vw_coveragechanges].[ContactPerson] AS [ContactPerson], 
+      [arms2_vw_coveragechanges].[ContactPersonNo] AS [ContactPersonNo], 
+      [arms2_vw_coveragechanges].[StoreChecking] AS [StoreChecking], 
+      [arms2_vw_coveragechanges].[StoreCheckingResult] AS [StoreCheckingResult], 
+      [arms2_vw_coveragechanges].[ProductPresentationResult] AS [ProductPresentationResult], 
+      [arms2_vw_coveragechanges].[TotalAmount] AS [TotalAmount], 
+      [arms2_vw_coveragechanges].[CompetitorActivities] AS [CompetitorActivities], 
+      [arms2_vw_coveragechanges].[WithOrder] AS [WithOrder], 
+      [arms2_vw_coveragechanges].[NextCallDate] AS [NextCallDate], 
+      [arms2_vw_coveragechanges].[PONum] AS [PONum], 
+      [arms2_vw_coveragechanges].[IssuesAndConcerns] AS [IssuesAndConcerns], 
+      [arms2_vw_coveragechanges].[Delivery] AS [Delivery], 
+      [arms2_vw_coveragechanges].[orders] AS [orders], 
+      [arms2_vw_coveragechanges].[SummaryLackingItems] AS [SummaryLackingItems], 
+      [arms2_vw_coveragechanges].[MobileNo] AS [MobileNo], 
+      [arms2_vw_coveragechanges].[Recommendation] AS [Recommendation], 
+      [arms2_vw_coveragechanges].[TimeTable] AS [TimeTable], 
+      [arms2_vw_coveragechanges].[Remarks] AS [Remarks], 
+      [arms2_vw_coveragechanges].[cFullCollection] AS [cFullCollection], 
+      [arms2_vw_coveragechanges].[cPartialCollection] AS [cPartialCollection], 
+      [arms2_vw_coveragechanges].[cNoCollection] AS [cNoCollection], 
+      [arms2_vw_coveragechanges].[OtherInformation] AS [OtherInformation], 
+      [arms2_vw_coveragechanges].[isPlanned] AS [isPlanned], 
+      [arms2_vw_coveragechanges].[Tmein] AS [Tmein], 
+      [arms2_vw_coveragechanges].[Tmeout] AS [Tmeout], 
+      [arms2_vw_coveragechanges].[Numvisit] AS [Numvisit], 
+      [arms2_vw_coveragechanges].[HotelName] AS [HotelName], 
+      [arms2_vw_coveragechanges].[HotelContactNumber] AS [HotelContactNumber], 
+      [arms2_vw_coveragechanges].[IsDeleted] AS [IsDeleted], 
+      [arms2_vw_coveragechanges].[IsAnEdit] AS [IsAnEdit], 
+      [arms2_vw_coveragechanges].[Coveragedate] AS [Coveragedate], 
+      [arms2_vw_coveragechanges].[Interval] AS [Interval], 
+      [arms2_vw_coveragechanges].[ASM_ID] AS [ASM_ID], 
+      [arms2_vw_coveragechanges].[CHM_ID] AS [CHM_ID], 
+      [arms2_vw_coveragechanges].[roleid] AS [roleid]
+      FROM [dbo].[arms2_vw_coveragechanges] AS [arms2_vw_coveragechanges]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_CoverageHdrStatus" EntityType="ARMSTestModel.Store.arms2_vw_CoverageHdrStatus" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_CoverageHdrStatus">
+      <DefiningQuery>SELECT 
+      [arms2_vw_CoverageHdrStatus].[EventID] AS [EventID], 
+      [arms2_vw_CoverageHdrStatus].[EmpIdNo] AS [EmpIdNo], 
+      [arms2_vw_CoverageHdrStatus].[Year] AS [Year], 
+      [arms2_vw_CoverageHdrStatus].[Month] AS [Month], 
+      [arms2_vw_CoverageHdrStatus].[DoctypeId] AS [DoctypeId], 
+      [arms2_vw_CoverageHdrStatus].[DocumentStatusId] AS [DocumentStatusId], 
+      [arms2_vw_CoverageHdrStatus].[branch] AS [branch], 
+      [arms2_vw_CoverageHdrStatus].[firstname] AS [firstname], 
+      [arms2_vw_CoverageHdrStatus].[lastname] AS [lastname], 
+      [arms2_vw_CoverageHdrStatus].[statedesc] AS [statedesc], 
+      [arms2_vw_CoverageHdrStatus].[nextStateDesc] AS [nextStateDesc], 
+      [arms2_vw_CoverageHdrStatus].[isFinal] AS [isFinal], 
+      [arms2_vw_CoverageHdrStatus].[isStart] AS [isStart], 
+      [arms2_vw_CoverageHdrStatus].[roleid] AS [roleid]
+      FROM [dbo].[arms2_vw_CoverageHdrStatus] AS [arms2_vw_CoverageHdrStatus]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_customerheader_lookup" EntityType="ARMSTestModel.Store.arms2_vw_customerheader_lookup" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_customerheader_lookup">
+      <DefiningQuery>SELECT 
+      [arms2_vw_customerheader_lookup].[ccaNum] AS [ccaNum], 
+      [arms2_vw_customerheader_lookup].[acctcode] AS [acctcode], 
+      [arms2_vw_customerheader_lookup].[acctName] AS [acctName], 
+      [arms2_vw_customerheader_lookup].[bussAdd] AS [bussAdd], 
+      [arms2_vw_customerheader_lookup].[SapAcctCode] AS [SapAcctCode], 
+      [arms2_vw_customerheader_lookup].[Pareto] AS [Pareto], 
+      [arms2_vw_customerheader_lookup].[acctClassfxn] AS [acctClassfxn]
+      FROM [dbo].[arms2_vw_customerheader_lookup] AS [arms2_vw_customerheader_lookup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_estAmount_actAmount" EntityType="ARMSTestModel.Store.arms2_vw_estAmount_actAmount" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_estAmount_actAmount">
+      <DefiningQuery>SELECT 
+      [arms2_vw_estAmount_actAmount].[EventID] AS [EventID], 
+      [arms2_vw_estAmount_actAmount].[LineNum] AS [LineNum], 
+      [arms2_vw_estAmount_actAmount].[Day] AS [Day], 
+      [arms2_vw_estAmount_actAmount].[ObjectiveCode] AS [ObjectiveCode], 
+      [arms2_vw_estAmount_actAmount].[estPlannedAmount] AS [estPlannedAmount], 
+      [arms2_vw_estAmount_actAmount].[estActualAmount] AS [estActualAmount]
+      FROM [dbo].[arms2_vw_estAmount_actAmount] AS [arms2_vw_estAmount_actAmount]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_getInventoryAuditDetail" EntityType="ARMSTestModel.Store.arms2_vw_getInventoryAuditDetail" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_getInventoryAuditDetail">
+      <DefiningQuery>SELECT 
+      [arms2_vw_getInventoryAuditDetail].[inventoryCountAuditId] AS [inventoryCountAuditId], 
+      [arms2_vw_getInventoryAuditDetail].[lineId] AS [lineId], 
+      [arms2_vw_getInventoryAuditDetail].[itemCode] AS [itemCode], 
+      [arms2_vw_getInventoryAuditDetail].[actualCount] AS [actualCount], 
+      [arms2_vw_getInventoryAuditDetail].[remarks] AS [remarks], 
+      [arms2_vw_getInventoryAuditDetail].[brand] AS [brand], 
+      [arms2_vw_getInventoryAuditDetail].[prodgrp] AS [prodgrp], 
+      [arms2_vw_getInventoryAuditDetail].[itemdescription] AS [itemdescription], 
+      [arms2_vw_getInventoryAuditDetail].[srp] AS [srp]
+      FROM [dbo].[arms2_vw_getInventoryAuditDetail] AS [arms2_vw_getInventoryAuditDetail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_getInventoryAuditHeader" EntityType="ARMSTestModel.Store.arms2_vw_getInventoryAuditHeader" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_getInventoryAuditHeader">
+      <DefiningQuery>SELECT 
+      [arms2_vw_getInventoryAuditHeader].[inventoryCountId] AS [inventoryCountId], 
+      [arms2_vw_getInventoryAuditHeader].[empId] AS [empId], 
+      [arms2_vw_getInventoryAuditHeader].[acctCode] AS [acctCode], 
+      [arms2_vw_getInventoryAuditHeader].[whsInchargeID] AS [whsInchargeID], 
+      [arms2_vw_getInventoryAuditHeader].[actualCountDate] AS [actualCountDate], 
+      [arms2_vw_getInventoryAuditHeader].[CardName] AS [CardName], 
+      [arms2_vw_getInventoryAuditHeader].[AreaName] AS [AreaName], 
+      [arms2_vw_getInventoryAuditHeader].[TerritoryName] AS [TerritoryName], 
+      [arms2_vw_getInventoryAuditHeader].[whsInchargeFirstName] AS [whsInchargeFirstName], 
+      [arms2_vw_getInventoryAuditHeader].[whsInchargeMiddleName] AS [whsInchargeMiddleName], 
+      [arms2_vw_getInventoryAuditHeader].[whsInchargeLastName] AS [whsInchargeLastName], 
+      [arms2_vw_getInventoryAuditHeader].[whsInchargeContactNo] AS [whsInchargeContactNo], 
+      [arms2_vw_getInventoryAuditHeader].[lastName] AS [lastName], 
+      [arms2_vw_getInventoryAuditHeader].[firstName] AS [firstName], 
+      [arms2_vw_getInventoryAuditHeader].[totalActualCount] AS [totalActualCount], 
+      [arms2_vw_getInventoryAuditHeader].[Pareto] AS [Pareto], 
+      [arms2_vw_getInventoryAuditHeader].[acctAddress] AS [acctAddress], 
+      [arms2_vw_getInventoryAuditHeader].[inventoryCountAuditId] AS [inventoryCountAuditId], 
+      [arms2_vw_getInventoryAuditHeader].[referenceInventoryCountId] AS [referenceInventoryCountId], 
+      [arms2_vw_getInventoryAuditHeader].[date] AS [date], 
+      [arms2_vw_getInventoryAuditHeader].[remarks] AS [remarks], 
+      [arms2_vw_getInventoryAuditHeader].[auditedBy] AS [auditedBy], 
+      [arms2_vw_getInventoryAuditHeader].[auditedName] AS [auditedName]
+      FROM [dbo].[arms2_vw_getInventoryAuditHeader] AS [arms2_vw_getInventoryAuditHeader]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_getInventoryDetail" EntityType="ARMSTestModel.Store.arms2_vw_getInventoryDetail" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_getInventoryDetail">
+      <DefiningQuery>SELECT 
+      [arms2_vw_getInventoryDetail].[inventoryCountId] AS [inventoryCountId], 
+      [arms2_vw_getInventoryDetail].[lineId] AS [lineId], 
+      [arms2_vw_getInventoryDetail].[itemCode] AS [itemCode], 
+      [arms2_vw_getInventoryDetail].[ssr] AS [ssr], 
+      [arms2_vw_getInventoryDetail].[begNvPcs] AS [begNvPcs], 
+      [arms2_vw_getInventoryDetail].[endNvPcs] AS [endNvPcs], 
+      [arms2_vw_getInventoryDetail].[actualSellOutPcs] AS [actualSellOutPcs], 
+      [arms2_vw_getInventoryDetail].[actualSellOutAmt] AS [actualSellOutAmt], 
+      [arms2_vw_getInventoryDetail].[remarks] AS [remarks], 
+      [arms2_vw_getInventoryDetail].[variancePcs] AS [variancePcs], 
+      [arms2_vw_getInventoryDetail].[varianceAmt] AS [varianceAmt], 
+      [arms2_vw_getInventoryDetail].[netSellIn] AS [netSellIn], 
+      [arms2_vw_getInventoryDetail].[salesForecastPcs0] AS [salesForecastPcs0], 
+      [arms2_vw_getInventoryDetail].[salesForecastAmt0] AS [salesForecastAmt0], 
+      [arms2_vw_getInventoryDetail].[salesForecastPcs1] AS [salesForecastPcs1], 
+      [arms2_vw_getInventoryDetail].[salesForecastAmt1] AS [salesForecastAmt1], 
+      [arms2_vw_getInventoryDetail].[salesForecastPcs2] AS [salesForecastPcs2], 
+      [arms2_vw_getInventoryDetail].[salesForecastAmt2] AS [salesForecastAmt2], 
+      [arms2_vw_getInventoryDetail].[salesForecastPcs3] AS [salesForecastPcs3], 
+      [arms2_vw_getInventoryDetail].[salesForecastAmt3] AS [salesForecastAmt3], 
+      [arms2_vw_getInventoryDetail].[netSellinOnHand] AS [netSellinOnHand], 
+      [arms2_vw_getInventoryDetail].[brand] AS [brand], 
+      [arms2_vw_getInventoryDetail].[prodgrp] AS [prodgrp], 
+      [arms2_vw_getInventoryDetail].[itemdescription] AS [itemdescription], 
+      [arms2_vw_getInventoryDetail].[srp] AS [srp]
+      FROM [dbo].[arms2_vw_getInventoryDetail] AS [arms2_vw_getInventoryDetail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_getInventoryHeader" EntityType="ARMSTestModel.Store.arms2_vw_getInventoryHeader" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_getInventoryHeader">
+      <DefiningQuery>SELECT 
+      [arms2_vw_getInventoryHeader].[inventoryCountId] AS [inventoryCountId], 
+      [arms2_vw_getInventoryHeader].[docTypeId] AS [docTypeId], 
+      [arms2_vw_getInventoryHeader].[empId] AS [empId], 
+      [arms2_vw_getInventoryHeader].[acctCode] AS [acctCode], 
+      [arms2_vw_getInventoryHeader].[whsInchargeID] AS [whsInchargeID], 
+      [arms2_vw_getInventoryHeader].[prevCountDate] AS [prevCountDate], 
+      [arms2_vw_getInventoryHeader].[nextCountDate] AS [nextCountDate], 
+      [arms2_vw_getInventoryHeader].[countRange] AS [countRange], 
+      [arms2_vw_getInventoryHeader].[totalAmount] AS [totalAmount], 
+      [arms2_vw_getInventoryHeader].[remarks] AS [remarks], 
+      [arms2_vw_getInventoryHeader].[DocumentStatusId] AS [DocumentStatusId], 
+      [arms2_vw_getInventoryHeader].[Audited] AS [Audited], 
+      [arms2_vw_getInventoryHeader].[inventoryCountStatus] AS [inventoryCountStatus], 
+      [arms2_vw_getInventoryHeader].[dateTimeStamp] AS [dateTimeStamp], 
+      [arms2_vw_getInventoryHeader].[actualCountDate] AS [actualCountDate], 
+      [arms2_vw_getInventoryHeader].[actualCountEndValidDate] AS [actualCountEndValidDate], 
+      [arms2_vw_getInventoryHeader].[CardName] AS [CardName], 
+      [arms2_vw_getInventoryHeader].[AreaName] AS [AreaName], 
+      [arms2_vw_getInventoryHeader].[TerritoryName] AS [TerritoryName], 
+      [arms2_vw_getInventoryHeader].[whsInchargeFirstName] AS [whsInchargeFirstName], 
+      [arms2_vw_getInventoryHeader].[whsInchargeMiddleName] AS [whsInchargeMiddleName], 
+      [arms2_vw_getInventoryHeader].[whsInchargeLastName] AS [whsInchargeLastName], 
+      [arms2_vw_getInventoryHeader].[whsInchargeContactNo] AS [whsInchargeContactNo], 
+      [arms2_vw_getInventoryHeader].[lastName] AS [lastName], 
+      [arms2_vw_getInventoryHeader].[firstName] AS [firstName], 
+      [arms2_vw_getInventoryHeader].[totalVarianceAmt] AS [totalVarianceAmt], 
+      [arms2_vw_getInventoryHeader].[totalSalesForecastAmt0] AS [totalSalesForecastAmt0], 
+      [arms2_vw_getInventoryHeader].[totalSalesForecastAmt1] AS [totalSalesForecastAmt1], 
+      [arms2_vw_getInventoryHeader].[totalSalesForecastAmt2] AS [totalSalesForecastAmt2], 
+      [arms2_vw_getInventoryHeader].[totalSalesForecastAmt3] AS [totalSalesForecastAmt3], 
+      [arms2_vw_getInventoryHeader].[Pareto] AS [Pareto], 
+      [arms2_vw_getInventoryHeader].[acctAddress] AS [acctAddress]
+      FROM [dbo].[arms2_vw_getInventoryHeader] AS [arms2_vw_getInventoryHeader]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_inventoryAccounts" EntityType="ARMSTestModel.Store.arms2_vw_inventoryAccounts" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_inventoryAccounts">
+      <DefiningQuery>SELECT 
+      [arms2_vw_inventoryAccounts].[ccaNum] AS [ccaNum], 
+      [arms2_vw_inventoryAccounts].[acctCode] AS [acctCode], 
+      [arms2_vw_inventoryAccounts].[bussAdd] AS [bussAdd], 
+      [arms2_vw_inventoryAccounts].[acctName] AS [acctName], 
+      [arms2_vw_inventoryAccounts].[areaname] AS [areaname], 
+      [arms2_vw_inventoryAccounts].[pareto] AS [pareto], 
+      [arms2_vw_inventoryAccounts].[territoryName] AS [territoryName], 
+      [arms2_vw_inventoryAccounts].[empIdNo] AS [empIdNo], 
+      [arms2_vw_inventoryAccounts].[firstName] AS [firstName], 
+      [arms2_vw_inventoryAccounts].[lastName] AS [lastName], 
+      [arms2_vw_inventoryAccounts].[CntctPrsn] AS [CntctPrsn], 
+      [arms2_vw_inventoryAccounts].[Phone1] AS [Phone1]
+      FROM [dbo].[arms2_vw_inventoryAccounts] AS [arms2_vw_inventoryAccounts]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_inventoryScheduleAccounts" EntityType="ARMSTestModel.Store.arms2_vw_inventoryScheduleAccounts" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_inventoryScheduleAccounts">
+      <DefiningQuery>SELECT 
+      [arms2_vw_inventoryScheduleAccounts].[ccaNum] AS [ccaNum], 
+      [arms2_vw_inventoryScheduleAccounts].[acctCode] AS [acctCode], 
+      [arms2_vw_inventoryScheduleAccounts].[bussAdd] AS [bussAdd], 
+      [arms2_vw_inventoryScheduleAccounts].[acctName] AS [acctName], 
+      [arms2_vw_inventoryScheduleAccounts].[areaname] AS [areaname], 
+      [arms2_vw_inventoryScheduleAccounts].[pareto] AS [pareto], 
+      [arms2_vw_inventoryScheduleAccounts].[territoryName] AS [territoryName], 
+      [arms2_vw_inventoryScheduleAccounts].[empIdNo] AS [empIdNo], 
+      [arms2_vw_inventoryScheduleAccounts].[firstName] AS [firstName], 
+      [arms2_vw_inventoryScheduleAccounts].[lastName] AS [lastName], 
+      [arms2_vw_inventoryScheduleAccounts].[CntctPrsn] AS [CntctPrsn], 
+      [arms2_vw_inventoryScheduleAccounts].[Phone1] AS [Phone1], 
+      [arms2_vw_inventoryScheduleAccounts].[prevCountDate] AS [prevCountDate], 
+      [arms2_vw_inventoryScheduleAccounts].[startCountDate] AS [startCountDate]
+      FROM [dbo].[arms2_vw_inventoryScheduleAccounts] AS [arms2_vw_inventoryScheduleAccounts]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_LookupAccounts" EntityType="ARMSTestModel.Store.arms2_vw_LookupAccounts" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_LookupAccounts">
+      <DefiningQuery>SELECT 
+      [arms2_vw_LookupAccounts].[CardCode] AS [CardCode], 
+      [arms2_vw_LookupAccounts].[CardName] AS [CardName], 
+      [arms2_vw_LookupAccounts].[Address] AS [Address], 
+      [arms2_vw_LookupAccounts].[acctClassfxn] AS [acctClassfxn], 
+      [arms2_vw_LookupAccounts].[Phone1] AS [Phone1], 
+      [arms2_vw_LookupAccounts].[CntctPrsn] AS [CntctPrsn], 
+      [arms2_vw_LookupAccounts].[EventID] AS [EventID], 
+      [arms2_vw_LookupAccounts].[EmpIdNo] AS [EmpIdNo], 
+      [arms2_vw_LookupAccounts].[Year] AS [Year], 
+      [arms2_vw_LookupAccounts].[Month] AS [Month], 
+      [arms2_vw_LookupAccounts].[DoctypeId] AS [DoctypeId], 
+      [arms2_vw_LookupAccounts].[DocumentStatusId] AS [DocumentStatusId], 
+      [arms2_vw_LookupAccounts].[day] AS [day], 
+      [arms2_vw_LookupAccounts].[HotelName] AS [HotelName], 
+      [arms2_vw_LookupAccounts].[HotelContactNumber] AS [HotelContactNumber]
+      FROM [dbo].[arms2_vw_LookupAccounts] AS [arms2_vw_LookupAccounts]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_lookUpOSLP" EntityType="ARMSTestModel.Store.arms2_vw_lookUpOSLP" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_lookUpOSLP">
+      <DefiningQuery>SELECT 
+      [arms2_vw_lookUpOSLP].[SlpCode] AS [SlpCode], 
+      [arms2_vw_lookUpOSLP].[SlpName] AS [SlpName], 
+      [arms2_vw_lookUpOSLP].[U_ASM] AS [U_ASM], 
+      [arms2_vw_lookUpOSLP].[U_ACTIVE] AS [U_ACTIVE], 
+      [arms2_vw_lookUpOSLP].[U_POSITION] AS [U_POSITION], 
+      [arms2_vw_lookUpOSLP].[U_AREA] AS [U_AREA], 
+      [arms2_vw_lookUpOSLP].[U_SALES_TARGET] AS [U_SALES_TARGET], 
+      [arms2_vw_lookUpOSLP].[empIdNo] AS [empIdNo]
+      FROM [dbo].[arms2_vw_lookUpOSLP] AS [arms2_vw_lookUpOSLP]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_nextInvDtl_itemMasterFile" EntityType="ARMSTestModel.Store.arms2_vw_nextInvDtl_itemMasterFile" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_nextInvDtl_itemMasterFile">
+      <DefiningQuery>SELECT 
+      [arms2_vw_nextInvDtl_itemMasterFile].[lineId] AS [lineId], 
+      [arms2_vw_nextInvDtl_itemMasterFile].[itemCode] AS [itemCode], 
+      [arms2_vw_nextInvDtl_itemMasterFile].[begNvPcs] AS [begNvPcs], 
+      [arms2_vw_nextInvDtl_itemMasterFile].[salesForecastPcs0] AS [salesForecastPcs0], 
+      [arms2_vw_nextInvDtl_itemMasterFile].[salesForecastAmt0] AS [salesForecastAmt0], 
+      [arms2_vw_nextInvDtl_itemMasterFile].[salesForecastPcs1] AS [salesForecastPcs1], 
+      [arms2_vw_nextInvDtl_itemMasterFile].[salesForecastAmt1] AS [salesForecastAmt1], 
+      [arms2_vw_nextInvDtl_itemMasterFile].[salesForecastPcs2] AS [salesForecastPcs2], 
+      [arms2_vw_nextInvDtl_itemMasterFile].[salesForecastAmt2] AS [salesForecastAmt2], 
+      [arms2_vw_nextInvDtl_itemMasterFile].[ssr] AS [ssr], 
+      [arms2_vw_nextInvDtl_itemMasterFile].[U_PL_ITEMCODE] AS [U_PL_ITEMCODE], 
+      [arms2_vw_nextInvDtl_itemMasterFile].[brand] AS [brand], 
+      [arms2_vw_nextInvDtl_itemMasterFile].[prodgrp] AS [prodgrp], 
+      [arms2_vw_nextInvDtl_itemMasterFile].[itemdescription] AS [itemdescription], 
+      [arms2_vw_nextInvDtl_itemMasterFile].[srp] AS [srp]
+      FROM [dbo].[arms2_vw_nextInvDtl_itemMasterFile] AS [arms2_vw_nextInvDtl_itemMasterFile]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_soCoverage" EntityType="ARMSTestModel.Store.arms2_vw_soCoverage" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_soCoverage">
+      <DefiningQuery>SELECT 
+      [arms2_vw_soCoverage].[EventID] AS [EventID], 
+      [arms2_vw_soCoverage].[EmpIdNo] AS [EmpIdNo], 
+      [arms2_vw_soCoverage].[Year] AS [Year], 
+      [arms2_vw_soCoverage].[Month] AS [Month], 
+      [arms2_vw_soCoverage].[DoctypeId] AS [DoctypeId], 
+      [arms2_vw_soCoverage].[DocumentStatusId] AS [DocumentStatusId], 
+      [arms2_vw_soCoverage].[LineNum] AS [LineNum], 
+      [arms2_vw_soCoverage].[Day] AS [Day], 
+      [arms2_vw_soCoverage].[AccountCode] AS [AccountCode], 
+      [arms2_vw_soCoverage].[ContactPerson] AS [ContactPerson], 
+      [arms2_vw_soCoverage].[ContactPersonNo] AS [ContactPersonNo], 
+      [arms2_vw_soCoverage].[StoreChecking] AS [StoreChecking], 
+      [arms2_vw_soCoverage].[StoreCheckingResult] AS [StoreCheckingResult], 
+      [arms2_vw_soCoverage].[ProductPresentationResult] AS [ProductPresentationResult], 
+      [arms2_vw_soCoverage].[TotalAmount] AS [TotalAmount], 
+      [arms2_vw_soCoverage].[CompetitorActivities] AS [CompetitorActivities], 
+      [arms2_vw_soCoverage].[WithOrder] AS [WithOrder], 
+      [arms2_vw_soCoverage].[NextCallDate] AS [NextCallDate], 
+      [arms2_vw_soCoverage].[PONum] AS [PONum], 
+      [arms2_vw_soCoverage].[IssuesAndConcerns] AS [IssuesAndConcerns], 
+      [arms2_vw_soCoverage].[Delivery] AS [Delivery], 
+      [arms2_vw_soCoverage].[Orders] AS [Orders], 
+      [arms2_vw_soCoverage].[SummaryLackingItems] AS [SummaryLackingItems], 
+      [arms2_vw_soCoverage].[MobileNo] AS [MobileNo], 
+      [arms2_vw_soCoverage].[Recommendation] AS [Recommendation], 
+      [arms2_vw_soCoverage].[TimeTable] AS [TimeTable], 
+      [arms2_vw_soCoverage].[Remarks] AS [Remarks], 
+      [arms2_vw_soCoverage].[cFullCollection] AS [cFullCollection], 
+      [arms2_vw_soCoverage].[cPartialCollection] AS [cPartialCollection], 
+      [arms2_vw_soCoverage].[cNoCollection] AS [cNoCollection], 
+      [arms2_vw_soCoverage].[OtherInformation] AS [OtherInformation], 
+      [arms2_vw_soCoverage].[ObjectiveCode] AS [ObjectiveCode], 
+      [arms2_vw_soCoverage].[Brand] AS [Brand], 
+      [arms2_vw_soCoverage].[PlannedAmount] AS [PlannedAmount], 
+      [arms2_vw_soCoverage].[ActualAmount] AS [ActualAmount], 
+      [arms2_vw_soCoverage].[CounterClerk] AS [CounterClerk]
+      FROM [dbo].[arms2_vw_soCoverage] AS [arms2_vw_soCoverage]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="arms2_vw_userheaderDetails" EntityType="ARMSTestModel.Store.arms2_vw_userheaderDetails" store:Type="Views" store:Schema="dbo" store:Name="arms2_vw_userheaderDetails">
+      <DefiningQuery>SELECT 
+      [arms2_vw_userheaderDetails].[slpcode] AS [slpcode], 
+      [arms2_vw_userheaderDetails].[slpname] AS [slpname], 
+      [arms2_vw_userheaderDetails].[area] AS [area], 
+      [arms2_vw_userheaderDetails].[empidno] AS [empidno]
+      FROM [dbo].[arms2_vw_userheaderDetails] AS [arms2_vw_userheaderDetails]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="armsII_vw_CalendarUser" EntityType="ARMSTestModel.Store.armsII_vw_CalendarUser" store:Type="Views" store:Schema="dbo" store:Name="armsII_vw_CalendarUser">
+      <DefiningQuery>SELECT 
+      [armsII_vw_CalendarUser].[empIDNo] AS [empIDNo], 
+      [armsII_vw_CalendarUser].[lastName] AS [lastName], 
+      [armsII_vw_CalendarUser].[firstName] AS [firstName], 
+      [armsII_vw_CalendarUser].[position] AS [position], 
+      [armsII_vw_CalendarUser].[branch] AS [branch], 
+      [armsII_vw_CalendarUser].[channel] AS [channel], 
+      [armsII_vw_CalendarUser].[area] AS [area], 
+      [armsII_vw_CalendarUser].[brand] AS [brand], 
+      [armsII_vw_CalendarUser].[roleCode] AS [roleCode], 
+      [armsII_vw_CalendarUser].[roleName] AS [roleName], 
+      [armsII_vw_CalendarUser].[ASM_ID] AS [ASM_ID]
+      FROM [dbo].[armsII_vw_CalendarUser] AS [armsII_vw_CalendarUser]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="armsII_vw_CallReport" EntityType="ARMSTestModel.Store.armsII_vw_CallReport" store:Type="Views" store:Schema="dbo" store:Name="armsII_vw_CallReport">
+      <DefiningQuery>SELECT 
+      [armsII_vw_CallReport].[EventId] AS [EventId], 
+      [armsII_vw_CallReport].[EmpIdNo] AS [EmpIdNo], 
+      [armsII_vw_CallReport].[Year] AS [Year], 
+      [armsII_vw_CallReport].[Month] AS [Month], 
+      [armsII_vw_CallReport].[DoctypeId] AS [DoctypeId], 
+      [armsII_vw_CallReport].[DocumentStatusId] AS [DocumentStatusId], 
+      [armsII_vw_CallReport].[LineNum] AS [LineNum], 
+      [armsII_vw_CallReport].[Day] AS [Day], 
+      [armsII_vw_CallReport].[AccountCode] AS [AccountCode], 
+      [armsII_vw_CallReport].[AccountName] AS [AccountName], 
+      [armsII_vw_CallReport].[AccountAddress] AS [AccountAddress], 
+      [armsII_vw_CallReport].[AccountClass] AS [AccountClass], 
+      [armsII_vw_CallReport].[ContactPerson] AS [ContactPerson], 
+      [armsII_vw_CallReport].[ContactPersonNo] AS [ContactPersonNo], 
+      [armsII_vw_CallReport].[ObjectiveCode] AS [ObjectiveCode], 
+      [armsII_vw_CallReport].[StoreCheckingResult] AS [StoreCheckingResult], 
+      [armsII_vw_CallReport].[ProductPresentationResult] AS [ProductPresentationResult], 
+      [armsII_vw_CallReport].[TotalAmount] AS [TotalAmount], 
+      [armsII_vw_CallReport].[CompetitorActivities] AS [CompetitorActivities], 
+      [armsII_vw_CallReport].[WithOrder] AS [WithOrder], 
+      [armsII_vw_CallReport].[NextCallDate] AS [NextCallDate], 
+      [armsII_vw_CallReport].[PONum] AS [PONum], 
+      [armsII_vw_CallReport].[IssuesAndConcerns] AS [IssuesAndConcerns], 
+      [armsII_vw_CallReport].[Delivery] AS [Delivery], 
+      [armsII_vw_CallReport].[Orders] AS [Orders], 
+      [armsII_vw_CallReport].[SummaryLackingItems] AS [SummaryLackingItems], 
+      [armsII_vw_CallReport].[MobileNo] AS [MobileNo], 
+      [armsII_vw_CallReport].[Recommendation] AS [Recommendation], 
+      [armsII_vw_CallReport].[TimeTable] AS [TimeTable], 
+      [armsII_vw_CallReport].[Remarks] AS [Remarks], 
+      [armsII_vw_CallReport].[cFullCollection] AS [cFullCollection], 
+      [armsII_vw_CallReport].[cPartialCollection] AS [cPartialCollection], 
+      [armsII_vw_CallReport].[cNoCollection] AS [cNoCollection], 
+      [armsII_vw_CallReport].[OtherInformation] AS [OtherInformation], 
+      [armsII_vw_CallReport].[Brand] AS [Brand], 
+      [armsII_vw_CallReport].[Amount] AS [Amount], 
+      [armsII_vw_CallReport].[CounterClerk] AS [CounterClerk]
+      FROM [dbo].[armsII_vw_CallReport] AS [armsII_vw_CallReport]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="armsII_vw_EventdtlsBySo" EntityType="ARMSTestModel.Store.armsII_vw_EventdtlsBySo" store:Type="Views" store:Schema="dbo" store:Name="armsII_vw_EventdtlsBySo">
+      <DefiningQuery>SELECT 
+      [armsII_vw_EventdtlsBySo].[EventId] AS [EventId], 
+      [armsII_vw_EventdtlsBySo].[EmpIdNo] AS [EmpIdNo], 
+      [armsII_vw_EventdtlsBySo].[Year] AS [Year], 
+      [armsII_vw_EventdtlsBySo].[Month] AS [Month], 
+      [armsII_vw_EventdtlsBySo].[DoctypeId] AS [DoctypeId], 
+      [armsII_vw_EventdtlsBySo].[DocumentStatusId] AS [DocumentStatusId], 
+      [armsII_vw_EventdtlsBySo].[LineNum] AS [LineNum], 
+      [armsII_vw_EventdtlsBySo].[Day] AS [Day], 
+      [armsII_vw_EventdtlsBySo].[AccountCode] AS [AccountCode], 
+      [armsII_vw_EventdtlsBySo].[AccountName] AS [AccountName], 
+      [armsII_vw_EventdtlsBySo].[AccountAddress] AS [AccountAddress], 
+      [armsII_vw_EventdtlsBySo].[AccountClass] AS [AccountClass], 
+      [armsII_vw_EventdtlsBySo].[ContactPerson] AS [ContactPerson], 
+      [armsII_vw_EventdtlsBySo].[ContactPersonNo] AS [ContactPersonNo], 
+      [armsII_vw_EventdtlsBySo].[ObjectiveCode] AS [ObjectiveCode], 
+      [armsII_vw_EventdtlsBySo].[StoreCheckingResult] AS [StoreCheckingResult], 
+      [armsII_vw_EventdtlsBySo].[ProductPresentationResult] AS [ProductPresentationResult], 
+      [armsII_vw_EventdtlsBySo].[TotalAmount] AS [TotalAmount], 
+      [armsII_vw_EventdtlsBySo].[CompetitorActivities] AS [CompetitorActivities], 
+      [armsII_vw_EventdtlsBySo].[WithOrder] AS [WithOrder], 
+      [armsII_vw_EventdtlsBySo].[NextCallDate] AS [NextCallDate], 
+      [armsII_vw_EventdtlsBySo].[PONum] AS [PONum], 
+      [armsII_vw_EventdtlsBySo].[IssuesAndConcerns] AS [IssuesAndConcerns], 
+      [armsII_vw_EventdtlsBySo].[Delivery] AS [Delivery], 
+      [armsII_vw_EventdtlsBySo].[Orders] AS [Orders], 
+      [armsII_vw_EventdtlsBySo].[SummaryLackingItems] AS [SummaryLackingItems], 
+      [armsII_vw_EventdtlsBySo].[MobileNo] AS [MobileNo], 
+      [armsII_vw_EventdtlsBySo].[Recommendation] AS [Recommendation], 
+      [armsII_vw_EventdtlsBySo].[TimeTable] AS [TimeTable], 
+      [armsII_vw_EventdtlsBySo].[Remarks] AS [Remarks], 
+      [armsII_vw_EventdtlsBySo].[cFullCollection] AS [cFullCollection], 
+      [armsII_vw_EventdtlsBySo].[cPartialCollection] AS [cPartialCollection], 
+      [armsII_vw_EventdtlsBySo].[cNoCollection] AS [cNoCollection], 
+      [armsII_vw_EventdtlsBySo].[Brand] AS [Brand], 
+      [armsII_vw_EventdtlsBySo].[Amount] AS [Amount], 
+      [armsII_vw_EventdtlsBySo].[CounterClerk] AS [CounterClerk]
+      FROM [dbo].[armsII_vw_EventdtlsBySo] AS [armsII_vw_EventdtlsBySo]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="armsII_vw_itemMasterFile" EntityType="ARMSTestModel.Store.armsII_vw_itemMasterFile" store:Type="Views" store:Schema="dbo" store:Name="armsII_vw_itemMasterFile">
+      <DefiningQuery>SELECT 
+      [armsII_vw_itemMasterFile].[U_PL_ITEMCODE] AS [U_PL_ITEMCODE], 
+      [armsII_vw_itemMasterFile].[ITEMCODE] AS [ITEMCODE], 
+      [armsII_vw_itemMasterFile].[Brand] AS [Brand], 
+      [armsII_vw_itemMasterFile].[ProdGrp] AS [ProdGrp], 
+      [armsII_vw_itemMasterFile].[ItemDescription] AS [ItemDescription], 
+      [armsII_vw_itemMasterFile].[SRP] AS [SRP], 
+      [armsII_vw_itemMasterFile].[U_PL_UOM] AS [U_PL_UOM], 
+      [armsII_vw_itemMasterFile].[LookUpItem] AS [LookUpItem], 
+      [armsII_vw_itemMasterFile].[U_GThickness] AS [U_GThickness], 
+      [armsII_vw_itemMasterFile].[U_GWidth] AS [U_GWidth], 
+      [armsII_vw_itemMasterFile].[U_GLength] AS [U_GLength], 
+      [armsII_vw_itemMasterFile].[U_GMultiplier] AS [U_GMultiplier], 
+      [armsII_vw_itemMasterFile].[U_ItemClass] AS [U_ItemClass], 
+      [armsII_vw_itemMasterFile].[U_PL_NAME] AS [U_PL_NAME]
+      FROM [dbo].[armsII_vw_itemMasterFile] AS [armsII_vw_itemMasterFile]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="armsII_vw_itemMasterFile_srp" EntityType="ARMSTestModel.Store.armsII_vw_itemMasterFile_srp" store:Type="Views" store:Schema="dbo" store:Name="armsII_vw_itemMasterFile_srp">
+      <DefiningQuery>SELECT 
+      [armsII_vw_itemMasterFile_srp].[U_PL_ITEMCODE] AS [U_PL_ITEMCODE], 
+      [armsII_vw_itemMasterFile_srp].[ITEMCODE] AS [ITEMCODE], 
+      [armsII_vw_itemMasterFile_srp].[Brand] AS [Brand], 
+      [armsII_vw_itemMasterFile_srp].[ProdGrp] AS [ProdGrp], 
+      [armsII_vw_itemMasterFile_srp].[ItemDescription] AS [ItemDescription], 
+      [armsII_vw_itemMasterFile_srp].[SRP] AS [SRP], 
+      [armsII_vw_itemMasterFile_srp].[U_PL_UOM] AS [U_PL_UOM], 
+      [armsII_vw_itemMasterFile_srp].[LookUpItem] AS [LookUpItem]
+      FROM [dbo].[armsII_vw_itemMasterFile_srp] AS [armsII_vw_itemMasterFile_srp]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="MTC_vw_empListHRIS" EntityType="ARMSTestModel.Store.MTC_vw_empListHRIS" store:Type="Views" store:Schema="dbo" store:Name="MTC_vw_empListHRIS">
+      <DefiningQuery>SELECT 
+      [MTC_vw_empListHRIS].[in_emp_id] AS [in_emp_id], 
+      [MTC_vw_empListHRIS].[lastName] AS [lastName], 
+      [MTC_vw_empListHRIS].[firstName] AS [firstName], 
+      [MTC_vw_empListHRIS].[emailadd] AS [emailadd]
+      FROM [dbo].[MTC_vw_empListHRIS] AS [MTC_vw_empListHRIS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="mtc_vw_inventoryCountlist" EntityType="ARMSTestModel.Store.mtc_vw_inventoryCountlist" store:Type="Views" store:Schema="dbo" store:Name="mtc_vw_inventoryCountlist">
+      <DefiningQuery>SELECT 
+      [mtc_vw_inventoryCountlist].[inventoryCountId] AS [inventoryCountId], 
+      [mtc_vw_inventoryCountlist].[empId] AS [empId], 
+      [mtc_vw_inventoryCountlist].[firstName] AS [firstName], 
+      [mtc_vw_inventoryCountlist].[lastName] AS [lastName], 
+      [mtc_vw_inventoryCountlist].[acctCode] AS [acctCode], 
+      [mtc_vw_inventoryCountlist].[Name] AS [Name], 
+      [mtc_vw_inventoryCountlist].[location] AS [location], 
+      [mtc_vw_inventoryCountlist].[roleid] AS [roleid], 
+      [mtc_vw_inventoryCountlist].[stateDesc] AS [stateDesc], 
+      [mtc_vw_inventoryCountlist].[actualCountDate] AS [actualCountDate], 
+      [mtc_vw_inventoryCountlist].[inventoryCountStatus] AS [inventoryCountStatus], 
+      [mtc_vw_inventoryCountlist].[DocumentStatusId] AS [DocumentStatusId], 
+      [mtc_vw_inventoryCountlist].[audited] AS [audited]
+      FROM [dbo].[mtc_vw_inventoryCountlist] AS [mtc_vw_inventoryCountlist]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="mtc_vw_so_salesmonitoringdtl" EntityType="ARMSTestModel.Store.mtc_vw_so_salesmonitoringdtl" store:Type="Views" store:Schema="dbo" store:Name="mtc_vw_so_salesmonitoringdtl">
+      <DefiningQuery>SELECT 
+      [mtc_vw_so_salesmonitoringdtl].[empIdNo] AS [empIdNo], 
+      [mtc_vw_so_salesmonitoringdtl].[SOCode] AS [SOCode], 
+      [mtc_vw_so_salesmonitoringdtl].[Sales_Officer] AS [Sales_Officer], 
+      [mtc_vw_so_salesmonitoringdtl].[GrossAmt] AS [GrossAmt], 
+      [mtc_vw_so_salesmonitoringdtl].[CMAmt] AS [CMAmt], 
+      [mtc_vw_so_salesmonitoringdtl].[UNPOSTEDAmt] AS [UNPOSTEDAmt], 
+      [mtc_vw_so_salesmonitoringdtl].[PostedAmt] AS [PostedAmt], 
+      [mtc_vw_so_salesmonitoringdtl].[Pending_Order] AS [Pending_Order], 
+      [mtc_vw_so_salesmonitoringdtl].[BOAmt] AS [BOAmt], 
+      [mtc_vw_so_salesmonitoringdtl].[NetPosted] AS [NetPosted], 
+      [mtc_vw_so_salesmonitoringdtl].[NoTransactingAccounts] AS [NoTransactingAccounts], 
+      [mtc_vw_so_salesmonitoringdtl].[DateAsOf] AS [DateAsOf]
+      FROM [dbo].[mtc_vw_so_salesmonitoringdtl] AS [mtc_vw_so_salesmonitoringdtl]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="mtc_vw_uploadsalesreport" EntityType="ARMSTestModel.Store.mtc_vw_uploadsalesreport" store:Type="Views" store:Schema="dbo" store:Name="mtc_vw_uploadsalesreport">
+      <DefiningQuery>SELECT 
+      [mtc_vw_uploadsalesreport].[counterid] AS [counterid], 
+      [mtc_vw_uploadsalesreport].[empidno] AS [empidno], 
+      [mtc_vw_uploadsalesreport].[slpcode] AS [slpcode], 
+      [mtc_vw_uploadsalesreport].[salesofficer] AS [salesofficer], 
+      [mtc_vw_uploadsalesreport].[uploaddatetime] AS [uploaddatetime], 
+      [mtc_vw_uploadsalesreport].[POSTED] AS [POSTED], 
+      [mtc_vw_uploadsalesreport].[CM] AS [CM], 
+      [mtc_vw_uploadsalesreport].[NET_POSTED] AS [NET_POSTED], 
+      [mtc_vw_uploadsalesreport].[UNPOSTED] AS [UNPOSTED], 
+      [mtc_vw_uploadsalesreport].[PICKLIST] AS [PICKLIST], 
+      [mtc_vw_uploadsalesreport].[SUBTOTAL] AS [SUBTOTAL], 
+      [mtc_vw_uploadsalesreport].[PENDING] AS [PENDING], 
+      [mtc_vw_uploadsalesreport].[BALANCE_ORDER] AS [BALANCE_ORDER], 
+      [mtc_vw_uploadsalesreport].[GROSS] AS [GROSS], 
+      [mtc_vw_uploadsalesreport].[NoOfTransactingAccts] AS [NoOfTransactingAccts]
+      FROM [dbo].[mtc_vw_uploadsalesreport] AS [mtc_vw_uploadsalesreport]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="mtc_vw_User_Role_Details" EntityType="ARMSTestModel.Store.mtc_vw_User_Role_Details" store:Type="Views" store:Schema="dbo" store:Name="mtc_vw_User_Role_Details">
+      <DefiningQuery>SELECT 
+      [mtc_vw_User_Role_Details].[empIDNo] AS [empIDNo], 
+      [mtc_vw_User_Role_Details].[lastName] AS [lastName], 
+      [mtc_vw_User_Role_Details].[firstName] AS [firstName], 
+      [mtc_vw_User_Role_Details].[userName] AS [userName], 
+      [mtc_vw_User_Role_Details].[userPass] AS [userPass], 
+      [mtc_vw_User_Role_Details].[position] AS [position], 
+      [mtc_vw_User_Role_Details].[branch] AS [branch], 
+      [mtc_vw_User_Role_Details].[channel] AS [channel], 
+      [mtc_vw_User_Role_Details].[area] AS [area], 
+      [mtc_vw_User_Role_Details].[brand] AS [brand], 
+      [mtc_vw_User_Role_Details].[roleCode] AS [roleCode], 
+      [mtc_vw_User_Role_Details].[roleName] AS [roleName]
+      FROM [dbo].[mtc_vw_User_Role_Details] AS [mtc_vw_User_Role_Details]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="apprvrRole_approvalState" Association="ARMSTestModel.Store.apprvrRole_approvalState">
+      <End Role="apprvrRole" EntitySet="apprvrRole" />
+      <End Role="approvalState" EntitySet="approvalState" />
+    </AssociationSet>
+    <AssociationSet Name="apprvrRole_apprvrDesig" Association="ARMSTestModel.Store.apprvrRole_apprvrDesig">
+      <End Role="apprvrRole" EntitySet="apprvrRole" />
+      <End Role="apprvrDesig" EntitySet="apprvrDesig" />
+    </AssociationSet>
+    <AssociationSet Name="CoverageDtls_CoverageDtl1" Association="ARMSTestModel.Store.CoverageDtls_CoverageDtl1">
+      <End Role="CoverageDtls" EntitySet="CoverageDtls" />
+      <End Role="CoverageDtl1" EntitySet="CoverageDtl1" />
+    </AssociationSet>
+    <AssociationSet Name="CoverageDtls_VisitLogs" Association="ARMSTestModel.Store.CoverageDtls_VisitLogs">
+      <End Role="CoverageDtls" EntitySet="CoverageDtls" />
+      <End Role="VisitLogs" EntitySet="VisitLogs" />
+    </AssociationSet>
+    <AssociationSet Name="CoverageHdr_CoverageDtl1" Association="ARMSTestModel.Store.CoverageHdr_CoverageDtl1">
+      <End Role="CoverageHdr" EntitySet="CoverageHdr" />
+      <End Role="CoverageDtl1" EntitySet="CoverageDtl1" />
+    </AssociationSet>
+    <AssociationSet Name="CoverageHdr_VisitLogs" Association="ARMSTestModel.Store.CoverageHdr_VisitLogs">
+      <End Role="CoverageHdr" EntitySet="CoverageHdr" />
+      <End Role="VisitLogs" EntitySet="VisitLogs" />
+    </AssociationSet>
+    <AssociationSet Name="customerHeader_custAttachment" Association="ARMSTestModel.Store.customerHeader_custAttachment">
+      <End Role="customerHeader" EntitySet="customerHeader" />
+      <End Role="custAttachment" EntitySet="custAttachment" />
+    </AssociationSet>
+    <AssociationSet Name="customerHeader_empInventory" Association="ARMSTestModel.Store.customerHeader_empInventory">
+      <End Role="customerHeader" EntitySet="customerHeader" />
+      <End Role="empInventory" EntitySet="empInventory" />
+    </AssociationSet>
+    <AssociationSet Name="documentTypes_approvalState" Association="ARMSTestModel.Store.documentTypes_approvalState">
+      <End Role="documentTypes" EntitySet="documentTypes" />
+      <End Role="approvalState" EntitySet="approvalState" />
+    </AssociationSet>
+    <AssociationSet Name="InventoryCountAuditHdr_InventoryCountAuditDtl" Association="ARMSTestModel.Store.InventoryCountAuditHdr_InventoryCountAuditDtl">
+      <End Role="InventoryCountAuditHdr" EntitySet="InventoryCountAuditHdr" />
+      <End Role="InventoryCountAuditDtl" EntitySet="InventoryCountAuditDtl" />
+    </AssociationSet>
+    <AssociationSet Name="InventoryCountHdr_InventoryCountAuditHdr" Association="ARMSTestModel.Store.InventoryCountHdr_InventoryCountAuditHdr">
+      <End Role="InventoryCountHdr" EntitySet="InventoryCountHdr" />
+      <End Role="InventoryCountAuditHdr" EntitySet="InventoryCountAuditHdr" />
+    </AssociationSet>
+    <AssociationSet Name="InventoryCountHdr_InventoryCountDtl" Association="ARMSTestModel.Store.InventoryCountHdr_InventoryCountDtl">
+      <End Role="InventoryCountHdr" EntitySet="InventoryCountHdr" />
+      <End Role="InventoryCountDtl" EntitySet="InventoryCountDtl" />
+    </AssociationSet>
+    <AssociationSet Name="inventoryCountStatusHdr_inventoryCountStatusDtl" Association="ARMSTestModel.Store.inventoryCountStatusHdr_inventoryCountStatusDtl">
+      <End Role="inventoryCountStatusHdr" EntitySet="inventoryCountStatusHdr" />
+      <End Role="inventoryCountStatusDtl" EntitySet="inventoryCountStatusDtl" />
+    </AssociationSet>
+    <AssociationSet Name="ObjectiveHdr_Objectives" Association="ARMSTestModel.Store.ObjectiveHdr_Objectives">
+      <End Role="ObjectiveHdr" EntitySet="ObjectiveHdr" />
+      <End Role="Objectives" EntitySet="Objectives" />
+    </AssociationSet>
+    <AssociationSet Name="userHeader_apprvrDesig" Association="ARMSTestModel.Store.userHeader_apprvrDesig">
+      <End Role="userHeader" EntitySet="userHeader" />
+      <End Role="apprvrDesig" EntitySet="apprvrDesig" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="approvalState">
+    <Key>
+      <PropertyRef Name="counterID" />
+      <PropertyRef Name="roleID" />
+      <PropertyRef Name="docType" />
+    </Key>
+    <Property Name="counterID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="roleID" Type="int" Nullable="false" />
+    <Property Name="docType" Type="int" Nullable="false" />
+    <Property Name="stateID" Type="int" Nullable="false" />
+    <Property Name="stateDesc" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="alternateStateID" Type="int" Nullable="false" />
+    <Property Name="isStart" Type="nvarchar" MaxLength="4" />
+    <Property Name="isFinal" Type="nvarchar" MaxLength="4" />
+    <Property Name="NextStatusId" Type="int" />
+    <Property Name="CancelStatusId" Type="int" />
+  </EntityType>
+  <EntityType Name="apprvrDesig">
+    <Key>
+      <PropertyRef Name="desigID" />
+      <PropertyRef Name="roleID" />
+    </Key>
+    <Property Name="desigID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="roleID" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="email" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="branch" Type="nvarchar" MaxLength="10" />
+    <Property Name="counterId" Type="int" />
+    <Property Name="brand" Type="nvarchar" MaxLength="20" />
+    <Property Name="channel" Type="nvarchar" MaxLength="50" />
+    <Property Name="area" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.apprvrdesig_bak' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="apprvrdesig_bak">
+    <Key>
+      <PropertyRef Name="desigID" />
+      <PropertyRef Name="roleID" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="desigID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="roleID" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="email" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="branch" Type="nvarchar" MaxLength="10" />
+    <Property Name="counterId" Type="int" />
+    <Property Name="brand" Type="nvarchar" MaxLength="20" />
+    <Property Name="channel" Type="nvarchar" MaxLength="50" />
+    <Property Name="area" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="apprvrRole">
+    <Key>
+      <PropertyRef Name="roleID" />
+    </Key>
+    <Property Name="roleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="roleName" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="roleCode" Type="varchar" MaxLength="10" />
+    <Property Name="TAG" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.ChannelGroup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ChannelGroup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="area" Type="varchar" MaxLength="40" />
+    <Property Name="channel" Type="varchar" MaxLength="40" />
+    <Property Name="grp_name" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.CollectionPendingAccounts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CollectionPendingAccounts">
+    <Key>
+      <PropertyRef Name="transid" />
+    </Key>
+    <Property Name="transid" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="docnum" Type="nvarchar" MaxLength="40" />
+    <Property Name="cardcode" Type="nvarchar" MaxLength="30" />
+    <Property Name="actdeldate" Type="datetime" />
+    <Property Name="duedate" Type="datetime" />
+    <Property Name="balance" Type="decimal" Scale="6" />
+  </EntityType>
+  <EntityType Name="CoverageDataChanges">
+    <Key>
+      <PropertyRef Name="CoverageDataChangesId" />
+    </Key>
+    <Property Name="CoverageDataChangesId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DocTypeId" Type="int" Nullable="false" />
+    <Property Name="DataChanges" Type="varchar(max)" />
+    <Property Name="DocId" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="CoverageDtl1">
+    <Key>
+      <PropertyRef Name="CounterId" />
+    </Key>
+    <Property Name="CounterId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EventID" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="LineNum" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Day" Type="int" Nullable="false" />
+    <Property Name="ObjectiveCode" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="40" />
+    <Property Name="PlannedAmount" Type="decimal" Scale="6" />
+    <Property Name="ActualAmount" Type="decimal" Scale="6" />
+    <Property Name="CounterClerk" Type="nvarchar" MaxLength="40" />
+    <Property Name="ProductPresented" Type="varchar(max)" />
+    <Property Name="isIncoverage" Type="nvarchar" MaxLength="10" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="300" />
+    <Property Name="CounterClerkNo" Type="nvarchar" MaxLength="40" />
+    <Property Name="IsDeleted" Type="nvarchar" MaxLength="10" />
+    <Property Name="detailRemarks" Type="nvarchar(max)" />
+    <Property Name="inventoryCountId" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CoverageDtls">
+    <Key>
+      <PropertyRef Name="LineNum" />
+    </Key>
+    <Property Name="EventID" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="LineNum" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Day" Type="int" Nullable="false" />
+    <Property Name="AccountCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="ContactPerson" Type="nvarchar" MaxLength="120" />
+    <Property Name="ContactPersonNo" Type="nvarchar" MaxLength="40" />
+    <Property Name="StoreChecking" Type="nvarchar" MaxLength="250" />
+    <Property Name="StoreCheckingResult" Type="nvarchar" MaxLength="250" />
+    <Property Name="ProductPresentationResult" Type="nvarchar" MaxLength="120" />
+    <Property Name="TotalAmount" Type="decimal" Scale="6" />
+    <Property Name="CompetitorActivities" Type="nvarchar" MaxLength="250" />
+    <Property Name="WithOrder" Type="nvarchar" MaxLength="1" />
+    <Property Name="NextCallDate" Type="datetime" />
+    <Property Name="PONum" Type="nvarchar" MaxLength="20" />
+    <Property Name="IssuesAndConcerns" Type="nvarchar" MaxLength="250" />
+    <Property Name="Delivery" Type="nvarchar" MaxLength="10" />
+    <Property Name="Orders" Type="nvarchar" MaxLength="10" />
+    <Property Name="SummaryLackingItems" Type="nvarchar" MaxLength="200" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Recommendation" Type="nvarchar(max)" />
+    <Property Name="TimeTable" Type="nvarchar" MaxLength="200" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="250" />
+    <Property Name="cFullCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="cPartialCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="cNoCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="OtherInformation" Type="nvarchar(max)" />
+    <Property Name="isPlanned" Type="nvarchar" MaxLength="20" />
+    <Property Name="Tmein" Type="datetime" />
+    <Property Name="Tmeout" Type="datetime" />
+    <Property Name="Numvisit" Type="int" />
+    <Property Name="HotelName" Type="nvarchar" MaxLength="60" />
+    <Property Name="HotelContactNumber" Type="nvarchar" MaxLength="40" />
+    <Property Name="IsDeleted" Type="nvarchar" MaxLength="10" />
+    <Property Name="AcctStatus" Type="int" />
+    <Property Name="IsAnEdit" Type="nvarchar" MaxLength="4" />
+    <Property Name="RmrkChanges" Type="nvarchar(max)" />
+    <Property Name="FileAttachment" Type="nvarchar(max)" />
+    <Property Name="hasCallreport" Type="nvarchar" MaxLength="2" />
+    <Property Name="AttachmentContent" Type="image" />
+    <Property Name="AttachmentType" Type="nvarchar(max)" />
+    <Property Name="CheckInAddress" Type="nvarchar" MaxLength="300" />
+    <Property Name="CheckInTime" Type="datetime" />
+    <Property Name="CheckOutAddress" Type="nvarchar" MaxLength="300" />
+    <Property Name="CheckOutTime" Type="datetime" />
+    <Property Name="LatitudeInAddress" Type="nvarchar" MaxLength="40" />
+    <Property Name="LongitudeOutAddress" Type="nvarchar" MaxLength="40" />
+    <Property Name="LatitudeOutAddress" Type="nvarchar" MaxLength="40" />
+    <Property Name="LongitudeInAddress" Type="nvarchar" MaxLength="40" />
+    <Property Name="ColPostDatedCheck" Type="decimal" Scale="6" />
+    <Property Name="ColDatedCheck" Type="decimal" Scale="6" />
+    <Property Name="ColTotal" Type="decimal" Scale="6" />
+    <Property Name="ColRemarks" Type="nvarchar" MaxLength="300" />
+    <Property Name="DateEncoded" Type="datetime" />
+    <Property Name="DateDeleted" Type="datetime" />
+    <Property Name="isUrgent" Type="nvarchar" MaxLength="1" />
+    <Property Name="FileAttachment2" Type="nvarchar(max)" />
+    <Property Name="AttachmentContent2" Type="image" />
+    <Property Name="AttachmentType2" Type="nvarchar(max)" />
+    <Property Name="FileAttachment3" Type="nvarchar(max)" />
+    <Property Name="AttachmentContent3" Type="image" />
+    <Property Name="AttachmentType3" Type="nvarchar(max)" />
+    <Property Name="FileAttachment4" Type="nvarchar(max)" />
+    <Property Name="AttachmentContent4" Type="image" />
+    <Property Name="AttachmentType4" Type="nvarchar(max)" />
+    <Property Name="hasPOUpload" Type="nvarchar" MaxLength="10" />
+    <Property Name="CashOrCredit" Type="decimal" />
+  </EntityType>
+  <EntityType Name="CoverageHdr">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EventID" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="EmpIdNo" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Month" Type="nvarchar" MaxLength="50" />
+    <Property Name="DoctypeId" Type="int" />
+    <Property Name="DocumentStatusId" Type="int" />
+  </EntityType>
+  <EntityType Name="CoverageLogChanges">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DocTypeId" Type="bigint" />
+    <Property Name="DocId" Type="varchar" MaxLength="40" />
+    <Property Name="TimeStmp" Type="datetime" />
+    <Property Name="UserName" Type="varchar" MaxLength="40" />
+    <Property Name="Data" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="custAttachment">
+    <Key>
+      <PropertyRef Name="attachID" />
+      <PropertyRef Name="ccaNum" />
+    </Key>
+    <Property Name="attachID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ccaNum" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="attachType" Type="nvarchar" MaxLength="40" />
+    <Property Name="AttachPath" Type="nvarchar" MaxLength="200" />
+    <Property Name="acctCode" Type="nvarchar" Nullable="false" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="customerAccStatus">
+    <Key>
+      <PropertyRef Name="ccaNum" />
+    </Key>
+    <Property Name="ccaNum" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Status" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="customerHeader">
+    <Key>
+      <PropertyRef Name="ccaNum" />
+    </Key>
+    <Property Name="ccaNum" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="acctCode" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="status" Type="nchar" MaxLength="20" />
+    <Property Name="acctType" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="acctClassfxn" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="keyAcct" Type="bit" Nullable="false" />
+    <Property Name="acctName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="acctClass" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="acctOffcr" Type="nvarchar" Nullable="false" MaxLength="80" />
+    <Property Name="territory" Type="nvarchar" Nullable="false" MaxLength="80" />
+    <Property Name="area" Type="nvarchar" MaxLength="80" />
+    <Property Name="region" Type="nvarchar" MaxLength="80" />
+    <Property Name="emailAdd" Type="nvarchar" MaxLength="80" />
+    <Property Name="telNum" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="faxNum" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="offceHrs" Type="nvarchar" MaxLength="40" />
+    <Property Name="storeHrs" Type="char" MaxLength="40" />
+    <Property Name="yrsInBusiness" Type="int" />
+    <Property Name="yrsWdMTC" Type="int" />
+    <Property Name="TIN" Type="nvarchar" MaxLength="60" />
+    <Property Name="VATregNum" Type="nvarchar" MaxLength="15" />
+    <Property Name="regBusName" Type="nvarchar" MaxLength="100" />
+    <Property Name="bussAdd" Type="nvarchar" MaxLength="200" />
+    <Property Name="delAdd" Type="nvarchar" MaxLength="200" />
+    <Property Name="TotalNumOfEmp" Type="int" />
+    <Property Name="SapAcctCode" Type="varchar" MaxLength="40" />
+    <Property Name="EncodedBy" Type="varchar" MaxLength="40" />
+    <Property Name="Canceled" Type="varchar" MaxLength="1" />
+    <Property Name="DocType" Type="bigint" />
+    <Property Name="Approved" Type="varchar" MaxLength="1" />
+    <Property Name="Status2" Type="varchar" MaxLength="5" />
+    <Property Name="SkipRoles1" Type="varchar" MaxLength="1" />
+    <Property Name="SkipASM" Type="varchar" MaxLength="1" />
+    <Property Name="SkipCHM" Type="varchar" MaxLength="1" />
+    <Property Name="acctCategoryVal" Type="varchar" MaxLength="40" />
+    <Property Name="acctBusinessClass" Type="varchar" MaxLength="40" />
+    <Property Name="acctCategoryPrem" Type="varchar" MaxLength="40" />
+    <Property Name="telNum2" Type="nvarchar" MaxLength="100" />
+    <Property Name="MobileNum" Type="nvarchar" MaxLength="100" />
+    <Property Name="TAG1" Type="varchar" MaxLength="50" />
+    <Property Name="Pareto" Type="nvarchar" MaxLength="1" />
+    <Property Name="TypeOfAccount" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="custOutletIncharge">
+    <Key>
+      <PropertyRef Name="acctCode" />
+      <PropertyRef Name="whsInchargeID" />
+    </Key>
+    <Property Name="acctCode" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="whsInchargeID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="whsInchargeFirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="whsInchargeMiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="whsInchargeLastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="whsInchargeContactNo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="custOutlets">
+    <Key>
+      <PropertyRef Name="custOutletsID" />
+      <PropertyRef Name="busTermsID" />
+      <PropertyRef Name="ccaNum" />
+    </Key>
+    <Property Name="custOutletsID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="busTermsID" Type="bigint" Nullable="false" />
+    <Property Name="ccaNum" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" />
+    <Property Name="location" Type="nvarchar" MaxLength="100" />
+    <Property Name="storeSize" Type="nvarchar" MaxLength="40" />
+    <Property Name="wreHouseSize" Type="nvarchar" MaxLength="40" />
+    <Property Name="inventoryIncharge" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="dayCycle">
+    <Key>
+      <PropertyRef Name="DayCycleNo" />
+    </Key>
+    <Property Name="DocTypeId" Type="int" />
+    <Property Name="DayCycleNo" Type="int" Nullable="false" />
+    <Property Name="rangeDayCycle" Type="int" />
+    <Property Name="startDayOfTheMonth" Type="int" />
+  </EntityType>
+  <EntityType Name="documentTypes">
+    <Key>
+      <PropertyRef Name="docType" />
+    </Key>
+    <Property Name="docType" Type="int" Nullable="false" />
+    <Property Name="docDescription" Type="nvarchar" Nullable="false" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="empInventory">
+    <Key>
+      <PropertyRef Name="InvID" />
+      <PropertyRef Name="ccaNum" />
+    </Key>
+    <Property Name="InvID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ccaNum" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="position" Type="nvarchar" MaxLength="40" />
+    <Property Name="numOfEmp" Type="int" />
+    <Property Name="acctCode" Type="nvarchar" Nullable="false" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.EventDtl1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="EventDtl1">
+    <Key>
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="Day" />
+      <PropertyRef Name="AccountCode" />
+      <PropertyRef Name="ObjectiveCode" />
+    </Key>
+    <Property Name="EventID" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="LineNum" Type="nvarchar" MaxLength="40" />
+    <Property Name="Day" Type="int" Nullable="false" />
+    <Property Name="AccountCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="ObjectiveCode" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="40" />
+    <Property Name="Amount" Type="decimal" Scale="6" />
+    <Property Name="CounterClerk" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="EventDtls">
+    <Key>
+      <PropertyRef Name="LineNum" />
+    </Key>
+    <Property Name="EventID" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="LineNum" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Day" Type="int" Nullable="false" />
+    <Property Name="AccountCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccountAddress" Type="nvarchar" MaxLength="120" />
+    <Property Name="AccountClass" Type="nvarchar" MaxLength="40" />
+    <Property Name="ContactPerson" Type="nvarchar" MaxLength="40" />
+    <Property Name="ContactPersonNo" Type="nvarchar" MaxLength="40" />
+    <Property Name="ObjectiveCode" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="StoreCheckingResult" Type="nvarchar" MaxLength="120" />
+    <Property Name="ProductPresentationResult" Type="nvarchar" MaxLength="120" />
+    <Property Name="TotalAmount" Type="decimal" Scale="6" />
+    <Property Name="CompetitorActivities" Type="nvarchar" MaxLength="150" />
+    <Property Name="WithOrder" Type="nvarchar" MaxLength="1" />
+    <Property Name="NextCallDate" Type="datetime" />
+    <Property Name="PONum" Type="nvarchar" MaxLength="20" />
+    <Property Name="IssuesAndConcerns" Type="nvarchar" MaxLength="120" />
+    <Property Name="Delivery" Type="nvarchar" MaxLength="10" />
+    <Property Name="Orders" Type="nvarchar" MaxLength="10" />
+    <Property Name="SummaryLackingItems" Type="nvarchar" MaxLength="120" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Recommendation" Type="nvarchar" MaxLength="150" />
+    <Property Name="TimeTable" Type="nvarchar" MaxLength="150" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="150" />
+    <Property Name="cFullCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="cPartialCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="cNoCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="OtherInformation" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="EventHdr">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EventID" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="EmpIdNo" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Month" Type="nvarchar" MaxLength="50" />
+    <Property Name="DoctypeId" Type="int" />
+    <Property Name="DocumentStatusId" Type="int" />
+  </EntityType>
+  <EntityType Name="InventoryCountAuditDtl">
+    <Key>
+      <PropertyRef Name="inventoryCountAuditId" />
+      <PropertyRef Name="itemCode" />
+    </Key>
+    <Property Name="inventoryCountAuditId" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="lineId" Type="int" />
+    <Property Name="itemCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="actualCount" Type="int" />
+    <Property Name="remarks" Type="nvarchar" MaxLength="120" />
+  </EntityType>
+  <EntityType Name="InventoryCountAuditHdr">
+    <Key>
+      <PropertyRef Name="inventoryCountAuditId" />
+    </Key>
+    <Property Name="inventoryCountAuditId" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="referenceInventoryCountId" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="remarks" Type="nvarchar" MaxLength="120" />
+    <Property Name="auditedBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="InventoryCountDtl">
+    <Key>
+      <PropertyRef Name="inventoryCountId" />
+      <PropertyRef Name="itemCode" />
+    </Key>
+    <Property Name="inventoryCountId" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="lineId" Type="int" />
+    <Property Name="itemCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ssr" Type="nvarchar" MaxLength="10" />
+    <Property Name="begNvPcs" Type="int" />
+    <Property Name="endNvPcs" Type="int" />
+    <Property Name="actualSellOutPcs" Type="int" />
+    <Property Name="actualSellOutAmt" Type="decimal" Scale="6" />
+    <Property Name="remarks" Type="nvarchar" MaxLength="120" />
+    <Property Name="variancePcs" Type="int" />
+    <Property Name="varianceAmt" Type="decimal" Scale="6" />
+    <Property Name="netSellIn" Type="int" />
+    <Property Name="salesForecastPcs0" Type="int" />
+    <Property Name="salesForecastAmt0" Type="decimal" Scale="6" />
+    <Property Name="salesForecastPcs1" Type="int" />
+    <Property Name="salesForecastAmt1" Type="decimal" Scale="6" />
+    <Property Name="salesForecastPcs2" Type="int" />
+    <Property Name="salesForecastAmt2" Type="decimal" Scale="6" />
+    <Property Name="salesForecastPcs3" Type="int" />
+    <Property Name="salesForecastAmt3" Type="decimal" Scale="6" />
+    <Property Name="netSellinOnHand" Type="int" />
+  </EntityType>
+  <EntityType Name="InventoryCountHdr">
+    <Key>
+      <PropertyRef Name="inventoryCountId" />
+    </Key>
+    <Property Name="inventoryCountId" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="docTypeId" Type="int" />
+    <Property Name="empId" Type="nvarchar" MaxLength="50" />
+    <Property Name="acctCode" Type="nvarchar" MaxLength="40" />
+    <Property Name="whsInchargeID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="prevCountDate" Type="datetime" />
+    <Property Name="nextCountDate" Type="datetime" />
+    <Property Name="countRange" Type="int" />
+    <Property Name="totalAmount" Type="decimal" Scale="6" />
+    <Property Name="remarks" Type="nvarchar" MaxLength="120" />
+    <Property Name="DocumentStatusId" Type="int" />
+    <Property Name="Audited" Type="nvarchar" MaxLength="1" />
+    <Property Name="inventoryCountStatus" Type="nvarchar" MaxLength="20" />
+    <Property Name="dateTimeStamp" Type="datetime" />
+    <Property Name="actualCountDate" Type="datetime" />
+    <Property Name="actualCountEndValidDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.inventoryCountStatusDtl' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="inventoryCountStatusDtl">
+    <Key>
+      <PropertyRef Name="in_statusId" />
+      <PropertyRef Name="custOutletsID" />
+      <PropertyRef Name="ch_empIDNo" />
+    </Key>
+    <Property Name="in_statusId" Type="bigint" Nullable="false" />
+    <Property Name="custOutletsID" Type="bigint" Nullable="false" />
+    <Property Name="ch_empIDNo" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="ch_status" Type="nvarchar" MaxLength="20" />
+    <Property Name="inventoryCountId" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="inventoryCountStatusHdr">
+    <Key>
+      <PropertyRef Name="in_statusId" />
+    </Key>
+    <Property Name="in_statusId" Type="bigint" Nullable="false" />
+    <Property Name="monthyear" Type="datetime" />
+  </EntityType>
+  <EntityType Name="InventoryProducts">
+    <Key>
+      <PropertyRef Name="ItemCode" />
+    </Key>
+    <Property Name="ItemCode" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="ItemDescription" Type="nvarchar" MaxLength="120" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="20" />
+    <Property Name="ProdGrp" Type="nvarchar" MaxLength="40" />
+    <Property Name="amount" Type="decimal" Scale="6" />
+  </EntityType>
+  <EntityType Name="LogChanges">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DocTypeId" Type="bigint" />
+    <Property Name="DocId" Type="varchar" MaxLength="40" />
+    <Property Name="TimeStmp" Type="datetime" />
+    <Property Name="UserName" Type="varchar" MaxLength="40" />
+    <Property Name="Data" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="majorCustomer">
+    <Key>
+      <PropertyRef Name="mjrCustID" />
+      <PropertyRef Name="busTermsID" />
+      <PropertyRef Name="ccaNum" />
+    </Key>
+    <Property Name="mjrCustID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="busTermsID" Type="bigint" Nullable="false" />
+    <Property Name="ccaNum" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" />
+    <Property Name="address" Type="nvarchar" MaxLength="100" />
+    <Property Name="sellingTerms" Type="nvarchar" MaxLength="40" />
+    <Property Name="estMonthPur" Type="decimal" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="nextInventoryCountDtl">
+    <Key>
+      <PropertyRef Name="lineId" />
+      <PropertyRef Name="itemCode" />
+    </Key>
+    <Property Name="lineId" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="itemCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="begNvPcs" Type="int" />
+    <Property Name="salesForecastPcs0" Type="int" />
+    <Property Name="salesForecastAmt0" Type="decimal" Scale="6" />
+    <Property Name="salesForecastPcs1" Type="int" />
+    <Property Name="salesForecastAmt1" Type="decimal" Scale="6" />
+    <Property Name="salesForecastPcs2" Type="int" />
+    <Property Name="salesForecastAmt2" Type="decimal" Scale="6" />
+    <Property Name="ssr" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="nextInventoryCountHdr">
+    <Key>
+      <PropertyRef Name="lineId" />
+      <PropertyRef Name="acctCode" />
+    </Key>
+    <Property Name="lineId" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="acctCode" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="prevCountDate" Type="datetime" />
+    <Property Name="startCountDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ObjectiveHdr">
+    <Key>
+      <PropertyRef Name="objectiveCode" />
+    </Key>
+    <Property Name="objectiveCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="objectiveDesc" Type="nvarchar" MaxLength="100" />
+    <Property Name="docTypeId" Type="int" />
+  </EntityType>
+  <EntityType Name="Objectives">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="objectiveCode" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="objectiveCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="FieldName" Type="nvarchar" MaxLength="50" />
+    <Property Name="isUsed" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="RouteChanges">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DocTypeId" Type="bigint" />
+    <Property Name="ActionType" Type="varchar" MaxLength="40" />
+    <Property Name="DocStatusId" Type="bigint" />
+    <Property Name="PrevDocStatusId" Type="bigint" />
+    <Property Name="UserName" Type="varchar" MaxLength="40" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="DocId" Type="varchar" MaxLength="40" />
+    <Property Name="RoleCode" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="RouteRmrks">
+    <Key>
+      <PropertyRef Name="CounterId" />
+    </Key>
+    <Property Name="CounterId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EventID" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="datelog" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SalesTarget">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Amount" Type="decimal" Scale="6" />
+    <Property Name="DocTypeId" Type="int" />
+  </EntityType>
+  <EntityType Name="SalesTargetMaintenance">
+    <Key>
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="Month" />
+      <PropertyRef Name="SlpCode" />
+    </Key>
+    <Property Name="DocTypeId" Type="int" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Month" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SlpCode" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Scale="6" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.SapItemsAvailableQty' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="SapItemsAvailableQty">
+    <Key>
+      <PropertyRef Name="ItemCode" />
+      <PropertyRef Name="whs" />
+      <PropertyRef Name="ProductGrp" />
+    </Key>
+    <Property Name="ItemCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="ItemName" Type="nvarchar" MaxLength="100" />
+    <Property Name="whs" Type="varchar" Nullable="false" MaxLength="6" />
+    <Property Name="qty" Type="numeric" Precision="38" Scale="6" />
+    <Property Name="U_Brand" Type="nvarchar(max)" />
+    <Property Name="ProductGrp" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="DateAsOf" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TempUploadCoveragePlan">
+    <Key>
+      <PropertyRef Name="counter_id" />
+    </Key>
+    <Property Name="counter_id" Type="bigint" Nullable="false" />
+    <Property Name="DataChanges" Type="varchar(max)" />
+    <Property Name="uploadingType" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="UploadedPricelist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FileAttachment" Type="nvarchar" MaxLength="30" />
+    <Property Name="FileContent" Type="image" />
+    <Property Name="AttachmentType" Type="nvarchar(max)" />
+    <Property Name="DateTimeStamp" Type="datetime" />
+    <Property Name="UploadedBy" Type="nvarchar" MaxLength="40" />
+    <Property Name="FileDescription" Type="nvarchar" MaxLength="260" />
+  </EntityType>
+  <EntityType Name="userHeader">
+    <Key>
+      <PropertyRef Name="counterId" />
+    </Key>
+    <Property Name="counterId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="empIdNo" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="lastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="firstName" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="position" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="emailAdd" Type="varchar" Nullable="false" MaxLength="80" />
+    <Property Name="status" Type="varchar" MaxLength="40" />
+    <Property Name="area" Type="varchar" MaxLength="40" />
+    <Property Name="territory" Type="varchar" MaxLength="40" />
+    <Property Name="region" Type="varchar" MaxLength="40" />
+    <Property Name="userName" Type="nvarchar" MaxLength="40" />
+    <Property Name="userPass" Type="nvarchar" MaxLength="40" />
+    <Property Name="positionId" Type="bigint" />
+    <Property Name="channel" Type="varchar" MaxLength="40" />
+    <Property Name="SlpCode" Type="int" />
+    <Property Name="LoginAttemp" Type="tinyint" />
+    <Property Name="ErrorAttemp" Type="tinyint" />
+    <Property Name="LastFilter1" Type="varchar" MaxLength="40" />
+    <Property Name="LastPasswordChange" Type="datetime" />
+  </EntityType>
+  <EntityType Name="VisitLogs">
+    <Key>
+      <PropertyRef Name="CounterId" />
+    </Key>
+    <Property Name="CounterId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EventID" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="LineNum" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="Address" Type="nvarchar" MaxLength="300" />
+    <Property Name="Longitude" Type="nvarchar" MaxLength="40" />
+    <Property Name="Latitude" Type="nvarchar" MaxLength="40" />
+    <Property Name="INOUT" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="isPlanned" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.app_vw_itemBrand' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="app_vw_itemBrand">
+    <Key>
+      <PropertyRef Name="TableID" />
+      <PropertyRef Name="FieldID" />
+      <PropertyRef Name="IndexID" />
+    </Key>
+    <Property Name="TableID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="FieldID" Type="smallint" Nullable="false" />
+    <Property Name="IndexID" Type="smallint" Nullable="false" />
+    <Property Name="FldValue" Type="nvarchar" MaxLength="254" />
+    <Property Name="Descr" Type="nvarchar" MaxLength="254" />
+    <Property Name="FldDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.app_vw_itemgroup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="app_vw_itemgroup">
+    <Key>
+      <PropertyRef Name="Code" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="8" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="U_CATEGORY" Type="nvarchar(max)" />
+    <Property Name="U_UOM" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arm2_view_Userview' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arm2_view_Userview">
+    <Key>
+      <PropertyRef Name="empIDNo" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="firstName" />
+      <PropertyRef Name="position" />
+      <PropertyRef Name="roleName" />
+    </Key>
+    <Property Name="empIDNo" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="lastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="firstName" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="position" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="branch" Type="nvarchar" MaxLength="10" />
+    <Property Name="channel" Type="nvarchar" MaxLength="50" />
+    <Property Name="area" Type="nvarchar" MaxLength="50" />
+    <Property Name="brand" Type="nvarchar" MaxLength="20" />
+    <Property Name="roleCode" Type="varchar" MaxLength="10" />
+    <Property Name="roleName" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="SlpCode" Type="int" />
+    <Property Name="U_area" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.Arms_vw_SOLookUps' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Arms_vw_SOLookUps">
+    <Key>
+      <PropertyRef Name="EmpidNo" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="position" />
+    </Key>
+    <Property Name="EmpidNo" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="91" />
+    <Property Name="position" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="area" Type="varchar" MaxLength="40" />
+    <Property Name="status" Type="varchar" MaxLength="40" />
+    <Property Name="territory" Type="varchar" MaxLength="40" />
+    <Property Name="region" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_AccountInCoverage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_AccountInCoverage">
+    <Key>
+      <PropertyRef Name="AccountCode" />
+      <PropertyRef Name="EmpIdNo" />
+      <PropertyRef Name="Day" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="LineNum" />
+    </Key>
+    <Property Name="AccountCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="EmpIdNo" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Month" Type="nvarchar" MaxLength="50" />
+    <Property Name="Day" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="EventID" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="DoctypeId" Type="int" />
+    <Property Name="DocumentStatusId" Type="int" />
+    <Property Name="LineNum" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="ContactPerson" Type="nvarchar" MaxLength="120" />
+    <Property Name="ContactPersonNo" Type="nvarchar" MaxLength="40" />
+    <Property Name="StoreChecking" Type="nvarchar" MaxLength="250" />
+    <Property Name="StoreCheckingResult" Type="nvarchar" MaxLength="250" />
+    <Property Name="ProductPresentationResult" Type="nvarchar" MaxLength="120" />
+    <Property Name="TotalAmount" Type="decimal" Scale="6" />
+    <Property Name="CompetitorActivities" Type="nvarchar" MaxLength="250" />
+    <Property Name="WithOrder" Type="nvarchar" MaxLength="1" />
+    <Property Name="NextCallDate" Type="datetime" />
+    <Property Name="PONum" Type="nvarchar" MaxLength="20" />
+    <Property Name="IssuesAndConcerns" Type="nvarchar" MaxLength="250" />
+    <Property Name="Delivery" Type="nvarchar" MaxLength="10" />
+    <Property Name="Orders" Type="nvarchar" MaxLength="10" />
+    <Property Name="SummaryLackingItems" Type="nvarchar" MaxLength="200" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Recommendation" Type="nvarchar" MaxLength="250" />
+    <Property Name="TimeTable" Type="nvarchar" MaxLength="200" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="250" />
+    <Property Name="cFullCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="cPartialCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="cNoCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="OtherInformation" Type="nvarchar(max)" />
+    <Property Name="acctName" Type="nvarchar" MaxLength="150" />
+    <Property Name="acctClassfxn" Type="nvarchar" MaxLength="20" />
+    <Property Name="bussAdd" Type="nvarchar" MaxLength="200" />
+    <Property Name="FileAttachment" Type="nvarchar" MaxLength="20" />
+    <Property Name="HotelName" Type="nvarchar" MaxLength="60" />
+    <Property Name="HotelContactNumber" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_ActivityLogs' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_ActivityLogs">
+    <Key>
+      <PropertyRef Name="field" />
+      <PropertyRef Name="activity" />
+      <PropertyRef Name="acctName" />
+    </Key>
+    <Property Name="empName" Type="varchar" MaxLength="91" />
+    <Property Name="datetimestamp" Type="datetime" />
+    <Property Name="field" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="activity" Type="varchar" Nullable="false" MaxLength="17" />
+    <Property Name="acctName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="acctcode" Type="nvarchar" MaxLength="40" />
+    <Property Name="Location" Type="nvarchar" MaxLength="300" />
+    <Property Name="bussAdd" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_actveBusPrtnr' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_actveBusPrtnr">
+    <Key>
+      <PropertyRef Name="acctClassfxn" />
+      <PropertyRef Name="ccanum" />
+      <PropertyRef Name="CardName" />
+      <PropertyRef Name="empIdNo" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="LastName" />
+    </Key>
+    <Property Name="CardCode" Type="varchar" MaxLength="40" />
+    <Property Name="CardName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Phone1" Type="nvarchar" MaxLength="100" />
+    <Property Name="CntctPrsn" Type="varchar" MaxLength="1" />
+    <Property Name="acctClassfxn" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="U_ACCTTYPE" Type="nvarchar" MaxLength="20" />
+    <Property Name="U_CHANNEL" Type="nvarchar" MaxLength="200" />
+    <Property Name="U_AREA" Type="nvarchar" MaxLength="200" />
+    <Property Name="Territory" Type="int" />
+    <Property Name="SOCode" Type="int" />
+    <Property Name="empIdNo" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Pareto" Type="nvarchar" MaxLength="1" />
+    <Property Name="TerritoryName" Type="nvarchar" MaxLength="200" />
+    <Property Name="FirstName" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ccanum" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_asmListofSO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_asmListofSO">
+    <Key>
+      <PropertyRef Name="slpcode" />
+      <PropertyRef Name="empidno" />
+      <PropertyRef Name="slpname" />
+      <PropertyRef Name="EventId" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="statedesc" />
+    </Key>
+    <Property Name="slpcode" Type="smallint" Nullable="false" />
+    <Property Name="empidno" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="slpname" Type="nvarchar" Nullable="false" MaxLength="32" />
+    <Property Name="u_position" Type="nvarchar(max)" />
+    <Property Name="U_area" Type="nvarchar(max)" />
+    <Property Name="EventId" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Month" Type="nvarchar" MaxLength="50" />
+    <Property Name="DoctypeId" Type="int" />
+    <Property Name="documentstatusId" Type="int" />
+    <Property Name="statedesc" Type="nvarchar" Nullable="false" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_asmViewSoCoverage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_asmViewSoCoverage">
+    <Key>
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="EmpIdNo" />
+      <PropertyRef Name="LastName" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="roleId" />
+      <PropertyRef Name="stateDesc" />
+      <PropertyRef Name="position" />
+      <PropertyRef Name="RoleName" />
+    </Key>
+    <Property Name="EventID" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="EmpIdNo" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Month" Type="nvarchar" MaxLength="50" />
+    <Property Name="DoctypeId" Type="int" />
+    <Property Name="DocumentStatusId" Type="int" />
+    <Property Name="roleId" Type="int" Nullable="false" />
+    <Property Name="stateDesc" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="position" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="branch" Type="nvarchar" MaxLength="10" />
+    <Property Name="channel" Type="nvarchar" MaxLength="50" />
+    <Property Name="U_area" Type="nvarchar" MaxLength="50" />
+    <Property Name="brand" Type="nvarchar" MaxLength="20" />
+    <Property Name="RoleCode" Type="varchar" MaxLength="10" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="SlpCode" Type="int" />
+    <Property Name="ASM_ID" Type="varchar" MaxLength="40" />
+    <Property Name="CHM_ID" Type="varchar" MaxLength="40" />
+    <Property Name="VPSALES_ID" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_coveragechanges' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_coveragechanges">
+    <Key>
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="EmpIdNo" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="firstname" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="stateDesc" />
+      <PropertyRef Name="LineNum" />
+      <PropertyRef Name="Day" />
+      <PropertyRef Name="AccountCode" />
+      <PropertyRef Name="roleid" />
+    </Key>
+    <Property Name="EventID" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="EmpIdNo" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="lastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="firstname" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="branch" Type="nvarchar" MaxLength="10" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Month" Type="nvarchar" MaxLength="50" />
+    <Property Name="DoctypeId" Type="int" />
+    <Property Name="AcctStatus" Type="int" />
+    <Property Name="stateDesc" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="LineNum" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Day" Type="int" Nullable="false" />
+    <Property Name="AccountCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="AcctClassfxn" Type="nvarchar" MaxLength="20" />
+    <Property Name="AcctName" Type="nvarchar" MaxLength="150" />
+    <Property Name="bussAdd" Type="nvarchar" MaxLength="200" />
+    <Property Name="ContactPerson" Type="nvarchar" MaxLength="120" />
+    <Property Name="ContactPersonNo" Type="nvarchar" MaxLength="40" />
+    <Property Name="StoreChecking" Type="nvarchar" MaxLength="250" />
+    <Property Name="StoreCheckingResult" Type="nvarchar" MaxLength="250" />
+    <Property Name="ProductPresentationResult" Type="nvarchar" MaxLength="120" />
+    <Property Name="TotalAmount" Type="decimal" Scale="6" />
+    <Property Name="CompetitorActivities" Type="nvarchar" MaxLength="250" />
+    <Property Name="WithOrder" Type="nvarchar" MaxLength="1" />
+    <Property Name="NextCallDate" Type="datetime" />
+    <Property Name="PONum" Type="nvarchar" MaxLength="20" />
+    <Property Name="IssuesAndConcerns" Type="nvarchar" MaxLength="250" />
+    <Property Name="Delivery" Type="nvarchar" MaxLength="10" />
+    <Property Name="orders" Type="nvarchar" MaxLength="10" />
+    <Property Name="SummaryLackingItems" Type="nvarchar" MaxLength="200" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Recommendation" Type="nvarchar(max)" />
+    <Property Name="TimeTable" Type="nvarchar" MaxLength="200" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="250" />
+    <Property Name="cFullCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="cPartialCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="cNoCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="OtherInformation" Type="nvarchar(max)" />
+    <Property Name="isPlanned" Type="nvarchar" MaxLength="20" />
+    <Property Name="Tmein" Type="datetime" />
+    <Property Name="Tmeout" Type="datetime" />
+    <Property Name="Numvisit" Type="int" />
+    <Property Name="HotelName" Type="nvarchar" MaxLength="60" />
+    <Property Name="HotelContactNumber" Type="nvarchar" MaxLength="40" />
+    <Property Name="IsDeleted" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsAnEdit" Type="nvarchar" MaxLength="4" />
+    <Property Name="Coveragedate" Type="datetime" />
+    <Property Name="Interval" Type="int" />
+    <Property Name="ASM_ID" Type="varchar" MaxLength="40" />
+    <Property Name="CHM_ID" Type="varchar" MaxLength="40" />
+    <Property Name="roleid" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_CoverageHdrStatus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_CoverageHdrStatus">
+    <Key>
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="EmpIdNo" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="firstname" />
+      <PropertyRef Name="lastname" />
+      <PropertyRef Name="statedesc" />
+      <PropertyRef Name="isFinal" />
+      <PropertyRef Name="isStart" />
+      <PropertyRef Name="roleid" />
+    </Key>
+    <Property Name="EventID" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="EmpIdNo" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Month" Type="nvarchar" MaxLength="50" />
+    <Property Name="DoctypeId" Type="int" />
+    <Property Name="DocumentStatusId" Type="int" />
+    <Property Name="branch" Type="nvarchar" MaxLength="10" />
+    <Property Name="firstname" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="lastname" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="statedesc" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="nextStateDesc" Type="nvarchar" MaxLength="40" />
+    <Property Name="isFinal" Type="nvarchar" Nullable="false" MaxLength="4" />
+    <Property Name="isStart" Type="nvarchar" Nullable="false" MaxLength="4" />
+    <Property Name="roleid" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_customerheader_lookup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_customerheader_lookup">
+    <Key>
+      <PropertyRef Name="ccaNum" />
+      <PropertyRef Name="acctcode" />
+      <PropertyRef Name="acctName" />
+    </Key>
+    <Property Name="ccaNum" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="acctcode" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="acctName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="bussAdd" Type="nvarchar" MaxLength="200" />
+    <Property Name="SapAcctCode" Type="varchar" MaxLength="40" />
+    <Property Name="Pareto" Type="nvarchar" MaxLength="1" />
+    <Property Name="acctClassfxn" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_estAmount_actAmount' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_estAmount_actAmount">
+    <Key>
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="LineNum" />
+      <PropertyRef Name="Day" />
+      <PropertyRef Name="ObjectiveCode" />
+    </Key>
+    <Property Name="EventID" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="LineNum" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Day" Type="int" Nullable="false" />
+    <Property Name="ObjectiveCode" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="estPlannedAmount" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="estActualAmount" Type="decimal" Precision="38" Scale="6" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_getInventoryAuditDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_getInventoryAuditDetail">
+    <Key>
+      <PropertyRef Name="inventoryCountAuditId" />
+      <PropertyRef Name="itemCode" />
+    </Key>
+    <Property Name="inventoryCountAuditId" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="lineId" Type="int" />
+    <Property Name="itemCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="actualCount" Type="int" />
+    <Property Name="remarks" Type="nvarchar" MaxLength="120" />
+    <Property Name="brand" Type="nvarchar(max)" />
+    <Property Name="prodgrp" Type="nvarchar(max)" />
+    <Property Name="itemdescription" Type="nvarchar" MaxLength="100" />
+    <Property Name="srp" Type="numeric" Precision="19" Scale="6" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_getInventoryAuditHeader' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_getInventoryAuditHeader">
+    <Key>
+      <PropertyRef Name="inventoryCountId" />
+      <PropertyRef Name="whsInchargeID" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="firstName" />
+      <PropertyRef Name="inventoryCountAuditId" />
+      <PropertyRef Name="referenceInventoryCountId" />
+    </Key>
+    <Property Name="inventoryCountId" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="empId" Type="nvarchar" MaxLength="50" />
+    <Property Name="acctCode" Type="nvarchar" MaxLength="40" />
+    <Property Name="whsInchargeID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="actualCountDate" Type="datetime" />
+    <Property Name="CardName" Type="nvarchar" MaxLength="100" />
+    <Property Name="AreaName" Type="nvarchar" MaxLength="200" />
+    <Property Name="TerritoryName" Type="nvarchar" MaxLength="200" />
+    <Property Name="whsInchargeFirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="whsInchargeMiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="whsInchargeLastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="whsInchargeContactNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="lastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="firstName" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="totalActualCount" Type="int" />
+    <Property Name="Pareto" Type="nvarchar" MaxLength="1" />
+    <Property Name="acctAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="inventoryCountAuditId" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="referenceInventoryCountId" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="date" Type="datetime" />
+    <Property Name="remarks" Type="nvarchar" MaxLength="120" />
+    <Property Name="auditedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="auditedName" Type="varchar" MaxLength="91" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_getInventoryDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_getInventoryDetail">
+    <Key>
+      <PropertyRef Name="inventoryCountId" />
+      <PropertyRef Name="itemCode" />
+    </Key>
+    <Property Name="inventoryCountId" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="lineId" Type="int" />
+    <Property Name="itemCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ssr" Type="nvarchar" MaxLength="10" />
+    <Property Name="begNvPcs" Type="int" />
+    <Property Name="endNvPcs" Type="int" />
+    <Property Name="actualSellOutPcs" Type="int" />
+    <Property Name="actualSellOutAmt" Type="decimal" Scale="6" />
+    <Property Name="remarks" Type="nvarchar" MaxLength="120" />
+    <Property Name="variancePcs" Type="int" />
+    <Property Name="varianceAmt" Type="decimal" Scale="6" />
+    <Property Name="netSellIn" Type="int" />
+    <Property Name="salesForecastPcs0" Type="int" />
+    <Property Name="salesForecastAmt0" Type="decimal" Scale="6" />
+    <Property Name="salesForecastPcs1" Type="int" />
+    <Property Name="salesForecastAmt1" Type="decimal" Scale="6" />
+    <Property Name="salesForecastPcs2" Type="int" />
+    <Property Name="salesForecastAmt2" Type="decimal" Scale="6" />
+    <Property Name="salesForecastPcs3" Type="int" />
+    <Property Name="salesForecastAmt3" Type="decimal" Scale="6" />
+    <Property Name="netSellinOnHand" Type="int" />
+    <Property Name="brand" Type="nvarchar(max)" />
+    <Property Name="prodgrp" Type="nvarchar(max)" />
+    <Property Name="itemdescription" Type="nvarchar" MaxLength="100" />
+    <Property Name="srp" Type="numeric" Precision="19" Scale="6" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_getInventoryHeader' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_getInventoryHeader">
+    <Key>
+      <PropertyRef Name="inventoryCountId" />
+      <PropertyRef Name="whsInchargeID" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="firstName" />
+    </Key>
+    <Property Name="inventoryCountId" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="docTypeId" Type="int" />
+    <Property Name="empId" Type="nvarchar" MaxLength="50" />
+    <Property Name="acctCode" Type="nvarchar" MaxLength="40" />
+    <Property Name="whsInchargeID" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="prevCountDate" Type="datetime" />
+    <Property Name="nextCountDate" Type="datetime" />
+    <Property Name="countRange" Type="int" />
+    <Property Name="totalAmount" Type="decimal" Scale="6" />
+    <Property Name="remarks" Type="nvarchar" MaxLength="120" />
+    <Property Name="DocumentStatusId" Type="int" />
+    <Property Name="Audited" Type="nvarchar" MaxLength="1" />
+    <Property Name="inventoryCountStatus" Type="nvarchar" MaxLength="20" />
+    <Property Name="dateTimeStamp" Type="datetime" />
+    <Property Name="actualCountDate" Type="datetime" />
+    <Property Name="actualCountEndValidDate" Type="datetime" />
+    <Property Name="CardName" Type="nvarchar" MaxLength="100" />
+    <Property Name="AreaName" Type="nvarchar" MaxLength="200" />
+    <Property Name="TerritoryName" Type="nvarchar" MaxLength="200" />
+    <Property Name="whsInchargeFirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="whsInchargeMiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="whsInchargeLastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="whsInchargeContactNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="lastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="firstName" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="totalVarianceAmt" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="totalSalesForecastAmt0" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="totalSalesForecastAmt1" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="totalSalesForecastAmt2" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="totalSalesForecastAmt3" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="Pareto" Type="nvarchar" MaxLength="1" />
+    <Property Name="acctAddress" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_inventoryAccounts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_inventoryAccounts">
+    <Key>
+      <PropertyRef Name="ccaNum" />
+      <PropertyRef Name="acctCode" />
+      <PropertyRef Name="acctName" />
+      <PropertyRef Name="empIdNo" />
+      <PropertyRef Name="firstName" />
+      <PropertyRef Name="lastName" />
+    </Key>
+    <Property Name="ccaNum" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="acctCode" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="bussAdd" Type="nvarchar" MaxLength="200" />
+    <Property Name="acctName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="areaname" Type="nvarchar" MaxLength="200" />
+    <Property Name="pareto" Type="nvarchar" MaxLength="1" />
+    <Property Name="territoryName" Type="nvarchar" MaxLength="200" />
+    <Property Name="empIdNo" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="firstName" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="lastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CntctPrsn" Type="nvarchar" MaxLength="90" />
+    <Property Name="Phone1" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_inventoryScheduleAccounts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_inventoryScheduleAccounts">
+    <Key>
+      <PropertyRef Name="ccaNum" />
+      <PropertyRef Name="acctCode" />
+      <PropertyRef Name="acctName" />
+      <PropertyRef Name="empIdNo" />
+      <PropertyRef Name="firstName" />
+      <PropertyRef Name="lastName" />
+    </Key>
+    <Property Name="ccaNum" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="acctCode" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="bussAdd" Type="nvarchar" MaxLength="200" />
+    <Property Name="acctName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="areaname" Type="nvarchar" MaxLength="200" />
+    <Property Name="pareto" Type="nvarchar" MaxLength="1" />
+    <Property Name="territoryName" Type="nvarchar" MaxLength="200" />
+    <Property Name="empIdNo" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="firstName" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CntctPrsn" Type="varchar" MaxLength="1" />
+    <Property Name="Phone1" Type="nvarchar" MaxLength="100" />
+    <Property Name="prevCountDate" Type="datetime" />
+    <Property Name="startCountDate" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_LookupAccounts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_LookupAccounts">
+    <Key>
+      <PropertyRef Name="CardCode" />
+      <PropertyRef Name="acctClassfxn" />
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="EmpIdNo" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="day" />
+    </Key>
+    <Property Name="CardCode" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="CardName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="acctClassfxn" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="Phone1" Type="nvarchar" MaxLength="20" />
+    <Property Name="CntctPrsn" Type="nvarchar" MaxLength="90" />
+    <Property Name="EventID" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="EmpIdNo" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Month" Type="nvarchar" MaxLength="50" />
+    <Property Name="DoctypeId" Type="int" />
+    <Property Name="DocumentStatusId" Type="int" />
+    <Property Name="day" Type="int" Nullable="false" />
+    <Property Name="HotelName" Type="nvarchar" MaxLength="60" />
+    <Property Name="HotelContactNumber" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_lookUpOSLP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_lookUpOSLP">
+    <Key>
+      <PropertyRef Name="SlpCode" />
+      <PropertyRef Name="SlpName" />
+      <PropertyRef Name="empIdNo" />
+    </Key>
+    <Property Name="SlpCode" Type="smallint" Nullable="false" />
+    <Property Name="SlpName" Type="nvarchar" Nullable="false" MaxLength="32" />
+    <Property Name="U_ASM" Type="nvarchar(max)" />
+    <Property Name="U_ACTIVE" Type="nvarchar(max)" />
+    <Property Name="U_POSITION" Type="nvarchar(max)" />
+    <Property Name="U_AREA" Type="nvarchar(max)" />
+    <Property Name="U_SALES_TARGET" Type="int" />
+    <Property Name="empIdNo" Type="varchar" Nullable="false" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_nextInvDtl_itemMasterFile' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_nextInvDtl_itemMasterFile">
+    <Key>
+      <PropertyRef Name="lineId" />
+      <PropertyRef Name="itemCode" />
+    </Key>
+    <Property Name="lineId" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="itemCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="begNvPcs" Type="int" />
+    <Property Name="salesForecastPcs0" Type="int" />
+    <Property Name="salesForecastAmt0" Type="decimal" Scale="6" />
+    <Property Name="salesForecastPcs1" Type="int" />
+    <Property Name="salesForecastAmt1" Type="decimal" Scale="6" />
+    <Property Name="salesForecastPcs2" Type="int" />
+    <Property Name="salesForecastAmt2" Type="decimal" Scale="6" />
+    <Property Name="ssr" Type="nvarchar" MaxLength="10" />
+    <Property Name="U_PL_ITEMCODE" Type="nvarchar(max)" />
+    <Property Name="brand" Type="nvarchar(max)" />
+    <Property Name="prodgrp" Type="nvarchar(max)" />
+    <Property Name="itemdescription" Type="nvarchar" MaxLength="100" />
+    <Property Name="srp" Type="numeric" Precision="19" Scale="6" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_soCoverage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_soCoverage">
+    <Key>
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="EmpIdNo" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="LineNum" />
+      <PropertyRef Name="Day" />
+      <PropertyRef Name="AccountCode" />
+    </Key>
+    <Property Name="EventID" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="EmpIdNo" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Month" Type="nvarchar" MaxLength="50" />
+    <Property Name="DoctypeId" Type="int" />
+    <Property Name="DocumentStatusId" Type="int" />
+    <Property Name="LineNum" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Day" Type="int" Nullable="false" />
+    <Property Name="AccountCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="ContactPerson" Type="nvarchar" MaxLength="40" />
+    <Property Name="ContactPersonNo" Type="nvarchar" MaxLength="40" />
+    <Property Name="StoreChecking" Type="nvarchar" MaxLength="120" />
+    <Property Name="StoreCheckingResult" Type="nvarchar" MaxLength="120" />
+    <Property Name="ProductPresentationResult" Type="nvarchar" MaxLength="120" />
+    <Property Name="TotalAmount" Type="decimal" Scale="6" />
+    <Property Name="CompetitorActivities" Type="nvarchar" MaxLength="150" />
+    <Property Name="WithOrder" Type="nvarchar" MaxLength="1" />
+    <Property Name="NextCallDate" Type="datetime" />
+    <Property Name="PONum" Type="nvarchar" MaxLength="20" />
+    <Property Name="IssuesAndConcerns" Type="nvarchar" MaxLength="120" />
+    <Property Name="Delivery" Type="nvarchar" MaxLength="10" />
+    <Property Name="Orders" Type="nvarchar" MaxLength="10" />
+    <Property Name="SummaryLackingItems" Type="nvarchar" MaxLength="120" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Recommendation" Type="nvarchar" MaxLength="150" />
+    <Property Name="TimeTable" Type="nvarchar" MaxLength="150" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="150" />
+    <Property Name="cFullCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="cPartialCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="cNoCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="OtherInformation" Type="nvarchar(max)" />
+    <Property Name="ObjectiveCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="40" />
+    <Property Name="PlannedAmount" Type="decimal" Scale="6" />
+    <Property Name="ActualAmount" Type="decimal" Scale="6" />
+    <Property Name="CounterClerk" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.arms2_vw_userheaderDetails' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="arms2_vw_userheaderDetails">
+    <Key>
+      <PropertyRef Name="slpcode" />
+      <PropertyRef Name="slpname" />
+      <PropertyRef Name="empidno" />
+    </Key>
+    <Property Name="slpcode" Type="smallint" Nullable="false" />
+    <Property Name="slpname" Type="nvarchar" Nullable="false" MaxLength="32" />
+    <Property Name="area" Type="varchar" MaxLength="40" />
+    <Property Name="empidno" Type="varchar" Nullable="false" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.armsII_vw_CalendarUser' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="armsII_vw_CalendarUser">
+    <Key>
+      <PropertyRef Name="empIDNo" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="firstName" />
+      <PropertyRef Name="position" />
+      <PropertyRef Name="roleName" />
+    </Key>
+    <Property Name="empIDNo" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="lastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="firstName" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="position" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="branch" Type="nvarchar" MaxLength="10" />
+    <Property Name="channel" Type="nvarchar" MaxLength="50" />
+    <Property Name="area" Type="nvarchar" MaxLength="50" />
+    <Property Name="brand" Type="nvarchar" MaxLength="20" />
+    <Property Name="roleCode" Type="varchar" MaxLength="10" />
+    <Property Name="roleName" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="ASM_ID" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.armsII_vw_CallReport' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="armsII_vw_CallReport">
+    <Key>
+      <PropertyRef Name="EventId" />
+      <PropertyRef Name="EmpIdNo" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="LineNum" />
+      <PropertyRef Name="Day" />
+      <PropertyRef Name="AccountCode" />
+      <PropertyRef Name="ObjectiveCode" />
+    </Key>
+    <Property Name="EventId" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="EmpIdNo" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Month" Type="nvarchar" MaxLength="50" />
+    <Property Name="DoctypeId" Type="int" />
+    <Property Name="DocumentStatusId" Type="int" />
+    <Property Name="LineNum" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Day" Type="int" Nullable="false" />
+    <Property Name="AccountCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccountAddress" Type="nvarchar" MaxLength="120" />
+    <Property Name="AccountClass" Type="nvarchar" MaxLength="40" />
+    <Property Name="ContactPerson" Type="nvarchar" MaxLength="40" />
+    <Property Name="ContactPersonNo" Type="nvarchar" MaxLength="40" />
+    <Property Name="ObjectiveCode" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="StoreCheckingResult" Type="nvarchar" MaxLength="120" />
+    <Property Name="ProductPresentationResult" Type="nvarchar" MaxLength="120" />
+    <Property Name="TotalAmount" Type="decimal" Scale="6" />
+    <Property Name="CompetitorActivities" Type="nvarchar" MaxLength="150" />
+    <Property Name="WithOrder" Type="nvarchar" MaxLength="1" />
+    <Property Name="NextCallDate" Type="datetime" />
+    <Property Name="PONum" Type="nvarchar" MaxLength="20" />
+    <Property Name="IssuesAndConcerns" Type="nvarchar" MaxLength="120" />
+    <Property Name="Delivery" Type="nvarchar" MaxLength="10" />
+    <Property Name="Orders" Type="nvarchar" MaxLength="10" />
+    <Property Name="SummaryLackingItems" Type="nvarchar" MaxLength="120" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Recommendation" Type="nvarchar" MaxLength="150" />
+    <Property Name="TimeTable" Type="nvarchar" MaxLength="150" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="150" />
+    <Property Name="cFullCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="cPartialCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="cNoCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="OtherInformation" Type="nvarchar(max)" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="40" />
+    <Property Name="Amount" Type="decimal" Scale="6" />
+    <Property Name="CounterClerk" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.armsII_vw_EventdtlsBySo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="armsII_vw_EventdtlsBySo">
+    <Key>
+      <PropertyRef Name="EventId" />
+      <PropertyRef Name="EmpIdNo" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="LineNum" />
+      <PropertyRef Name="Day" />
+      <PropertyRef Name="AccountCode" />
+      <PropertyRef Name="ObjectiveCode" />
+    </Key>
+    <Property Name="EventId" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="EmpIdNo" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="Month" Type="nvarchar" MaxLength="50" />
+    <Property Name="DoctypeId" Type="int" />
+    <Property Name="DocumentStatusId" Type="int" />
+    <Property Name="LineNum" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="Day" Type="int" Nullable="false" />
+    <Property Name="AccountCode" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccountAddress" Type="nvarchar" MaxLength="120" />
+    <Property Name="AccountClass" Type="nvarchar" MaxLength="40" />
+    <Property Name="ContactPerson" Type="nvarchar" MaxLength="40" />
+    <Property Name="ContactPersonNo" Type="nvarchar" MaxLength="40" />
+    <Property Name="ObjectiveCode" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="StoreCheckingResult" Type="nvarchar" MaxLength="120" />
+    <Property Name="ProductPresentationResult" Type="nvarchar" MaxLength="120" />
+    <Property Name="TotalAmount" Type="decimal" Scale="6" />
+    <Property Name="CompetitorActivities" Type="nvarchar" MaxLength="150" />
+    <Property Name="WithOrder" Type="nvarchar" MaxLength="1" />
+    <Property Name="NextCallDate" Type="datetime" />
+    <Property Name="PONum" Type="nvarchar" MaxLength="20" />
+    <Property Name="IssuesAndConcerns" Type="nvarchar" MaxLength="120" />
+    <Property Name="Delivery" Type="nvarchar" MaxLength="10" />
+    <Property Name="Orders" Type="nvarchar" MaxLength="10" />
+    <Property Name="SummaryLackingItems" Type="nvarchar" MaxLength="120" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Recommendation" Type="nvarchar" MaxLength="150" />
+    <Property Name="TimeTable" Type="nvarchar" MaxLength="150" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="150" />
+    <Property Name="cFullCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="cPartialCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="cNoCollection" Type="nvarchar" MaxLength="5" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="40" />
+    <Property Name="Amount" Type="decimal" Scale="6" />
+    <Property Name="CounterClerk" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.armsII_vw_itemMasterFile' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="armsII_vw_itemMasterFile">
+    <Key>
+      <PropertyRef Name="ITEMCODE" />
+    </Key>
+    <Property Name="U_PL_ITEMCODE" Type="nvarchar(max)" />
+    <Property Name="ITEMCODE" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Brand" Type="nvarchar(max)" />
+    <Property Name="ProdGrp" Type="nvarchar(max)" />
+    <Property Name="ItemDescription" Type="nvarchar" MaxLength="100" />
+    <Property Name="SRP" Type="numeric" Precision="19" Scale="6" />
+    <Property Name="U_PL_UOM" Type="nvarchar(max)" />
+    <Property Name="LookUpItem" Type="nvarchar" MaxLength="123" />
+    <Property Name="U_GThickness" Type="numeric" Precision="19" Scale="6" />
+    <Property Name="U_GWidth" Type="numeric" Precision="19" Scale="6" />
+    <Property Name="U_GLength" Type="numeric" Precision="19" Scale="6" />
+    <Property Name="U_GMultiplier" Type="numeric" Precision="19" Scale="6" />
+    <Property Name="U_ItemClass" Type="nvarchar(max)" />
+    <Property Name="U_PL_NAME" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.armsII_vw_itemMasterFile_srp' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="armsII_vw_itemMasterFile_srp">
+    <Key>
+      <PropertyRef Name="ITEMCODE" />
+    </Key>
+    <Property Name="U_PL_ITEMCODE" Type="nvarchar(max)" />
+    <Property Name="ITEMCODE" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Brand" Type="nvarchar(max)" />
+    <Property Name="ProdGrp" Type="nvarchar(max)" />
+    <Property Name="ItemDescription" Type="nvarchar" MaxLength="100" />
+    <Property Name="SRP" Type="numeric" Precision="19" Scale="6" />
+    <Property Name="U_PL_UOM" Type="nvarchar(max)" />
+    <Property Name="LookUpItem" Type="nvarchar" MaxLength="123" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.MTC_vw_empListHRIS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="MTC_vw_empListHRIS">
+    <Key>
+      <PropertyRef Name="in_emp_id" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="firstName" />
+    </Key>
+    <Property Name="in_emp_id" Type="nvarchar" Nullable="false" MaxLength="6" />
+    <Property Name="lastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="firstName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="emailadd" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.mtc_vw_inventoryCountlist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="mtc_vw_inventoryCountlist">
+    <Key>
+      <PropertyRef Name="inventoryCountId" />
+      <PropertyRef Name="firstName" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="roleid" />
+      <PropertyRef Name="stateDesc" />
+    </Key>
+    <Property Name="inventoryCountId" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="empId" Type="nvarchar" MaxLength="50" />
+    <Property Name="firstName" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="lastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="acctCode" Type="nvarchar" MaxLength="40" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="location" Type="nvarchar" MaxLength="200" />
+    <Property Name="roleid" Type="int" Nullable="false" />
+    <Property Name="stateDesc" Type="nvarchar" Nullable="false" MaxLength="40" />
+    <Property Name="actualCountDate" Type="datetime" />
+    <Property Name="inventoryCountStatus" Type="nvarchar" MaxLength="20" />
+    <Property Name="DocumentStatusId" Type="int" />
+    <Property Name="audited" Type="nvarchar" MaxLength="1" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.mtc_vw_so_salesmonitoringdtl' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="mtc_vw_so_salesmonitoringdtl">
+    <Key>
+      <PropertyRef Name="SOCode" />
+      <PropertyRef Name="Sales_Officer" />
+      <PropertyRef Name="DateAsOf" />
+    </Key>
+    <Property Name="empIdNo" Type="varchar" MaxLength="40" />
+    <Property Name="SOCode" Type="int" Nullable="false" />
+    <Property Name="Sales_Officer" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="GrossAmt" Type="numeric" Precision="38" Scale="6" />
+    <Property Name="CMAmt" Type="numeric" Precision="38" Scale="6" />
+    <Property Name="UNPOSTEDAmt" Type="numeric" Precision="38" Scale="6" />
+    <Property Name="PostedAmt" Type="numeric" Precision="38" Scale="6" />
+    <Property Name="Pending_Order" Type="numeric" Precision="38" Scale="6" />
+    <Property Name="BOAmt" Type="numeric" Precision="38" Scale="6" />
+    <Property Name="NetPosted" Type="numeric" Precision="38" Scale="6" />
+    <Property Name="NoTransactingAccounts" Type="int" />
+    <Property Name="DateAsOf" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.mtc_vw_uploadsalesreport' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="mtc_vw_uploadsalesreport">
+    <Key>
+      <PropertyRef Name="counterid" />
+      <PropertyRef Name="empidno" />
+      <PropertyRef Name="slpcode" />
+    </Key>
+    <Property Name="counterid" Type="int" Nullable="false" />
+    <Property Name="empidno" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="slpcode" Type="smallint" Nullable="false" />
+    <Property Name="salesofficer" Type="varchar" MaxLength="100" />
+    <Property Name="uploaddatetime" Type="datetime" />
+    <Property Name="POSTED" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="CM" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="NET_POSTED" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="UNPOSTED" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="PICKLIST" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="SUBTOTAL" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="PENDING" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="BALANCE_ORDER" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="GROSS" Type="decimal" Precision="38" Scale="6" />
+    <Property Name="NoOfTransactingAccts" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'ArmsTestMobile.dbo.mtc_vw_User_Role_Details' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="mtc_vw_User_Role_Details">
+    <Key>
+      <PropertyRef Name="empIDNo" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="firstName" />
+      <PropertyRef Name="position" />
+      <PropertyRef Name="roleName" />
+    </Key>
+    <Property Name="empIDNo" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="lastName" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="firstName" Type="varchar" Nullable="false" MaxLength="40" />
+    <Property Name="userName" Type="nvarchar" MaxLength="40" />
+    <Property Name="userPass" Type="nvarchar" MaxLength="40" />
+    <Property Name="position" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="branch" Type="nvarchar" MaxLength="10" />
+    <Property Name="channel" Type="nvarchar" MaxLength="50" />
+    <Property Name="area" Type="nvarchar" MaxLength="50" />
+    <Property Name="brand" Type="nvarchar" MaxLength="20" />
+    <Property Name="roleCode" Type="varchar" MaxLength="10" />
+    <Property Name="roleName" Type="nvarchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <Association Name="apprvrRole_approvalState">
+    <End Role="apprvrRole" Type="ARMSTestModel.Store.apprvrRole" Multiplicity="1" />
+    <End Role="approvalState" Type="ARMSTestModel.Store.approvalState" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apprvrRole">
+        <PropertyRef Name="roleID" />
+      </Principal>
+      <Dependent Role="approvalState">
+        <PropertyRef Name="roleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="apprvrRole_apprvrDesig">
+    <End Role="apprvrRole" Type="ARMSTestModel.Store.apprvrRole" Multiplicity="1" />
+    <End Role="apprvrDesig" Type="ARMSTestModel.Store.apprvrDesig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apprvrRole">
+        <PropertyRef Name="roleID" />
+      </Principal>
+      <Dependent Role="apprvrDesig">
+        <PropertyRef Name="roleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CoverageDtls_CoverageDtl1">
+    <End Role="CoverageDtls" Type="ARMSTestModel.Store.CoverageDtls" Multiplicity="1" />
+    <End Role="CoverageDtl1" Type="ARMSTestModel.Store.CoverageDtl1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoverageDtls">
+        <PropertyRef Name="LineNum" />
+      </Principal>
+      <Dependent Role="CoverageDtl1">
+        <PropertyRef Name="LineNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CoverageDtls_VisitLogs">
+    <End Role="CoverageDtls" Type="ARMSTestModel.Store.CoverageDtls" Multiplicity="1" />
+    <End Role="VisitLogs" Type="ARMSTestModel.Store.VisitLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoverageDtls">
+        <PropertyRef Name="LineNum" />
+      </Principal>
+      <Dependent Role="VisitLogs">
+        <PropertyRef Name="LineNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CoverageHdr_CoverageDtl1">
+    <End Role="CoverageHdr" Type="ARMSTestModel.Store.CoverageHdr" Multiplicity="1" />
+    <End Role="CoverageDtl1" Type="ARMSTestModel.Store.CoverageDtl1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoverageHdr">
+        <PropertyRef Name="EventID" />
+      </Principal>
+      <Dependent Role="CoverageDtl1">
+        <PropertyRef Name="EventID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CoverageHdr_VisitLogs">
+    <End Role="CoverageHdr" Type="ARMSTestModel.Store.CoverageHdr" Multiplicity="1" />
+    <End Role="VisitLogs" Type="ARMSTestModel.Store.VisitLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoverageHdr">
+        <PropertyRef Name="EventID" />
+      </Principal>
+      <Dependent Role="VisitLogs">
+        <PropertyRef Name="EventID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="customerHeader_custAttachment">
+    <End Role="customerHeader" Type="ARMSTestModel.Store.customerHeader" Multiplicity="1" />
+    <End Role="custAttachment" Type="ARMSTestModel.Store.custAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customerHeader">
+        <PropertyRef Name="ccaNum" />
+      </Principal>
+      <Dependent Role="custAttachment">
+        <PropertyRef Name="ccaNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="customerHeader_empInventory">
+    <End Role="customerHeader" Type="ARMSTestModel.Store.customerHeader" Multiplicity="1" />
+    <End Role="empInventory" Type="ARMSTestModel.Store.empInventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customerHeader">
+        <PropertyRef Name="ccaNum" />
+      </Principal>
+      <Dependent Role="empInventory">
+        <PropertyRef Name="ccaNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="documentTypes_approvalState">
+    <End Role="documentTypes" Type="ARMSTestModel.Store.documentTypes" Multiplicity="1" />
+    <End Role="approvalState" Type="ARMSTestModel.Store.approvalState" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="documentTypes">
+        <PropertyRef Name="docType" />
+      </Principal>
+      <Dependent Role="approvalState">
+        <PropertyRef Name="docType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="InventoryCountAuditHdr_InventoryCountAuditDtl">
+    <End Role="InventoryCountAuditHdr" Type="ARMSTestModel.Store.InventoryCountAuditHdr" Multiplicity="1" />
+    <End Role="InventoryCountAuditDtl" Type="ARMSTestModel.Store.InventoryCountAuditDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InventoryCountAuditHdr">
+        <PropertyRef Name="inventoryCountAuditId" />
+      </Principal>
+      <Dependent Role="InventoryCountAuditDtl">
+        <PropertyRef Name="inventoryCountAuditId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="InventoryCountHdr_InventoryCountAuditHdr">
+    <End Role="InventoryCountHdr" Type="ARMSTestModel.Store.InventoryCountHdr" Multiplicity="1" />
+    <End Role="InventoryCountAuditHdr" Type="ARMSTestModel.Store.InventoryCountAuditHdr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InventoryCountHdr">
+        <PropertyRef Name="inventoryCountId" />
+      </Principal>
+      <Dependent Role="InventoryCountAuditHdr">
+        <PropertyRef Name="referenceInventoryCountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="InventoryCountHdr_InventoryCountDtl">
+    <End Role="InventoryCountHdr" Type="ARMSTestModel.Store.InventoryCountHdr" Multiplicity="1" />
+    <End Role="InventoryCountDtl" Type="ARMSTestModel.Store.InventoryCountDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InventoryCountHdr">
+        <PropertyRef Name="inventoryCountId" />
+      </Principal>
+      <Dependent Role="InventoryCountDtl">
+        <PropertyRef Name="inventoryCountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="inventoryCountStatusHdr_inventoryCountStatusDtl">
+    <End Role="inventoryCountStatusHdr" Type="ARMSTestModel.Store.inventoryCountStatusHdr" Multiplicity="1" />
+    <End Role="inventoryCountStatusDtl" Type="ARMSTestModel.Store.inventoryCountStatusDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="inventoryCountStatusHdr">
+        <PropertyRef Name="in_statusId" />
+      </Principal>
+      <Dependent Role="inventoryCountStatusDtl">
+        <PropertyRef Name="in_statusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ObjectiveHdr_Objectives">
+    <End Role="ObjectiveHdr" Type="ARMSTestModel.Store.ObjectiveHdr" Multiplicity="1" />
+    <End Role="Objectives" Type="ARMSTestModel.Store.Objectives" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObjectiveHdr">
+        <PropertyRef Name="objectiveCode" />
+      </Principal>
+      <Dependent Role="Objectives">
+        <PropertyRef Name="objectiveCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="userHeader_apprvrDesig">
+    <End Role="userHeader" Type="ARMSTestModel.Store.userHeader" Multiplicity="0..1" />
+    <End Role="apprvrDesig" Type="ARMSTestModel.Store.apprvrDesig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userHeader">
+        <PropertyRef Name="counterId" />
+      </Principal>
+      <Dependent Role="apprvrDesig">
+        <PropertyRef Name="counterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="arms2_sp_ActivityLogsReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EmpId" Type="nvarchar" Mode="In" />
+    <Parameter Name="datefrom" Type="datetime" Mode="In" />
+    <Parameter Name="dateto" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="arms2_sp_inventoryCountNotification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="arms2_sp_inventoryCountNotificationWithLink" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="arms2_sp_InventoryCountSchedule" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="arms2_sp_PendingAccounts88" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="BPCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="armsmobile_proc_get_uploadattachment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="filterterm" Type="nvarchar" Mode="In" />
+    <Parameter Name="sortindex" Type="int" Mode="In" />
+    <Parameter Name="sortdirection" Type="char" Mode="In" />
+    <Parameter Name="startrownum" Type="int" Mode="In" />
+    <Parameter Name="endrownum" Type="int" Mode="In" />
+    <Parameter Name="totalrowscount" Type="int" Mode="InOut" />
+    <Parameter Name="filteredrowscount" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="customer_filter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetDocStatusMessage" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="roleCode" Type="varchar" Mode="In" />
+    <Parameter Name="docstatus" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="getNewReviewNo" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="acctCode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="List_Of_Pending_Trans" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="region" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="MTC_fn_generateCCANUM" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MTC_fn_generateMrktReqNo" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MTC_fn_getBranch" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="docuType" Type="int" Mode="In" />
+    <Parameter Name="docuNum" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="MTC_fn_getCurrState" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="docuType" Type="int" Mode="In" />
+    <Parameter Name="docuNum" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="MTC_fn_latestDate" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="progNum" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="mtc_getCurrentState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="docType" Type="int" Mode="In" />
+    <Parameter Name="docNum" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="mtc_nextRoute" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="docNum" Type="nvarchar" Mode="In" />
+    <Parameter Name="docType" Type="int" Mode="In" />
+    <Parameter Name="isApprove" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="mtc_proc_accountstatusscheduler" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="mtc_proc_arbalance_88" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cardcode" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="mtc_recipientEmailAdd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="roleID" Type="int" Mode="In" />
+    <Parameter Name="branch" Type="nvarchar" Mode="In" />
+    <Parameter Name="area" Type="nvarchar" Mode="In" />
+    <Parameter Name="channel" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="MTC_sp_BusRevDailyNotification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MTC_sp_BusRevMonthlyNotification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MTC_sp_BusRevWeeklyNotification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MTC_sp_customerFromSAPtoARMS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MTC_sp_insertApprvrDesig" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="roleID" Type="nvarchar" Mode="In" />
+    <Parameter Name="branch" Type="nvarchar" Mode="In" />
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+    <Parameter Name="brand" Type="nvarchar" Mode="In" />
+    <Parameter Name="channel" Type="nvarchar" Mode="In" />
+    <Parameter Name="area" Type="nvarchar" Mode="In" />
+    <Parameter Name="empID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="MTC_sp_insertApprvrRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="roleName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="MTC_sp_insertMrktngReqHeader" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="encodeBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="status" Type="nvarchar" Mode="In" />
+    <Parameter Name="acctCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="acctName" Type="nvarchar" Mode="In" />
+    <Parameter Name="acctAdd" Type="nvarchar" Mode="In" />
+    <Parameter Name="acctArea" Type="nvarchar" Mode="In" />
+    <Parameter Name="acctOfficer" Type="nvarchar" Mode="In" />
+    <Parameter Name="requestedBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="brand" Type="nvarchar" Mode="In" />
+    <Parameter Name="category" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="nvarchar" Mode="In" />
+    <Parameter Name="setUpDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="size" Type="nvarchar" Mode="In" />
+    <Parameter Name="value" Type="nvarchar" Mode="In" />
+    <Parameter Name="availDeploy" Type="nvarchar" Mode="In" />
+    <Parameter Name="actualDeploy" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="MTC_sp_insertMrktngReqOtherStip" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="reqID" Type="nvarchar" Mode="In" />
+    <Parameter Name="stipulation" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="MTC_sp_MarketingProgAmt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="startamount" Type="float" Mode="In" />
+    <Parameter Name="endamount" Type="float" Mode="In" />
+  </Function>
+  <Function Name="MTC_sp_OnScheduleNotification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="br_no" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="MTC_sp_roleAccess_Migrate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="roleName" Type="nvarchar" Mode="In" />
+    <Parameter Name="module" Type="nvarchar" Mode="In" />
+    <Parameter Name="rights" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="mtc_sp_ScheduleDailyNotification" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MTC_sp_transferDataFromSAP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="mtc_updateDocStatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="docType" Type="int" Mode="In" />
+    <Parameter Name="docNum" Type="nvarchar" Mode="In" />
+    <Parameter Name="stateID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="mtc_updateDocStatusNegPath" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="docType" Type="int" Mode="In" />
+    <Parameter Name="docNum" Type="nvarchar" Mode="In" />
+    <Parameter Name="stateID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="mtc_updateDocStatusPosPath" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="docType" Type="int" Mode="In" />
+    <Parameter Name="docNum" Type="nvarchar" Mode="In" />
+    <Parameter Name="stateID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>

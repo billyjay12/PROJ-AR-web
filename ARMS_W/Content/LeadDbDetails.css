@@ -1,0 +1,6 @@
+﻿input[disabled=disabled], input[readonly=readonly]
+{
+    background:#ededed;
+}
+
+.required_fields { background-color:#fff7dd; border:1px solid #4e4e4e; }

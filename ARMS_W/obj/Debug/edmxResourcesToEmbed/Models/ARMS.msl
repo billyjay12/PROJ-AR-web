@@ -1,0 +1,1509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ARMSTestModelStoreContainer" CdmEntityContainer="ARMSTestEntities">
+    <FunctionImportMapping FunctionImportName="arms2_sp_InventoryCountSchedule" FunctionName="ARMSTestModel.Store.arms2_sp_InventoryCountSchedule">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ARMSTestModel.arms2_sp_InventoryCountSchedule_Result1">
+          <ScalarProperty Name="ccaNum" ColumnName="ccaNum" />
+          <ScalarProperty Name="acctCode" ColumnName="acctCode" />
+          <ScalarProperty Name="bussAdd" ColumnName="bussAdd" />
+          <ScalarProperty Name="acctName" ColumnName="acctName" />
+          <ScalarProperty Name="empId" ColumnName="empId" />
+          <ScalarProperty Name="empFirstName" ColumnName="empFirstName" />
+          <ScalarProperty Name="empLastName" ColumnName="empLastName" />
+          <ScalarProperty Name="prevCountDate" ColumnName="prevCountDate" />
+          <ScalarProperty Name="startCountDate" ColumnName="startCountDate" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="pareto" ColumnName="pareto" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="approvalStates">
+      <EntityTypeMapping TypeName="ARMSTestModel.approvalState">
+        <MappingFragment StoreEntitySet="approvalState">
+          <ScalarProperty Name="CancelStatusId" ColumnName="CancelStatusId" />
+          <ScalarProperty Name="NextStatusId" ColumnName="NextStatusId" />
+          <ScalarProperty Name="isFinal" ColumnName="isFinal" />
+          <ScalarProperty Name="isStart" ColumnName="isStart" />
+          <ScalarProperty Name="alternateStateID" ColumnName="alternateStateID" />
+          <ScalarProperty Name="stateDesc" ColumnName="stateDesc" />
+          <ScalarProperty Name="stateID" ColumnName="stateID" />
+          <ScalarProperty Name="docType" ColumnName="docType" />
+          <ScalarProperty Name="roleID" ColumnName="roleID" />
+          <ScalarProperty Name="counterID" ColumnName="counterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="apprvrDesigs">
+      <EntityTypeMapping TypeName="ARMSTestModel.apprvrDesig">
+        <MappingFragment StoreEntitySet="apprvrDesig">
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="channel" ColumnName="channel" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="counterId" ColumnName="counterId" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="roleID" ColumnName="roleID" />
+          <ScalarProperty Name="desigID" ColumnName="desigID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="apprvrdesig_bak">
+      <EntityTypeMapping TypeName="ARMSTestModel.apprvrdesig_bak">
+        <MappingFragment StoreEntitySet="apprvrdesig_bak">
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="channel" ColumnName="channel" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="counterId" ColumnName="counterId" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="roleID" ColumnName="roleID" />
+          <ScalarProperty Name="desigID" ColumnName="desigID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="apprvrRoles">
+      <EntityTypeMapping TypeName="ARMSTestModel.apprvrRole">
+        <MappingFragment StoreEntitySet="apprvrRole">
+          <ScalarProperty Name="TAG" ColumnName="TAG" />
+          <ScalarProperty Name="roleCode" ColumnName="roleCode" />
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+          <ScalarProperty Name="roleID" ColumnName="roleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChannelGroups">
+      <EntityTypeMapping TypeName="ARMSTestModel.ChannelGroup">
+        <MappingFragment StoreEntitySet="ChannelGroup">
+          <ScalarProperty Name="grp_name" ColumnName="grp_name" />
+          <ScalarProperty Name="channel" ColumnName="channel" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoverageHdrs">
+      <EntityTypeMapping TypeName="ARMSTestModel.CoverageHdr">
+        <MappingFragment StoreEntitySet="CoverageHdr">
+          <ScalarProperty Name="DocumentStatusId" ColumnName="DocumentStatusId" />
+          <ScalarProperty Name="DoctypeId" ColumnName="DoctypeId" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="EmpIdNo" ColumnName="EmpIdNo" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="custAttachments">
+      <EntityTypeMapping TypeName="ARMSTestModel.custAttachment">
+        <MappingFragment StoreEntitySet="custAttachment">
+          <ScalarProperty Name="acctCode" ColumnName="acctCode" />
+          <ScalarProperty Name="AttachPath" ColumnName="AttachPath" />
+          <ScalarProperty Name="attachType" ColumnName="attachType" />
+          <ScalarProperty Name="ccaNum" ColumnName="ccaNum" />
+          <ScalarProperty Name="attachID" ColumnName="attachID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="documentTypes">
+      <EntityTypeMapping TypeName="ARMSTestModel.documentType">
+        <MappingFragment StoreEntitySet="documentTypes">
+          <ScalarProperty Name="docDescription" ColumnName="docDescription" />
+          <ScalarProperty Name="docType" ColumnName="docType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="empInventories">
+      <EntityTypeMapping TypeName="ARMSTestModel.empInventory">
+        <MappingFragment StoreEntitySet="empInventory">
+          <ScalarProperty Name="acctCode" ColumnName="acctCode" />
+          <ScalarProperty Name="numOfEmp" ColumnName="numOfEmp" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="ccaNum" ColumnName="ccaNum" />
+          <ScalarProperty Name="InvID" ColumnName="InvID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventDtl1">
+      <EntityTypeMapping TypeName="ARMSTestModel.EventDtl1">
+        <MappingFragment StoreEntitySet="EventDtl1">
+          <ScalarProperty Name="CounterClerk" ColumnName="CounterClerk" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="ObjectiveCode" ColumnName="ObjectiveCode" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="LineNum" ColumnName="LineNum" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventDtls">
+      <EntityTypeMapping TypeName="ARMSTestModel.EventDtl">
+        <MappingFragment StoreEntitySet="EventDtls">
+          <ScalarProperty Name="OtherInformation" ColumnName="OtherInformation" />
+          <ScalarProperty Name="cNoCollection" ColumnName="cNoCollection" />
+          <ScalarProperty Name="cPartialCollection" ColumnName="cPartialCollection" />
+          <ScalarProperty Name="cFullCollection" ColumnName="cFullCollection" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="TimeTable" ColumnName="TimeTable" />
+          <ScalarProperty Name="Recommendation" ColumnName="Recommendation" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="SummaryLackingItems" ColumnName="SummaryLackingItems" />
+          <ScalarProperty Name="Orders" ColumnName="Orders" />
+          <ScalarProperty Name="Delivery" ColumnName="Delivery" />
+          <ScalarProperty Name="IssuesAndConcerns" ColumnName="IssuesAndConcerns" />
+          <ScalarProperty Name="PONum" ColumnName="PONum" />
+          <ScalarProperty Name="NextCallDate" ColumnName="NextCallDate" />
+          <ScalarProperty Name="WithOrder" ColumnName="WithOrder" />
+          <ScalarProperty Name="CompetitorActivities" ColumnName="CompetitorActivities" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="ProductPresentationResult" ColumnName="ProductPresentationResult" />
+          <ScalarProperty Name="StoreCheckingResult" ColumnName="StoreCheckingResult" />
+          <ScalarProperty Name="ObjectiveCode" ColumnName="ObjectiveCode" />
+          <ScalarProperty Name="ContactPersonNo" ColumnName="ContactPersonNo" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="AccountClass" ColumnName="AccountClass" />
+          <ScalarProperty Name="AccountAddress" ColumnName="AccountAddress" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="LineNum" ColumnName="LineNum" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventHdrs">
+      <EntityTypeMapping TypeName="ARMSTestModel.EventHdr">
+        <MappingFragment StoreEntitySet="EventHdr">
+          <ScalarProperty Name="DocumentStatusId" ColumnName="DocumentStatusId" />
+          <ScalarProperty Name="DoctypeId" ColumnName="DoctypeId" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="EmpIdNo" ColumnName="EmpIdNo" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventoryCountAuditDtls">
+      <EntityTypeMapping TypeName="ARMSTestModel.InventoryCountAuditDtl">
+        <MappingFragment StoreEntitySet="InventoryCountAuditDtl">
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="actualCount" ColumnName="actualCount" />
+          <ScalarProperty Name="itemCode" ColumnName="itemCode" />
+          <ScalarProperty Name="lineId" ColumnName="lineId" />
+          <ScalarProperty Name="inventoryCountAuditId" ColumnName="inventoryCountAuditId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventoryCountAuditHdrs">
+      <EntityTypeMapping TypeName="ARMSTestModel.InventoryCountAuditHdr">
+        <MappingFragment StoreEntitySet="InventoryCountAuditHdr">
+          <ScalarProperty Name="auditedBy" ColumnName="auditedBy" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="referenceInventoryCountId" ColumnName="referenceInventoryCountId" />
+          <ScalarProperty Name="inventoryCountAuditId" ColumnName="inventoryCountAuditId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventoryCountDtls">
+      <EntityTypeMapping TypeName="ARMSTestModel.InventoryCountDtl">
+        <MappingFragment StoreEntitySet="InventoryCountDtl">
+          <ScalarProperty Name="netSellinOnHand" ColumnName="netSellinOnHand" />
+          <ScalarProperty Name="salesForecastAmt3" ColumnName="salesForecastAmt3" />
+          <ScalarProperty Name="salesForecastPcs3" ColumnName="salesForecastPcs3" />
+          <ScalarProperty Name="salesForecastAmt2" ColumnName="salesForecastAmt2" />
+          <ScalarProperty Name="salesForecastPcs2" ColumnName="salesForecastPcs2" />
+          <ScalarProperty Name="salesForecastAmt1" ColumnName="salesForecastAmt1" />
+          <ScalarProperty Name="salesForecastPcs1" ColumnName="salesForecastPcs1" />
+          <ScalarProperty Name="salesForecastAmt0" ColumnName="salesForecastAmt0" />
+          <ScalarProperty Name="salesForecastPcs0" ColumnName="salesForecastPcs0" />
+          <ScalarProperty Name="netSellIn" ColumnName="netSellIn" />
+          <ScalarProperty Name="varianceAmt" ColumnName="varianceAmt" />
+          <ScalarProperty Name="variancePcs" ColumnName="variancePcs" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="actualSellOutAmt" ColumnName="actualSellOutAmt" />
+          <ScalarProperty Name="actualSellOutPcs" ColumnName="actualSellOutPcs" />
+          <ScalarProperty Name="endNvPcs" ColumnName="endNvPcs" />
+          <ScalarProperty Name="begNvPcs" ColumnName="begNvPcs" />
+          <ScalarProperty Name="ssr" ColumnName="ssr" />
+          <ScalarProperty Name="itemCode" ColumnName="itemCode" />
+          <ScalarProperty Name="lineId" ColumnName="lineId" />
+          <ScalarProperty Name="inventoryCountId" ColumnName="inventoryCountId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventoryCountHdrs">
+      <EntityTypeMapping TypeName="ARMSTestModel.InventoryCountHdr">
+        <MappingFragment StoreEntitySet="InventoryCountHdr">
+          <ScalarProperty Name="actualCountEndValidDate" ColumnName="actualCountEndValidDate" />
+          <ScalarProperty Name="actualCountDate" ColumnName="actualCountDate" />
+          <ScalarProperty Name="dateTimeStamp" ColumnName="dateTimeStamp" />
+          <ScalarProperty Name="inventoryCountStatus" ColumnName="inventoryCountStatus" />
+          <ScalarProperty Name="Audited" ColumnName="Audited" />
+          <ScalarProperty Name="DocumentStatusId" ColumnName="DocumentStatusId" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+          <ScalarProperty Name="countRange" ColumnName="countRange" />
+          <ScalarProperty Name="nextCountDate" ColumnName="nextCountDate" />
+          <ScalarProperty Name="prevCountDate" ColumnName="prevCountDate" />
+          <ScalarProperty Name="whsInchargeID" ColumnName="whsInchargeID" />
+          <ScalarProperty Name="acctCode" ColumnName="acctCode" />
+          <ScalarProperty Name="empId" ColumnName="empId" />
+          <ScalarProperty Name="docTypeId" ColumnName="docTypeId" />
+          <ScalarProperty Name="inventoryCountId" ColumnName="inventoryCountId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inventoryCountStatusDtls">
+      <EntityTypeMapping TypeName="ARMSTestModel.inventoryCountStatusDtl">
+        <MappingFragment StoreEntitySet="inventoryCountStatusDtl">
+          <ScalarProperty Name="inventoryCountId" ColumnName="inventoryCountId" />
+          <ScalarProperty Name="ch_status" ColumnName="ch_status" />
+          <ScalarProperty Name="ch_empIDNo" ColumnName="ch_empIDNo" />
+          <ScalarProperty Name="custOutletsID" ColumnName="custOutletsID" />
+          <ScalarProperty Name="in_statusId" ColumnName="in_statusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inventoryCountStatusHdrs">
+      <EntityTypeMapping TypeName="ARMSTestModel.inventoryCountStatusHdr">
+        <MappingFragment StoreEntitySet="inventoryCountStatusHdr">
+          <ScalarProperty Name="monthyear" ColumnName="monthyear" />
+          <ScalarProperty Name="in_statusId" ColumnName="in_statusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventoryProducts">
+      <EntityTypeMapping TypeName="ARMSTestModel.InventoryProduct">
+        <MappingFragment StoreEntitySet="InventoryProducts">
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="ProdGrp" ColumnName="ProdGrp" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogChanges">
+      <EntityTypeMapping TypeName="ARMSTestModel.LogChanx">
+        <MappingFragment StoreEntitySet="LogChanges">
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="TimeStmp" ColumnName="TimeStmp" />
+          <ScalarProperty Name="DocId" ColumnName="DocId" />
+          <ScalarProperty Name="DocTypeId" ColumnName="DocTypeId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="majorCustomers">
+      <EntityTypeMapping TypeName="ARMSTestModel.majorCustomer">
+        <MappingFragment StoreEntitySet="majorCustomer">
+          <ScalarProperty Name="estMonthPur" ColumnName="estMonthPur" />
+          <ScalarProperty Name="sellingTerms" ColumnName="sellingTerms" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ccaNum" ColumnName="ccaNum" />
+          <ScalarProperty Name="busTermsID" ColumnName="busTermsID" />
+          <ScalarProperty Name="mjrCustID" ColumnName="mjrCustID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nextInventoryCountDtls">
+      <EntityTypeMapping TypeName="ARMSTestModel.nextInventoryCountDtl">
+        <MappingFragment StoreEntitySet="nextInventoryCountDtl">
+          <ScalarProperty Name="ssr" ColumnName="ssr" />
+          <ScalarProperty Name="salesForecastAmt2" ColumnName="salesForecastAmt2" />
+          <ScalarProperty Name="salesForecastPcs2" ColumnName="salesForecastPcs2" />
+          <ScalarProperty Name="salesForecastAmt1" ColumnName="salesForecastAmt1" />
+          <ScalarProperty Name="salesForecastPcs1" ColumnName="salesForecastPcs1" />
+          <ScalarProperty Name="salesForecastAmt0" ColumnName="salesForecastAmt0" />
+          <ScalarProperty Name="salesForecastPcs0" ColumnName="salesForecastPcs0" />
+          <ScalarProperty Name="begNvPcs" ColumnName="begNvPcs" />
+          <ScalarProperty Name="itemCode" ColumnName="itemCode" />
+          <ScalarProperty Name="lineId" ColumnName="lineId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="nextInventoryCountHdrs">
+      <EntityTypeMapping TypeName="ARMSTestModel.nextInventoryCountHdr">
+        <MappingFragment StoreEntitySet="nextInventoryCountHdr">
+          <ScalarProperty Name="startCountDate" ColumnName="startCountDate" />
+          <ScalarProperty Name="prevCountDate" ColumnName="prevCountDate" />
+          <ScalarProperty Name="acctCode" ColumnName="acctCode" />
+          <ScalarProperty Name="lineId" ColumnName="lineId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObjectiveHdrs">
+      <EntityTypeMapping TypeName="ARMSTestModel.ObjectiveHdr">
+        <MappingFragment StoreEntitySet="ObjectiveHdr">
+          <ScalarProperty Name="docTypeId" ColumnName="docTypeId" />
+          <ScalarProperty Name="objectiveDesc" ColumnName="objectiveDesc" />
+          <ScalarProperty Name="objectiveCode" ColumnName="objectiveCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Objectives">
+      <EntityTypeMapping TypeName="ARMSTestModel.Objective">
+        <MappingFragment StoreEntitySet="Objectives">
+          <ScalarProperty Name="isUsed" ColumnName="isUsed" />
+          <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+          <ScalarProperty Name="objectiveCode" ColumnName="objectiveCode" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RouteChanges">
+      <EntityTypeMapping TypeName="ARMSTestModel.RouteChanx">
+        <MappingFragment StoreEntitySet="RouteChanges">
+          <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+          <ScalarProperty Name="DocId" ColumnName="DocId" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PrevDocStatusId" ColumnName="PrevDocStatusId" />
+          <ScalarProperty Name="DocStatusId" ColumnName="DocStatusId" />
+          <ScalarProperty Name="ActionType" ColumnName="ActionType" />
+          <ScalarProperty Name="DocTypeId" ColumnName="DocTypeId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userHeaders">
+      <EntityTypeMapping TypeName="ARMSTestModel.userHeader">
+        <MappingFragment StoreEntitySet="userHeader">
+          <ScalarProperty Name="LastPasswordChange" ColumnName="LastPasswordChange" />
+          <ScalarProperty Name="LastFilter1" ColumnName="LastFilter1" />
+          <ScalarProperty Name="ErrorAttemp" ColumnName="ErrorAttemp" />
+          <ScalarProperty Name="LoginAttemp" ColumnName="LoginAttemp" />
+          <ScalarProperty Name="SlpCode" ColumnName="SlpCode" />
+          <ScalarProperty Name="channel" ColumnName="channel" />
+          <ScalarProperty Name="positionId" ColumnName="positionId" />
+          <ScalarProperty Name="userPass" ColumnName="userPass" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="territory" ColumnName="territory" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="emailAdd" ColumnName="emailAdd" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="empIdNo" ColumnName="empIdNo" />
+          <ScalarProperty Name="counterId" ColumnName="counterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arm2_view_Userview">
+      <EntityTypeMapping TypeName="ARMSTestModel.arm2_view_Userview">
+        <MappingFragment StoreEntitySet="arm2_view_Userview">
+          <ScalarProperty Name="U_area" ColumnName="U_area" />
+          <ScalarProperty Name="SlpCode" ColumnName="SlpCode" />
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+          <ScalarProperty Name="roleCode" ColumnName="roleCode" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="channel" ColumnName="channel" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="empIDNo" ColumnName="empIDNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_asmListofSO">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_asmListofSO">
+        <MappingFragment StoreEntitySet="arms2_vw_asmListofSO">
+          <ScalarProperty Name="statedesc" ColumnName="statedesc" />
+          <ScalarProperty Name="documentstatusId" ColumnName="documentstatusId" />
+          <ScalarProperty Name="DoctypeId" ColumnName="DoctypeId" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+          <ScalarProperty Name="U_area" ColumnName="U_area" />
+          <ScalarProperty Name="u_position" ColumnName="u_position" />
+          <ScalarProperty Name="slpname" ColumnName="slpname" />
+          <ScalarProperty Name="empidno" ColumnName="empidno" />
+          <ScalarProperty Name="slpcode" ColumnName="slpcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_getInventoryAuditDetail">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_getInventoryAuditDetail">
+        <MappingFragment StoreEntitySet="arms2_vw_getInventoryAuditDetail">
+          <ScalarProperty Name="srp" ColumnName="srp" />
+          <ScalarProperty Name="itemdescription" ColumnName="itemdescription" />
+          <ScalarProperty Name="prodgrp" ColumnName="prodgrp" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="actualCount" ColumnName="actualCount" />
+          <ScalarProperty Name="itemCode" ColumnName="itemCode" />
+          <ScalarProperty Name="lineId" ColumnName="lineId" />
+          <ScalarProperty Name="inventoryCountAuditId" ColumnName="inventoryCountAuditId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_getInventoryAuditHeader">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_getInventoryAuditHeader">
+        <MappingFragment StoreEntitySet="arms2_vw_getInventoryAuditHeader">
+          <ScalarProperty Name="auditedName" ColumnName="auditedName" />
+          <ScalarProperty Name="auditedBy" ColumnName="auditedBy" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="referenceInventoryCountId" ColumnName="referenceInventoryCountId" />
+          <ScalarProperty Name="inventoryCountAuditId" ColumnName="inventoryCountAuditId" />
+          <ScalarProperty Name="acctAddress" ColumnName="acctAddress" />
+          <ScalarProperty Name="Pareto" ColumnName="Pareto" />
+          <ScalarProperty Name="totalActualCount" ColumnName="totalActualCount" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="whsInchargeContactNo" ColumnName="whsInchargeContactNo" />
+          <ScalarProperty Name="whsInchargeLastName" ColumnName="whsInchargeLastName" />
+          <ScalarProperty Name="whsInchargeMiddleName" ColumnName="whsInchargeMiddleName" />
+          <ScalarProperty Name="whsInchargeFirstName" ColumnName="whsInchargeFirstName" />
+          <ScalarProperty Name="TerritoryName" ColumnName="TerritoryName" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+          <ScalarProperty Name="CardName" ColumnName="CardName" />
+          <ScalarProperty Name="actualCountDate" ColumnName="actualCountDate" />
+          <ScalarProperty Name="whsInchargeID" ColumnName="whsInchargeID" />
+          <ScalarProperty Name="acctCode" ColumnName="acctCode" />
+          <ScalarProperty Name="empId" ColumnName="empId" />
+          <ScalarProperty Name="inventoryCountId" ColumnName="inventoryCountId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_getInventoryDetail">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_getInventoryDetail">
+        <MappingFragment StoreEntitySet="arms2_vw_getInventoryDetail">
+          <ScalarProperty Name="srp" ColumnName="srp" />
+          <ScalarProperty Name="itemdescription" ColumnName="itemdescription" />
+          <ScalarProperty Name="prodgrp" ColumnName="prodgrp" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="netSellinOnHand" ColumnName="netSellinOnHand" />
+          <ScalarProperty Name="salesForecastAmt3" ColumnName="salesForecastAmt3" />
+          <ScalarProperty Name="salesForecastPcs3" ColumnName="salesForecastPcs3" />
+          <ScalarProperty Name="salesForecastAmt2" ColumnName="salesForecastAmt2" />
+          <ScalarProperty Name="salesForecastPcs2" ColumnName="salesForecastPcs2" />
+          <ScalarProperty Name="salesForecastAmt1" ColumnName="salesForecastAmt1" />
+          <ScalarProperty Name="salesForecastPcs1" ColumnName="salesForecastPcs1" />
+          <ScalarProperty Name="salesForecastAmt0" ColumnName="salesForecastAmt0" />
+          <ScalarProperty Name="salesForecastPcs0" ColumnName="salesForecastPcs0" />
+          <ScalarProperty Name="netSellIn" ColumnName="netSellIn" />
+          <ScalarProperty Name="varianceAmt" ColumnName="varianceAmt" />
+          <ScalarProperty Name="variancePcs" ColumnName="variancePcs" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="actualSellOutAmt" ColumnName="actualSellOutAmt" />
+          <ScalarProperty Name="actualSellOutPcs" ColumnName="actualSellOutPcs" />
+          <ScalarProperty Name="endNvPcs" ColumnName="endNvPcs" />
+          <ScalarProperty Name="begNvPcs" ColumnName="begNvPcs" />
+          <ScalarProperty Name="ssr" ColumnName="ssr" />
+          <ScalarProperty Name="itemCode" ColumnName="itemCode" />
+          <ScalarProperty Name="lineId" ColumnName="lineId" />
+          <ScalarProperty Name="inventoryCountId" ColumnName="inventoryCountId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_getInventoryHeader">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_getInventoryHeader">
+        <MappingFragment StoreEntitySet="arms2_vw_getInventoryHeader">
+          <ScalarProperty Name="acctAddress" ColumnName="acctAddress" />
+          <ScalarProperty Name="Pareto" ColumnName="Pareto" />
+          <ScalarProperty Name="totalSalesForecastAmt3" ColumnName="totalSalesForecastAmt3" />
+          <ScalarProperty Name="totalSalesForecastAmt2" ColumnName="totalSalesForecastAmt2" />
+          <ScalarProperty Name="totalSalesForecastAmt1" ColumnName="totalSalesForecastAmt1" />
+          <ScalarProperty Name="totalSalesForecastAmt0" ColumnName="totalSalesForecastAmt0" />
+          <ScalarProperty Name="totalVarianceAmt" ColumnName="totalVarianceAmt" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="whsInchargeContactNo" ColumnName="whsInchargeContactNo" />
+          <ScalarProperty Name="whsInchargeLastName" ColumnName="whsInchargeLastName" />
+          <ScalarProperty Name="whsInchargeMiddleName" ColumnName="whsInchargeMiddleName" />
+          <ScalarProperty Name="whsInchargeFirstName" ColumnName="whsInchargeFirstName" />
+          <ScalarProperty Name="TerritoryName" ColumnName="TerritoryName" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+          <ScalarProperty Name="CardName" ColumnName="CardName" />
+          <ScalarProperty Name="actualCountEndValidDate" ColumnName="actualCountEndValidDate" />
+          <ScalarProperty Name="actualCountDate" ColumnName="actualCountDate" />
+          <ScalarProperty Name="dateTimeStamp" ColumnName="dateTimeStamp" />
+          <ScalarProperty Name="inventoryCountStatus" ColumnName="inventoryCountStatus" />
+          <ScalarProperty Name="Audited" ColumnName="Audited" />
+          <ScalarProperty Name="DocumentStatusId" ColumnName="DocumentStatusId" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+          <ScalarProperty Name="countRange" ColumnName="countRange" />
+          <ScalarProperty Name="nextCountDate" ColumnName="nextCountDate" />
+          <ScalarProperty Name="prevCountDate" ColumnName="prevCountDate" />
+          <ScalarProperty Name="whsInchargeID" ColumnName="whsInchargeID" />
+          <ScalarProperty Name="acctCode" ColumnName="acctCode" />
+          <ScalarProperty Name="empId" ColumnName="empId" />
+          <ScalarProperty Name="docTypeId" ColumnName="docTypeId" />
+          <ScalarProperty Name="inventoryCountId" ColumnName="inventoryCountId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_inventoryScheduleAccounts">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_inventoryScheduleAccounts">
+        <MappingFragment StoreEntitySet="arms2_vw_inventoryScheduleAccounts">
+          <ScalarProperty Name="startCountDate" ColumnName="startCountDate" />
+          <ScalarProperty Name="prevCountDate" ColumnName="prevCountDate" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="CntctPrsn" ColumnName="CntctPrsn" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="empIdNo" ColumnName="empIdNo" />
+          <ScalarProperty Name="territoryName" ColumnName="territoryName" />
+          <ScalarProperty Name="pareto" ColumnName="pareto" />
+          <ScalarProperty Name="areaname" ColumnName="areaname" />
+          <ScalarProperty Name="acctName" ColumnName="acctName" />
+          <ScalarProperty Name="bussAdd" ColumnName="bussAdd" />
+          <ScalarProperty Name="acctCode" ColumnName="acctCode" />
+          <ScalarProperty Name="ccaNum" ColumnName="ccaNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_nextInvDtl_itemMasterFile">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_nextInvDtl_itemMasterFile">
+        <MappingFragment StoreEntitySet="arms2_vw_nextInvDtl_itemMasterFile">
+          <ScalarProperty Name="srp" ColumnName="srp" />
+          <ScalarProperty Name="itemdescription" ColumnName="itemdescription" />
+          <ScalarProperty Name="prodgrp" ColumnName="prodgrp" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="U_PL_ITEMCODE" ColumnName="U_PL_ITEMCODE" />
+          <ScalarProperty Name="ssr" ColumnName="ssr" />
+          <ScalarProperty Name="salesForecastAmt2" ColumnName="salesForecastAmt2" />
+          <ScalarProperty Name="salesForecastPcs2" ColumnName="salesForecastPcs2" />
+          <ScalarProperty Name="salesForecastAmt1" ColumnName="salesForecastAmt1" />
+          <ScalarProperty Name="salesForecastPcs1" ColumnName="salesForecastPcs1" />
+          <ScalarProperty Name="salesForecastAmt0" ColumnName="salesForecastAmt0" />
+          <ScalarProperty Name="salesForecastPcs0" ColumnName="salesForecastPcs0" />
+          <ScalarProperty Name="begNvPcs" ColumnName="begNvPcs" />
+          <ScalarProperty Name="itemCode" ColumnName="itemCode" />
+          <ScalarProperty Name="lineId" ColumnName="lineId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_soCoverage">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_soCoverage">
+        <MappingFragment StoreEntitySet="arms2_vw_soCoverage">
+          <ScalarProperty Name="CounterClerk" ColumnName="CounterClerk" />
+          <ScalarProperty Name="ActualAmount" ColumnName="ActualAmount" />
+          <ScalarProperty Name="PlannedAmount" ColumnName="PlannedAmount" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="ObjectiveCode" ColumnName="ObjectiveCode" />
+          <ScalarProperty Name="OtherInformation" ColumnName="OtherInformation" />
+          <ScalarProperty Name="cNoCollection" ColumnName="cNoCollection" />
+          <ScalarProperty Name="cPartialCollection" ColumnName="cPartialCollection" />
+          <ScalarProperty Name="cFullCollection" ColumnName="cFullCollection" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="TimeTable" ColumnName="TimeTable" />
+          <ScalarProperty Name="Recommendation" ColumnName="Recommendation" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="SummaryLackingItems" ColumnName="SummaryLackingItems" />
+          <ScalarProperty Name="Orders" ColumnName="Orders" />
+          <ScalarProperty Name="Delivery" ColumnName="Delivery" />
+          <ScalarProperty Name="IssuesAndConcerns" ColumnName="IssuesAndConcerns" />
+          <ScalarProperty Name="PONum" ColumnName="PONum" />
+          <ScalarProperty Name="NextCallDate" ColumnName="NextCallDate" />
+          <ScalarProperty Name="WithOrder" ColumnName="WithOrder" />
+          <ScalarProperty Name="CompetitorActivities" ColumnName="CompetitorActivities" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="ProductPresentationResult" ColumnName="ProductPresentationResult" />
+          <ScalarProperty Name="StoreCheckingResult" ColumnName="StoreCheckingResult" />
+          <ScalarProperty Name="StoreChecking" ColumnName="StoreChecking" />
+          <ScalarProperty Name="ContactPersonNo" ColumnName="ContactPersonNo" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="LineNum" ColumnName="LineNum" />
+          <ScalarProperty Name="DocumentStatusId" ColumnName="DocumentStatusId" />
+          <ScalarProperty Name="DoctypeId" ColumnName="DoctypeId" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="EmpIdNo" ColumnName="EmpIdNo" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="armsII_vw_CalendarUser">
+      <EntityTypeMapping TypeName="ARMSTestModel.armsII_vw_CalendarUser">
+        <MappingFragment StoreEntitySet="armsII_vw_CalendarUser">
+          <ScalarProperty Name="ASM_ID" ColumnName="ASM_ID" />
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+          <ScalarProperty Name="roleCode" ColumnName="roleCode" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="channel" ColumnName="channel" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="empIDNo" ColumnName="empIDNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="armsII_vw_CallReport">
+      <EntityTypeMapping TypeName="ARMSTestModel.armsII_vw_CallReport">
+        <MappingFragment StoreEntitySet="armsII_vw_CallReport">
+          <ScalarProperty Name="CounterClerk" ColumnName="CounterClerk" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="OtherInformation" ColumnName="OtherInformation" />
+          <ScalarProperty Name="cNoCollection" ColumnName="cNoCollection" />
+          <ScalarProperty Name="cPartialCollection" ColumnName="cPartialCollection" />
+          <ScalarProperty Name="cFullCollection" ColumnName="cFullCollection" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="TimeTable" ColumnName="TimeTable" />
+          <ScalarProperty Name="Recommendation" ColumnName="Recommendation" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="SummaryLackingItems" ColumnName="SummaryLackingItems" />
+          <ScalarProperty Name="Orders" ColumnName="Orders" />
+          <ScalarProperty Name="Delivery" ColumnName="Delivery" />
+          <ScalarProperty Name="IssuesAndConcerns" ColumnName="IssuesAndConcerns" />
+          <ScalarProperty Name="PONum" ColumnName="PONum" />
+          <ScalarProperty Name="NextCallDate" ColumnName="NextCallDate" />
+          <ScalarProperty Name="WithOrder" ColumnName="WithOrder" />
+          <ScalarProperty Name="CompetitorActivities" ColumnName="CompetitorActivities" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="ProductPresentationResult" ColumnName="ProductPresentationResult" />
+          <ScalarProperty Name="StoreCheckingResult" ColumnName="StoreCheckingResult" />
+          <ScalarProperty Name="ObjectiveCode" ColumnName="ObjectiveCode" />
+          <ScalarProperty Name="ContactPersonNo" ColumnName="ContactPersonNo" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="AccountClass" ColumnName="AccountClass" />
+          <ScalarProperty Name="AccountAddress" ColumnName="AccountAddress" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="LineNum" ColumnName="LineNum" />
+          <ScalarProperty Name="DocumentStatusId" ColumnName="DocumentStatusId" />
+          <ScalarProperty Name="DoctypeId" ColumnName="DoctypeId" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="EmpIdNo" ColumnName="EmpIdNo" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="armsII_vw_EventdtlsBySo">
+      <EntityTypeMapping TypeName="ARMSTestModel.armsII_vw_EventdtlsBySo">
+        <MappingFragment StoreEntitySet="armsII_vw_EventdtlsBySo">
+          <ScalarProperty Name="CounterClerk" ColumnName="CounterClerk" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="cNoCollection" ColumnName="cNoCollection" />
+          <ScalarProperty Name="cPartialCollection" ColumnName="cPartialCollection" />
+          <ScalarProperty Name="cFullCollection" ColumnName="cFullCollection" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="TimeTable" ColumnName="TimeTable" />
+          <ScalarProperty Name="Recommendation" ColumnName="Recommendation" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="SummaryLackingItems" ColumnName="SummaryLackingItems" />
+          <ScalarProperty Name="Orders" ColumnName="Orders" />
+          <ScalarProperty Name="Delivery" ColumnName="Delivery" />
+          <ScalarProperty Name="IssuesAndConcerns" ColumnName="IssuesAndConcerns" />
+          <ScalarProperty Name="PONum" ColumnName="PONum" />
+          <ScalarProperty Name="NextCallDate" ColumnName="NextCallDate" />
+          <ScalarProperty Name="WithOrder" ColumnName="WithOrder" />
+          <ScalarProperty Name="CompetitorActivities" ColumnName="CompetitorActivities" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="ProductPresentationResult" ColumnName="ProductPresentationResult" />
+          <ScalarProperty Name="StoreCheckingResult" ColumnName="StoreCheckingResult" />
+          <ScalarProperty Name="ObjectiveCode" ColumnName="ObjectiveCode" />
+          <ScalarProperty Name="ContactPersonNo" ColumnName="ContactPersonNo" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="AccountClass" ColumnName="AccountClass" />
+          <ScalarProperty Name="AccountAddress" ColumnName="AccountAddress" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="LineNum" ColumnName="LineNum" />
+          <ScalarProperty Name="DocumentStatusId" ColumnName="DocumentStatusId" />
+          <ScalarProperty Name="DoctypeId" ColumnName="DoctypeId" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="EmpIdNo" ColumnName="EmpIdNo" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customerHeaders">
+      <EntityTypeMapping TypeName="ARMSTestModel.customerHeader">
+        <MappingFragment StoreEntitySet="customerHeader">
+          <ScalarProperty Name="TypeOfAccount" ColumnName="TypeOfAccount" />
+          <ScalarProperty Name="TAG1" ColumnName="TAG1" />
+          <ScalarProperty Name="Pareto" ColumnName="Pareto" />
+          <ScalarProperty Name="MobileNum" ColumnName="MobileNum" />
+          <ScalarProperty Name="telNum2" ColumnName="telNum2" />
+          <ScalarProperty Name="acctCategoryPrem" ColumnName="acctCategoryPrem" />
+          <ScalarProperty Name="acctBusinessClass" ColumnName="acctBusinessClass" />
+          <ScalarProperty Name="acctCategoryVal" ColumnName="acctCategoryVal" />
+          <ScalarProperty Name="SkipCHM" ColumnName="SkipCHM" />
+          <ScalarProperty Name="SkipASM" ColumnName="SkipASM" />
+          <ScalarProperty Name="SkipRoles1" ColumnName="SkipRoles1" />
+          <ScalarProperty Name="Status2" ColumnName="Status2" />
+          <ScalarProperty Name="Approved" ColumnName="Approved" />
+          <ScalarProperty Name="DocType" ColumnName="DocType" />
+          <ScalarProperty Name="Canceled" ColumnName="Canceled" />
+          <ScalarProperty Name="EncodedBy" ColumnName="EncodedBy" />
+          <ScalarProperty Name="SapAcctCode" ColumnName="SapAcctCode" />
+          <ScalarProperty Name="TotalNumOfEmp" ColumnName="TotalNumOfEmp" />
+          <ScalarProperty Name="delAdd" ColumnName="delAdd" />
+          <ScalarProperty Name="bussAdd" ColumnName="bussAdd" />
+          <ScalarProperty Name="regBusName" ColumnName="regBusName" />
+          <ScalarProperty Name="VATregNum" ColumnName="VATregNum" />
+          <ScalarProperty Name="TIN" ColumnName="TIN" />
+          <ScalarProperty Name="yrsWdMTC" ColumnName="yrsWdMTC" />
+          <ScalarProperty Name="yrsInBusiness" ColumnName="yrsInBusiness" />
+          <ScalarProperty Name="storeHrs" ColumnName="storeHrs" />
+          <ScalarProperty Name="offceHrs" ColumnName="offceHrs" />
+          <ScalarProperty Name="faxNum" ColumnName="faxNum" />
+          <ScalarProperty Name="telNum" ColumnName="telNum" />
+          <ScalarProperty Name="emailAdd" ColumnName="emailAdd" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="territory" ColumnName="territory" />
+          <ScalarProperty Name="acctOffcr" ColumnName="acctOffcr" />
+          <ScalarProperty Name="acctClass" ColumnName="acctClass" />
+          <ScalarProperty Name="acctName" ColumnName="acctName" />
+          <ScalarProperty Name="keyAcct" ColumnName="keyAcct" />
+          <ScalarProperty Name="acctClassfxn" ColumnName="acctClassfxn" />
+          <ScalarProperty Name="acctType" ColumnName="acctType" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="acctCode" ColumnName="acctCode" />
+          <ScalarProperty Name="ccaNum" ColumnName="ccaNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="app_vw_itemBrand">
+      <EntityTypeMapping TypeName="ARMSTestModel.app_vw_itemBrand">
+        <MappingFragment StoreEntitySet="app_vw_itemBrand">
+          <ScalarProperty Name="FldDate" ColumnName="FldDate" />
+          <ScalarProperty Name="Descr" ColumnName="Descr" />
+          <ScalarProperty Name="FldValue" ColumnName="FldValue" />
+          <ScalarProperty Name="IndexID" ColumnName="IndexID" />
+          <ScalarProperty Name="FieldID" ColumnName="FieldID" />
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="custOutletIncharges">
+      <EntityTypeMapping TypeName="ARMSTestModel.custOutletIncharge">
+        <MappingFragment StoreEntitySet="custOutletIncharge">
+          <ScalarProperty Name="whsInchargeContactNo" ColumnName="whsInchargeContactNo" />
+          <ScalarProperty Name="whsInchargeLastName" ColumnName="whsInchargeLastName" />
+          <ScalarProperty Name="whsInchargeMiddleName" ColumnName="whsInchargeMiddleName" />
+          <ScalarProperty Name="whsInchargeFirstName" ColumnName="whsInchargeFirstName" />
+          <ScalarProperty Name="whsInchargeID" ColumnName="whsInchargeID" />
+          <ScalarProperty Name="acctCode" ColumnName="acctCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="custOutlets">
+      <EntityTypeMapping TypeName="ARMSTestModel.custOutlet">
+        <MappingFragment StoreEntitySet="custOutlets">
+          <ScalarProperty Name="inventoryIncharge" ColumnName="inventoryIncharge" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="wreHouseSize" ColumnName="wreHouseSize" />
+          <ScalarProperty Name="storeSize" ColumnName="storeSize" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ccaNum" ColumnName="ccaNum" />
+          <ScalarProperty Name="busTermsID" ColumnName="busTermsID" />
+          <ScalarProperty Name="custOutletsID" ColumnName="custOutletsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customerAccStatus">
+      <EntityTypeMapping TypeName="ARMSTestModel.customerAccStatu">
+        <MappingFragment StoreEntitySet="customerAccStatus">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ccaNum" ColumnName="ccaNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dayCycles">
+      <EntityTypeMapping TypeName="ARMSTestModel.dayCycle">
+        <MappingFragment StoreEntitySet="dayCycle">
+          <ScalarProperty Name="startDayOfTheMonth" ColumnName="startDayOfTheMonth" />
+          <ScalarProperty Name="rangeDayCycle" ColumnName="rangeDayCycle" />
+          <ScalarProperty Name="DayCycleNo" ColumnName="DayCycleNo" />
+          <ScalarProperty Name="DocTypeId" ColumnName="DocTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="app_vw_itemgroup">
+      <EntityTypeMapping TypeName="ARMSTestModel.app_vw_itemgroup">
+        <MappingFragment StoreEntitySet="app_vw_itemgroup">
+          <ScalarProperty Name="U_UOM" ColumnName="U_UOM" />
+          <ScalarProperty Name="U_CATEGORY" ColumnName="U_CATEGORY" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mtc_vw_User_Role_Details">
+      <EntityTypeMapping TypeName="ARMSTestModel.mtc_vw_User_Role_Details">
+        <MappingFragment StoreEntitySet="mtc_vw_User_Role_Details">
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+          <ScalarProperty Name="roleCode" ColumnName="roleCode" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="channel" ColumnName="channel" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="userPass" ColumnName="userPass" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="empIDNo" ColumnName="empIDNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SalesTargets">
+      <EntityTypeMapping TypeName="ARMSTestModel.SalesTarget">
+        <MappingFragment StoreEntitySet="SalesTarget">
+          <ScalarProperty Name="DocTypeId" ColumnName="DocTypeId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoverageDataChanges">
+      <EntityTypeMapping TypeName="ARMSTestModel.CoverageDataChanx">
+        <MappingFragment StoreEntitySet="CoverageDataChanges">
+          <ScalarProperty Name="DocId" ColumnName="DocId" />
+          <ScalarProperty Name="DataChanges" ColumnName="DataChanges" />
+          <ScalarProperty Name="DocTypeId" ColumnName="DocTypeId" />
+          <ScalarProperty Name="CoverageDataChangesId" ColumnName="CoverageDataChangesId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoverageLogChanges">
+      <EntityTypeMapping TypeName="ARMSTestModel.CoverageLogChanx">
+        <MappingFragment StoreEntitySet="CoverageLogChanges">
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="TimeStmp" ColumnName="TimeStmp" />
+          <ScalarProperty Name="DocId" ColumnName="DocId" />
+          <ScalarProperty Name="DocTypeId" ColumnName="DocTypeId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_inventoryAccounts">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_inventoryAccounts">
+        <MappingFragment StoreEntitySet="arms2_vw_inventoryAccounts">
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="CntctPrsn" ColumnName="CntctPrsn" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="empIdNo" ColumnName="empIdNo" />
+          <ScalarProperty Name="territoryName" ColumnName="territoryName" />
+          <ScalarProperty Name="pareto" ColumnName="pareto" />
+          <ScalarProperty Name="areaname" ColumnName="areaname" />
+          <ScalarProperty Name="acctName" ColumnName="acctName" />
+          <ScalarProperty Name="bussAdd" ColumnName="bussAdd" />
+          <ScalarProperty Name="acctCode" ColumnName="acctCode" />
+          <ScalarProperty Name="ccaNum" ColumnName="ccaNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="armsII_vw_itemMasterFile">
+      <EntityTypeMapping TypeName="ARMSTestModel.armsII_vw_itemMasterFile">
+        <MappingFragment StoreEntitySet="armsII_vw_itemMasterFile">
+          <ScalarProperty Name="U_PL_NAME" ColumnName="U_PL_NAME" />
+          <ScalarProperty Name="U_ItemClass" ColumnName="U_ItemClass" />
+          <ScalarProperty Name="U_GMultiplier" ColumnName="U_GMultiplier" />
+          <ScalarProperty Name="U_GLength" ColumnName="U_GLength" />
+          <ScalarProperty Name="U_GWidth" ColumnName="U_GWidth" />
+          <ScalarProperty Name="U_GThickness" ColumnName="U_GThickness" />
+          <ScalarProperty Name="LookUpItem" ColumnName="LookUpItem" />
+          <ScalarProperty Name="U_PL_UOM" ColumnName="U_PL_UOM" />
+          <ScalarProperty Name="SRP" ColumnName="SRP" />
+          <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+          <ScalarProperty Name="ProdGrp" ColumnName="ProdGrp" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="ITEMCODE" ColumnName="ITEMCODE" />
+          <ScalarProperty Name="U_PL_ITEMCODE" ColumnName="U_PL_ITEMCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TempUploadCoveragePlans">
+      <EntityTypeMapping TypeName="ARMSTestModel.TempUploadCoveragePlan">
+        <MappingFragment StoreEntitySet="TempUploadCoveragePlan">
+          <ScalarProperty Name="uploadingType" ColumnName="uploadingType" />
+          <ScalarProperty Name="DataChanges" ColumnName="DataChanges" />
+          <ScalarProperty Name="counter_id" ColumnName="counter_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_AccountInCoverage">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_AccountInCoverage">
+        <MappingFragment StoreEntitySet="arms2_vw_AccountInCoverage">
+          <ScalarProperty Name="HotelContactNumber" ColumnName="HotelContactNumber" />
+          <ScalarProperty Name="HotelName" ColumnName="HotelName" />
+          <ScalarProperty Name="FileAttachment" ColumnName="FileAttachment" />
+          <ScalarProperty Name="bussAdd" ColumnName="bussAdd" />
+          <ScalarProperty Name="acctClassfxn" ColumnName="acctClassfxn" />
+          <ScalarProperty Name="acctName" ColumnName="acctName" />
+          <ScalarProperty Name="OtherInformation" ColumnName="OtherInformation" />
+          <ScalarProperty Name="cNoCollection" ColumnName="cNoCollection" />
+          <ScalarProperty Name="cPartialCollection" ColumnName="cPartialCollection" />
+          <ScalarProperty Name="cFullCollection" ColumnName="cFullCollection" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="TimeTable" ColumnName="TimeTable" />
+          <ScalarProperty Name="Recommendation" ColumnName="Recommendation" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="SummaryLackingItems" ColumnName="SummaryLackingItems" />
+          <ScalarProperty Name="Orders" ColumnName="Orders" />
+          <ScalarProperty Name="Delivery" ColumnName="Delivery" />
+          <ScalarProperty Name="IssuesAndConcerns" ColumnName="IssuesAndConcerns" />
+          <ScalarProperty Name="PONum" ColumnName="PONum" />
+          <ScalarProperty Name="NextCallDate" ColumnName="NextCallDate" />
+          <ScalarProperty Name="WithOrder" ColumnName="WithOrder" />
+          <ScalarProperty Name="CompetitorActivities" ColumnName="CompetitorActivities" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="ProductPresentationResult" ColumnName="ProductPresentationResult" />
+          <ScalarProperty Name="StoreCheckingResult" ColumnName="StoreCheckingResult" />
+          <ScalarProperty Name="StoreChecking" ColumnName="StoreChecking" />
+          <ScalarProperty Name="ContactPersonNo" ColumnName="ContactPersonNo" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="LineNum" ColumnName="LineNum" />
+          <ScalarProperty Name="DocumentStatusId" ColumnName="DocumentStatusId" />
+          <ScalarProperty Name="DoctypeId" ColumnName="DoctypeId" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="EmpIdNo" ColumnName="EmpIdNo" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_LookupAccounts">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_LookupAccounts">
+        <MappingFragment StoreEntitySet="arms2_vw_LookupAccounts">
+          <ScalarProperty Name="HotelContactNumber" ColumnName="HotelContactNumber" />
+          <ScalarProperty Name="HotelName" ColumnName="HotelName" />
+          <ScalarProperty Name="day" ColumnName="day" />
+          <ScalarProperty Name="DocumentStatusId" ColumnName="DocumentStatusId" />
+          <ScalarProperty Name="DoctypeId" ColumnName="DoctypeId" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="EmpIdNo" ColumnName="EmpIdNo" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="CntctPrsn" ColumnName="CntctPrsn" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="acctClassfxn" ColumnName="acctClassfxn" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CardName" ColumnName="CardName" />
+          <ScalarProperty Name="CardCode" ColumnName="CardCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_estAmount_actAmount">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_estAmount_actAmount">
+        <MappingFragment StoreEntitySet="arms2_vw_estAmount_actAmount">
+          <ScalarProperty Name="estActualAmount" ColumnName="estActualAmount" />
+          <ScalarProperty Name="estPlannedAmount" ColumnName="estPlannedAmount" />
+          <ScalarProperty Name="ObjectiveCode" ColumnName="ObjectiveCode" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="LineNum" ColumnName="LineNum" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RouteRmrks">
+      <EntityTypeMapping TypeName="ARMSTestModel.RouteRmrk">
+        <MappingFragment StoreEntitySet="RouteRmrks">
+          <ScalarProperty Name="datelog" ColumnName="datelog" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="CounterId" ColumnName="CounterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoverageDtl1">
+      <EntityTypeMapping TypeName="ARMSTestModel.CoverageDtl1">
+        <MappingFragment StoreEntitySet="CoverageDtl1">
+          <ScalarProperty Name="inventoryCountId" ColumnName="inventoryCountId" />
+          <ScalarProperty Name="detailRemarks" ColumnName="detailRemarks" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="CounterClerkNo" ColumnName="CounterClerkNo" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="isIncoverage" ColumnName="isIncoverage" />
+          <ScalarProperty Name="ProductPresented" ColumnName="ProductPresented" />
+          <ScalarProperty Name="CounterClerk" ColumnName="CounterClerk" />
+          <ScalarProperty Name="ActualAmount" ColumnName="ActualAmount" />
+          <ScalarProperty Name="PlannedAmount" ColumnName="PlannedAmount" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="ObjectiveCode" ColumnName="ObjectiveCode" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="LineNum" ColumnName="LineNum" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="CounterId" ColumnName="CounterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="arms2_sp_PendingAccounts88" FunctionName="ARMSTestModel.Store.arms2_sp_PendingAccounts88">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ARMSTestModel.arms2_sp_PendingAccounts88_Result">
+          <ScalarProperty Name="transid" ColumnName="transid" />
+          <ScalarProperty Name="actdeldate" ColumnName="actdeldate" />
+          <ScalarProperty Name="duedate" ColumnName="duedate" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="docnum" ColumnName="docnum" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="CollectionPendingAccounts">
+      <EntityTypeMapping TypeName="ARMSTestModel.CollectionPendingAccount">
+        <MappingFragment StoreEntitySet="CollectionPendingAccounts">
+          <ScalarProperty Name="balance" ColumnName="balance" />
+          <ScalarProperty Name="duedate" ColumnName="duedate" />
+          <ScalarProperty Name="actdeldate" ColumnName="actdeldate" />
+          <ScalarProperty Name="cardcode" ColumnName="cardcode" />
+          <ScalarProperty Name="docnum" ColumnName="docnum" />
+          <ScalarProperty Name="transid" ColumnName="transid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoverageDtls">
+      <EntityTypeMapping TypeName="ARMSTestModel.CoverageDtl">
+        <MappingFragment StoreEntitySet="CoverageDtls">
+          <ScalarProperty Name="hasPOUpload" ColumnName="hasPOUpload" />
+          <ScalarProperty Name="AttachmentType4" ColumnName="AttachmentType4" />
+          <ScalarProperty Name="AttachmentContent4" ColumnName="AttachmentContent4" />
+          <ScalarProperty Name="FileAttachment4" ColumnName="FileAttachment4" />
+          <ScalarProperty Name="AttachmentType3" ColumnName="AttachmentType3" />
+          <ScalarProperty Name="AttachmentContent3" ColumnName="AttachmentContent3" />
+          <ScalarProperty Name="FileAttachment3" ColumnName="FileAttachment3" />
+          <ScalarProperty Name="AttachmentType2" ColumnName="AttachmentType2" />
+          <ScalarProperty Name="AttachmentContent2" ColumnName="AttachmentContent2" />
+          <ScalarProperty Name="FileAttachment2" ColumnName="FileAttachment2" />
+          <ScalarProperty Name="CashOrCredit" ColumnName="CashOrCredit" />
+          <ScalarProperty Name="isUrgent" ColumnName="isUrgent" />
+          <ScalarProperty Name="DateDeleted" ColumnName="DateDeleted" />
+          <ScalarProperty Name="DateEncoded" ColumnName="DateEncoded" />
+          <ScalarProperty Name="ColRemarks" ColumnName="ColRemarks" />
+          <ScalarProperty Name="ColTotal" ColumnName="ColTotal" />
+          <ScalarProperty Name="ColDatedCheck" ColumnName="ColDatedCheck" />
+          <ScalarProperty Name="ColPostDatedCheck" ColumnName="ColPostDatedCheck" />
+          <ScalarProperty Name="LongitudeInAddress" ColumnName="LongitudeInAddress" />
+          <ScalarProperty Name="LatitudeOutAddress" ColumnName="LatitudeOutAddress" />
+          <ScalarProperty Name="LongitudeOutAddress" ColumnName="LongitudeOutAddress" />
+          <ScalarProperty Name="LatitudeInAddress" ColumnName="LatitudeInAddress" />
+          <ScalarProperty Name="CheckOutTime" ColumnName="CheckOutTime" />
+          <ScalarProperty Name="CheckOutAddress" ColumnName="CheckOutAddress" />
+          <ScalarProperty Name="CheckInTime" ColumnName="CheckInTime" />
+          <ScalarProperty Name="CheckInAddress" ColumnName="CheckInAddress" />
+          <ScalarProperty Name="AttachmentType" ColumnName="AttachmentType" />
+          <ScalarProperty Name="AttachmentContent" ColumnName="AttachmentContent" />
+          <ScalarProperty Name="hasCallreport" ColumnName="hasCallreport" />
+          <ScalarProperty Name="FileAttachment" ColumnName="FileAttachment" />
+          <ScalarProperty Name="RmrkChanges" ColumnName="RmrkChanges" />
+          <ScalarProperty Name="IsAnEdit" ColumnName="IsAnEdit" />
+          <ScalarProperty Name="AcctStatus" ColumnName="AcctStatus" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="HotelContactNumber" ColumnName="HotelContactNumber" />
+          <ScalarProperty Name="HotelName" ColumnName="HotelName" />
+          <ScalarProperty Name="Numvisit" ColumnName="Numvisit" />
+          <ScalarProperty Name="Tmeout" ColumnName="Tmeout" />
+          <ScalarProperty Name="Tmein" ColumnName="Tmein" />
+          <ScalarProperty Name="isPlanned" ColumnName="isPlanned" />
+          <ScalarProperty Name="OtherInformation" ColumnName="OtherInformation" />
+          <ScalarProperty Name="cNoCollection" ColumnName="cNoCollection" />
+          <ScalarProperty Name="cPartialCollection" ColumnName="cPartialCollection" />
+          <ScalarProperty Name="cFullCollection" ColumnName="cFullCollection" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="TimeTable" ColumnName="TimeTable" />
+          <ScalarProperty Name="Recommendation" ColumnName="Recommendation" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="SummaryLackingItems" ColumnName="SummaryLackingItems" />
+          <ScalarProperty Name="Orders" ColumnName="Orders" />
+          <ScalarProperty Name="Delivery" ColumnName="Delivery" />
+          <ScalarProperty Name="IssuesAndConcerns" ColumnName="IssuesAndConcerns" />
+          <ScalarProperty Name="PONum" ColumnName="PONum" />
+          <ScalarProperty Name="NextCallDate" ColumnName="NextCallDate" />
+          <ScalarProperty Name="WithOrder" ColumnName="WithOrder" />
+          <ScalarProperty Name="CompetitorActivities" ColumnName="CompetitorActivities" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="ProductPresentationResult" ColumnName="ProductPresentationResult" />
+          <ScalarProperty Name="StoreCheckingResult" ColumnName="StoreCheckingResult" />
+          <ScalarProperty Name="StoreChecking" ColumnName="StoreChecking" />
+          <ScalarProperty Name="ContactPersonNo" ColumnName="ContactPersonNo" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="LineNum" ColumnName="LineNum" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Arms_vw_SOLookUps">
+      <EntityTypeMapping TypeName="ARMSTestModel.Arms_vw_SOLookUps">
+        <MappingFragment StoreEntitySet="Arms_vw_SOLookUps">
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="territory" ColumnName="territory" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EmpidNo" ColumnName="EmpidNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_lookUpOSLP">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_lookUpOSLP">
+        <MappingFragment StoreEntitySet="arms2_vw_lookUpOSLP">
+          <ScalarProperty Name="empIdNo" ColumnName="empIdNo" />
+          <ScalarProperty Name="U_SALES_TARGET" ColumnName="U_SALES_TARGET" />
+          <ScalarProperty Name="U_AREA" ColumnName="U_AREA" />
+          <ScalarProperty Name="U_POSITION" ColumnName="U_POSITION" />
+          <ScalarProperty Name="U_ACTIVE" ColumnName="U_ACTIVE" />
+          <ScalarProperty Name="U_ASM" ColumnName="U_ASM" />
+          <ScalarProperty Name="SlpName" ColumnName="SlpName" />
+          <ScalarProperty Name="SlpCode" ColumnName="SlpCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_userheaderDetails">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_userheaderDetails">
+        <MappingFragment StoreEntitySet="arms2_vw_userheaderDetails">
+          <ScalarProperty Name="empidno" ColumnName="empidno" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="slpname" ColumnName="slpname" />
+          <ScalarProperty Name="slpcode" ColumnName="slpcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UploadedPricelists">
+      <EntityTypeMapping TypeName="ARMSTestModel.UploadedPricelist">
+        <MappingFragment StoreEntitySet="UploadedPricelist">
+          <ScalarProperty Name="FileDescription" ColumnName="FileDescription" />
+          <ScalarProperty Name="UploadedBy" ColumnName="UploadedBy" />
+          <ScalarProperty Name="DateTimeStamp" ColumnName="DateTimeStamp" />
+          <ScalarProperty Name="AttachmentType" ColumnName="AttachmentType" />
+          <ScalarProperty Name="FileContent" ColumnName="FileContent" />
+          <ScalarProperty Name="FileAttachment" ColumnName="FileAttachment" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_customerheader_lookup">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_customerheader_lookup">
+        <MappingFragment StoreEntitySet="arms2_vw_customerheader_lookup">
+          <ScalarProperty Name="acctClassfxn" ColumnName="acctClassfxn" />
+          <ScalarProperty Name="Pareto" ColumnName="Pareto" />
+          <ScalarProperty Name="SapAcctCode" ColumnName="SapAcctCode" />
+          <ScalarProperty Name="bussAdd" ColumnName="bussAdd" />
+          <ScalarProperty Name="acctName" ColumnName="acctName" />
+          <ScalarProperty Name="acctcode" ColumnName="acctcode" />
+          <ScalarProperty Name="ccaNum" ColumnName="ccaNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VisitLogs">
+      <EntityTypeMapping TypeName="ARMSTestModel.VisitLog">
+        <MappingFragment StoreEntitySet="VisitLogs">
+          <ScalarProperty Name="isPlanned" ColumnName="isPlanned" />
+          <ScalarProperty Name="INOUT" ColumnName="INOUT" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="LineNum" ColumnName="LineNum" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="CounterId" ColumnName="CounterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_actveBusPrtnr">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_actveBusPrtnr">
+        <MappingFragment StoreEntitySet="arms2_vw_actveBusPrtnr">
+          <ScalarProperty Name="ccanum" ColumnName="ccanum" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="TerritoryName" ColumnName="TerritoryName" />
+          <ScalarProperty Name="Pareto" ColumnName="Pareto" />
+          <ScalarProperty Name="empIdNo" ColumnName="empIdNo" />
+          <ScalarProperty Name="SOCode" ColumnName="SOCode" />
+          <ScalarProperty Name="Territory" ColumnName="Territory" />
+          <ScalarProperty Name="U_AREA" ColumnName="U_AREA" />
+          <ScalarProperty Name="U_CHANNEL" ColumnName="U_CHANNEL" />
+          <ScalarProperty Name="U_ACCTTYPE" ColumnName="U_ACCTTYPE" />
+          <ScalarProperty Name="acctClassfxn" ColumnName="acctClassfxn" />
+          <ScalarProperty Name="CntctPrsn" ColumnName="CntctPrsn" />
+          <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CardName" ColumnName="CardName" />
+          <ScalarProperty Name="CardCode" ColumnName="CardCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mtc_vw_inventoryCountlist">
+      <EntityTypeMapping TypeName="ARMSTestModel.mtc_vw_inventoryCountlist">
+        <MappingFragment StoreEntitySet="mtc_vw_inventoryCountlist">
+          <ScalarProperty Name="audited" ColumnName="audited" />
+          <ScalarProperty Name="DocumentStatusId" ColumnName="DocumentStatusId" />
+          <ScalarProperty Name="inventoryCountStatus" ColumnName="inventoryCountStatus" />
+          <ScalarProperty Name="actualCountDate" ColumnName="actualCountDate" />
+          <ScalarProperty Name="stateDesc" ColumnName="stateDesc" />
+          <ScalarProperty Name="roleid" ColumnName="roleid" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="acctCode" ColumnName="acctCode" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="empId" ColumnName="empId" />
+          <ScalarProperty Name="inventoryCountId" ColumnName="inventoryCountId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="arms2_sp_ActivityLogsReport" FunctionName="ARMSTestModel.Store.arms2_sp_ActivityLogsReport">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ARMSTestModel.arms2_sp_ActivityLogsReport_Result">
+          <ScalarProperty Name="empName" ColumnName="empName" />
+          <ScalarProperty Name="datetimestamp" ColumnName="datetimestamp" />
+          <ScalarProperty Name="field" ColumnName="field" />
+          <ScalarProperty Name="activity" ColumnName="activity" />
+          <ScalarProperty Name="acctName" ColumnName="acctName" />
+          <ScalarProperty Name="acctcode" ColumnName="acctcode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SalesTargetMaintenances">
+      <EntityTypeMapping TypeName="ARMSTestModel.SalesTargetMaintenance">
+        <MappingFragment StoreEntitySet="SalesTargetMaintenance">
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="SlpCode" ColumnName="SlpCode" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="DocTypeId" ColumnName="DocTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_ActivityLogs">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_ActivityLogs">
+        <MappingFragment StoreEntitySet="arms2_vw_ActivityLogs">
+          <ScalarProperty Name="bussAdd" ColumnName="bussAdd" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="acctcode" ColumnName="acctcode" />
+          <ScalarProperty Name="acctName" ColumnName="acctName" />
+          <ScalarProperty Name="activity" ColumnName="activity" />
+          <ScalarProperty Name="field" ColumnName="field" />
+          <ScalarProperty Name="datetimestamp" ColumnName="datetimestamp" />
+          <ScalarProperty Name="empName" ColumnName="empName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="armsII_vw_itemMasterFile_srp">
+      <EntityTypeMapping TypeName="ARMSTestModel.armsII_vw_itemMasterFile_srp">
+        <MappingFragment StoreEntitySet="armsII_vw_itemMasterFile_srp">
+          <ScalarProperty Name="LookUpItem" ColumnName="LookUpItem" />
+          <ScalarProperty Name="U_PL_UOM" ColumnName="U_PL_UOM" />
+          <ScalarProperty Name="SRP" ColumnName="SRP" />
+          <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+          <ScalarProperty Name="ProdGrp" ColumnName="ProdGrp" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="ITEMCODE" ColumnName="ITEMCODE" />
+          <ScalarProperty Name="U_PL_ITEMCODE" ColumnName="U_PL_ITEMCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SapItemsAvailableQties">
+      <EntityTypeMapping TypeName="ARMSTestModel.SapItemsAvailableQty">
+        <MappingFragment StoreEntitySet="SapItemsAvailableQty">
+          <ScalarProperty Name="DateAsOf" ColumnName="DateAsOf" />
+          <ScalarProperty Name="ProductGrp" ColumnName="ProductGrp" />
+          <ScalarProperty Name="U_Brand" ColumnName="U_Brand" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="whs" ColumnName="whs" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_CoverageHdrStatus">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_CoverageHdrStatus">
+        <MappingFragment StoreEntitySet="arms2_vw_CoverageHdrStatus">
+          <ScalarProperty Name="roleid" ColumnName="roleid" />
+          <ScalarProperty Name="isStart" ColumnName="isStart" />
+          <ScalarProperty Name="isFinal" ColumnName="isFinal" />
+          <ScalarProperty Name="nextStateDesc" ColumnName="nextStateDesc" />
+          <ScalarProperty Name="statedesc" ColumnName="statedesc" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="DocumentStatusId" ColumnName="DocumentStatusId" />
+          <ScalarProperty Name="DoctypeId" ColumnName="DoctypeId" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="EmpIdNo" ColumnName="EmpIdNo" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mtc_vw_uploadsalesreport">
+      <EntityTypeMapping TypeName="ARMSTestModel.mtc_vw_uploadsalesreport">
+        <MappingFragment StoreEntitySet="mtc_vw_uploadsalesreport">
+          <ScalarProperty Name="NoOfTransactingAccts" ColumnName="NoOfTransactingAccts" />
+          <ScalarProperty Name="GROSS" ColumnName="GROSS" />
+          <ScalarProperty Name="BALANCE_ORDER" ColumnName="BALANCE_ORDER" />
+          <ScalarProperty Name="PENDING" ColumnName="PENDING" />
+          <ScalarProperty Name="SUBTOTAL" ColumnName="SUBTOTAL" />
+          <ScalarProperty Name="PICKLIST" ColumnName="PICKLIST" />
+          <ScalarProperty Name="UNPOSTED" ColumnName="UNPOSTED" />
+          <ScalarProperty Name="NET_POSTED" ColumnName="NET_POSTED" />
+          <ScalarProperty Name="CM" ColumnName="CM" />
+          <ScalarProperty Name="POSTED" ColumnName="POSTED" />
+          <ScalarProperty Name="uploaddatetime" ColumnName="uploaddatetime" />
+          <ScalarProperty Name="salesofficer" ColumnName="salesofficer" />
+          <ScalarProperty Name="slpcode" ColumnName="slpcode" />
+          <ScalarProperty Name="empidno" ColumnName="empidno" />
+          <ScalarProperty Name="counterid" ColumnName="counterid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_coveragechanges">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_coveragechanges">
+        <MappingFragment StoreEntitySet="arms2_vw_coveragechanges">
+          <ScalarProperty Name="roleid" ColumnName="roleid" />
+          <ScalarProperty Name="CHM_ID" ColumnName="CHM_ID" />
+          <ScalarProperty Name="ASM_ID" ColumnName="ASM_ID" />
+          <ScalarProperty Name="Interval" ColumnName="Interval" />
+          <ScalarProperty Name="Coveragedate" ColumnName="Coveragedate" />
+          <ScalarProperty Name="IsAnEdit" ColumnName="IsAnEdit" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="HotelContactNumber" ColumnName="HotelContactNumber" />
+          <ScalarProperty Name="HotelName" ColumnName="HotelName" />
+          <ScalarProperty Name="Numvisit" ColumnName="Numvisit" />
+          <ScalarProperty Name="Tmeout" ColumnName="Tmeout" />
+          <ScalarProperty Name="Tmein" ColumnName="Tmein" />
+          <ScalarProperty Name="isPlanned" ColumnName="isPlanned" />
+          <ScalarProperty Name="OtherInformation" ColumnName="OtherInformation" />
+          <ScalarProperty Name="cNoCollection" ColumnName="cNoCollection" />
+          <ScalarProperty Name="cPartialCollection" ColumnName="cPartialCollection" />
+          <ScalarProperty Name="cFullCollection" ColumnName="cFullCollection" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="TimeTable" ColumnName="TimeTable" />
+          <ScalarProperty Name="Recommendation" ColumnName="Recommendation" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="SummaryLackingItems" ColumnName="SummaryLackingItems" />
+          <ScalarProperty Name="orders" ColumnName="orders" />
+          <ScalarProperty Name="Delivery" ColumnName="Delivery" />
+          <ScalarProperty Name="IssuesAndConcerns" ColumnName="IssuesAndConcerns" />
+          <ScalarProperty Name="PONum" ColumnName="PONum" />
+          <ScalarProperty Name="NextCallDate" ColumnName="NextCallDate" />
+          <ScalarProperty Name="WithOrder" ColumnName="WithOrder" />
+          <ScalarProperty Name="CompetitorActivities" ColumnName="CompetitorActivities" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="ProductPresentationResult" ColumnName="ProductPresentationResult" />
+          <ScalarProperty Name="StoreCheckingResult" ColumnName="StoreCheckingResult" />
+          <ScalarProperty Name="StoreChecking" ColumnName="StoreChecking" />
+          <ScalarProperty Name="ContactPersonNo" ColumnName="ContactPersonNo" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="bussAdd" ColumnName="bussAdd" />
+          <ScalarProperty Name="AcctName" ColumnName="AcctName" />
+          <ScalarProperty Name="AcctClassfxn" ColumnName="AcctClassfxn" />
+          <ScalarProperty Name="AccountCode" ColumnName="AccountCode" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="LineNum" ColumnName="LineNum" />
+          <ScalarProperty Name="stateDesc" ColumnName="stateDesc" />
+          <ScalarProperty Name="AcctStatus" ColumnName="AcctStatus" />
+          <ScalarProperty Name="DoctypeId" ColumnName="DoctypeId" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="EmpIdNo" ColumnName="EmpIdNo" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mtc_vw_so_salesmonitoringdtl">
+      <EntityTypeMapping TypeName="ARMSTestModel.mtc_vw_so_salesmonitoringdtl">
+        <MappingFragment StoreEntitySet="mtc_vw_so_salesmonitoringdtl">
+          <ScalarProperty Name="DateAsOf" ColumnName="DateAsOf" />
+          <ScalarProperty Name="NoTransactingAccounts" ColumnName="NoTransactingAccounts" />
+          <ScalarProperty Name="NetPosted" ColumnName="NetPosted" />
+          <ScalarProperty Name="BOAmt" ColumnName="BOAmt" />
+          <ScalarProperty Name="Pending_Order" ColumnName="Pending_Order" />
+          <ScalarProperty Name="PostedAmt" ColumnName="PostedAmt" />
+          <ScalarProperty Name="UNPOSTEDAmt" ColumnName="UNPOSTEDAmt" />
+          <ScalarProperty Name="CMAmt" ColumnName="CMAmt" />
+          <ScalarProperty Name="GrossAmt" ColumnName="GrossAmt" />
+          <ScalarProperty Name="Sales_Officer" ColumnName="Sales_Officer" />
+          <ScalarProperty Name="SOCode" ColumnName="SOCode" />
+          <ScalarProperty Name="empIdNo" ColumnName="empIdNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arms2_vw_asmViewSoCoverage">
+      <EntityTypeMapping TypeName="ARMSTestModel.arms2_vw_asmViewSoCoverage">
+        <MappingFragment StoreEntitySet="arms2_vw_asmViewSoCoverage">
+          <ScalarProperty Name="VPSALES_ID" ColumnName="VPSALES_ID" />
+          <ScalarProperty Name="CHM_ID" ColumnName="CHM_ID" />
+          <ScalarProperty Name="ASM_ID" ColumnName="ASM_ID" />
+          <ScalarProperty Name="SlpCode" ColumnName="SlpCode" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleCode" ColumnName="RoleCode" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="U_area" ColumnName="U_area" />
+          <ScalarProperty Name="channel" ColumnName="channel" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="stateDesc" ColumnName="stateDesc" />
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+          <ScalarProperty Name="DocumentStatusId" ColumnName="DocumentStatusId" />
+          <ScalarProperty Name="DoctypeId" ColumnName="DoctypeId" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="EmpIdNo" ColumnName="EmpIdNo" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MTC_vw_empListHRIS">
+      <EntityTypeMapping TypeName="ARMSTestModel.MTC_vw_empListHRIS">
+        <MappingFragment StoreEntitySet="MTC_vw_empListHRIS">
+          <ScalarProperty Name="emailadd" ColumnName="emailadd" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="in_emp_id" ColumnName="in_emp_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="armsmobile_proc_get_uploadattachment_Result" FunctionName="ARMSTestModel.Store.armsmobile_proc_get_uploadattachment">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ARMSTestModel.armsmobile_proc_get_uploadattachment_Result6">
+          <ScalarProperty Name="eventid" ColumnName="eventid" />
+          <ScalarProperty Name="accountcodename" ColumnName="accountcodename" />
+          <ScalarProperty Name="empidno" ColumnName="empidno" />
+          <ScalarProperty Name="linenum" ColumnName="linenum" />
+          <ScalarProperty Name="day" ColumnName="day" />
+          <ScalarProperty Name="month" ColumnName="month" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="po" ColumnName="po" />
+          <ScalarProperty Name="warehouse" ColumnName="warehouse" />
+          <ScalarProperty Name="selfie" ColumnName="selfie" />
+          <ScalarProperty Name="competition" ColumnName="competition" />
+          <ScalarProperty Name="pofiletype" ColumnName="pofiletype" />
+          <ScalarProperty Name="warehousefiletype" ColumnName="warehousefiletype" />
+          <ScalarProperty Name="selfiefiletype" ColumnName="selfiefiletype" />
+          <ScalarProperty Name="competitionfiletype" ColumnName="competitionfiletype" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,32 @@
+﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>UploadDialogBoxForexcel</title>
+</head>
+<body>
+
+<link href="<%=ResolveUrl("~/") %>Content/UploadDialogBox.css" rel="stylesheet" type="text/css" />
+<script src="<%=ResolveUrl("~/") %>Scripts/MarketingProg.js" type="text/javascript"></script>
+    
+<div>
+    <form method="post" action="<%=ResolveUrl("~/") %>SQL/TestUploadEXCEL" enctype="multipart/form-data">
+		<table>
+			<tr>
+				<td>
+					<input type="file" id="upl_file" name="upl_file" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="submit" id="btn_upload" value="Upload" />
+				</td>
+                
+			</tr>
+		</table>
+	</form>
+    </div>
+</body>
+</html>

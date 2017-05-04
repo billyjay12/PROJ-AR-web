@@ -1,0 +1,21 @@
+﻿
+#sub_tab .ui-widget-content { padding:2px; font-size:11px; font-family:Arial; }
+#sub_tab .ui-state-default a { font-size:11px; font-family:Arial; }
+#sub_tab .ui-tabs-panel { padding:1px; }
+
+input[type=text], input[type=password]
+{
+    font-size:10px;
+    font-family:verdana;
+    border:1px solid #bcbcbc;
+    height:14px;
+    padding:2px;
+    width:150px;
+}
+.required_fields { background-color:#fff7dd; border:1px solid #4e4e4e; }
+.readonly_fields { background-color:#cfcfcf; }
+
+#slt_acct_classification
+{
+    font-size:11px; font-family:Arial;
+}

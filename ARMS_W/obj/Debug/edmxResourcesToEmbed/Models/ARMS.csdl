@@ -1,0 +1,2030 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ARMSTestModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ARMSTestEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="arms2_sp_InventoryCountSchedule" ReturnType="Collection(ARMSTestModel.arms2_sp_InventoryCountSchedule_Result1)" />
+    <EntitySet Name="approvalStates" EntityType="ARMSTestModel.approvalState" />
+    <EntitySet Name="apprvrDesigs" EntityType="ARMSTestModel.apprvrDesig" />
+    <EntitySet Name="apprvrdesig_bak" EntityType="ARMSTestModel.apprvrdesig_bak" />
+    <EntitySet Name="apprvrRoles" EntityType="ARMSTestModel.apprvrRole" />
+    <EntitySet Name="ChannelGroups" EntityType="ARMSTestModel.ChannelGroup" />
+    <EntitySet Name="CoverageHdrs" EntityType="ARMSTestModel.CoverageHdr" />
+    <EntitySet Name="custAttachments" EntityType="ARMSTestModel.custAttachment" />
+    <EntitySet Name="documentTypes" EntityType="ARMSTestModel.documentType" />
+    <EntitySet Name="empInventories" EntityType="ARMSTestModel.empInventory" />
+    <EntitySet Name="EventDtl1" EntityType="ARMSTestModel.EventDtl1" />
+    <EntitySet Name="EventDtls" EntityType="ARMSTestModel.EventDtl" />
+    <EntitySet Name="EventHdrs" EntityType="ARMSTestModel.EventHdr" />
+    <EntitySet Name="InventoryCountAuditDtls" EntityType="ARMSTestModel.InventoryCountAuditDtl" />
+    <EntitySet Name="InventoryCountAuditHdrs" EntityType="ARMSTestModel.InventoryCountAuditHdr" />
+    <EntitySet Name="InventoryCountDtls" EntityType="ARMSTestModel.InventoryCountDtl" />
+    <EntitySet Name="InventoryCountHdrs" EntityType="ARMSTestModel.InventoryCountHdr" />
+    <EntitySet Name="inventoryCountStatusDtls" EntityType="ARMSTestModel.inventoryCountStatusDtl" />
+    <EntitySet Name="inventoryCountStatusHdrs" EntityType="ARMSTestModel.inventoryCountStatusHdr" />
+    <EntitySet Name="InventoryProducts" EntityType="ARMSTestModel.InventoryProduct" />
+    <EntitySet Name="LogChanges" EntityType="ARMSTestModel.LogChanx" />
+    <EntitySet Name="majorCustomers" EntityType="ARMSTestModel.majorCustomer" />
+    <EntitySet Name="nextInventoryCountDtls" EntityType="ARMSTestModel.nextInventoryCountDtl" />
+    <EntitySet Name="nextInventoryCountHdrs" EntityType="ARMSTestModel.nextInventoryCountHdr" />
+    <EntitySet Name="ObjectiveHdrs" EntityType="ARMSTestModel.ObjectiveHdr" />
+    <EntitySet Name="Objectives" EntityType="ARMSTestModel.Objective" />
+    <EntitySet Name="RouteChanges" EntityType="ARMSTestModel.RouteChanx" />
+    <EntitySet Name="userHeaders" EntityType="ARMSTestModel.userHeader" />
+    <EntitySet Name="arm2_view_Userview" EntityType="ARMSTestModel.arm2_view_Userview" />
+    <EntitySet Name="arms2_vw_asmListofSO" EntityType="ARMSTestModel.arms2_vw_asmListofSO" />
+    <EntitySet Name="arms2_vw_getInventoryAuditDetail" EntityType="ARMSTestModel.arms2_vw_getInventoryAuditDetail" />
+    <EntitySet Name="arms2_vw_getInventoryAuditHeader" EntityType="ARMSTestModel.arms2_vw_getInventoryAuditHeader" />
+    <EntitySet Name="arms2_vw_getInventoryDetail" EntityType="ARMSTestModel.arms2_vw_getInventoryDetail" />
+    <EntitySet Name="arms2_vw_getInventoryHeader" EntityType="ARMSTestModel.arms2_vw_getInventoryHeader" />
+    <EntitySet Name="arms2_vw_inventoryScheduleAccounts" EntityType="ARMSTestModel.arms2_vw_inventoryScheduleAccounts" />
+    <EntitySet Name="arms2_vw_nextInvDtl_itemMasterFile" EntityType="ARMSTestModel.arms2_vw_nextInvDtl_itemMasterFile" />
+    <EntitySet Name="arms2_vw_soCoverage" EntityType="ARMSTestModel.arms2_vw_soCoverage" />
+    <EntitySet Name="armsII_vw_CalendarUser" EntityType="ARMSTestModel.armsII_vw_CalendarUser" />
+    <EntitySet Name="armsII_vw_CallReport" EntityType="ARMSTestModel.armsII_vw_CallReport" />
+    <EntitySet Name="armsII_vw_EventdtlsBySo" EntityType="ARMSTestModel.armsII_vw_EventdtlsBySo" />
+    <AssociationSet Name="apprvrRole_approvalState" Association="ARMSTestModel.apprvrRole_approvalState">
+      <End Role="apprvrRole" EntitySet="apprvrRoles" />
+      <End Role="approvalState" EntitySet="approvalStates" />
+    </AssociationSet>
+    <AssociationSet Name="documentTypes_approvalState" Association="ARMSTestModel.documentTypes_approvalState">
+      <End Role="documentType" EntitySet="documentTypes" />
+      <End Role="approvalState" EntitySet="approvalStates" />
+    </AssociationSet>
+    <AssociationSet Name="apprvrRole_apprvrDesig" Association="ARMSTestModel.apprvrRole_apprvrDesig">
+      <End Role="apprvrRole" EntitySet="apprvrRoles" />
+      <End Role="apprvrDesig" EntitySet="apprvrDesigs" />
+    </AssociationSet>
+    <AssociationSet Name="userHeader_apprvrDesig" Association="ARMSTestModel.userHeader_apprvrDesig">
+      <End Role="userHeader" EntitySet="userHeaders" />
+      <End Role="apprvrDesig" EntitySet="apprvrDesigs" />
+    </AssociationSet>
+    <AssociationSet Name="InventoryCountAuditHdr_InventoryCountAuditDtl" Association="ARMSTestModel.InventoryCountAuditHdr_InventoryCountAuditDtl">
+      <End Role="InventoryCountAuditHdr" EntitySet="InventoryCountAuditHdrs" />
+      <End Role="InventoryCountAuditDtl" EntitySet="InventoryCountAuditDtls" />
+    </AssociationSet>
+    <AssociationSet Name="InventoryCountHdr_InventoryCountAuditHdr" Association="ARMSTestModel.InventoryCountHdr_InventoryCountAuditHdr">
+      <End Role="InventoryCountHdr" EntitySet="InventoryCountHdrs" />
+      <End Role="InventoryCountAuditHdr" EntitySet="InventoryCountAuditHdrs" />
+    </AssociationSet>
+    <AssociationSet Name="InventoryCountHdr_InventoryCountDtl" Association="ARMSTestModel.InventoryCountHdr_InventoryCountDtl">
+      <End Role="InventoryCountHdr" EntitySet="InventoryCountHdrs" />
+      <End Role="InventoryCountDtl" EntitySet="InventoryCountDtls" />
+    </AssociationSet>
+    <AssociationSet Name="inventoryCountStatusHdr_inventoryCountStatusDtl" Association="ARMSTestModel.inventoryCountStatusHdr_inventoryCountStatusDtl">
+      <End Role="inventoryCountStatusHdr" EntitySet="inventoryCountStatusHdrs" />
+      <End Role="inventoryCountStatusDtl" EntitySet="inventoryCountStatusDtls" />
+    </AssociationSet>
+    <AssociationSet Name="ObjectiveHdr_Objectives" Association="ARMSTestModel.ObjectiveHdr_Objectives">
+      <End Role="ObjectiveHdr" EntitySet="ObjectiveHdrs" />
+      <End Role="Objective" EntitySet="Objectives" />
+    </AssociationSet>
+    <EntitySet Name="customerHeaders" EntityType="ARMSTestModel.customerHeader" />
+    <EntitySet Name="app_vw_itemBrand" EntityType="ARMSTestModel.app_vw_itemBrand" />
+    <AssociationSet Name="customerHeader_custAttachment" Association="ARMSTestModel.customerHeader_custAttachment">
+      <End Role="customerHeader" EntitySet="customerHeaders" />
+      <End Role="custAttachment" EntitySet="custAttachments" />
+    </AssociationSet>
+    <AssociationSet Name="customerHeader_empInventory" Association="ARMSTestModel.customerHeader_empInventory">
+      <End Role="customerHeader" EntitySet="customerHeaders" />
+      <End Role="empInventory" EntitySet="empInventories" />
+    </AssociationSet>
+    <EntitySet Name="custOutletIncharges" EntityType="ARMSTestModel.custOutletIncharge" />
+    <EntitySet Name="custOutlets" EntityType="ARMSTestModel.custOutlet" />
+    <EntitySet Name="customerAccStatus" EntityType="ARMSTestModel.customerAccStatu" />
+    <EntitySet Name="dayCycles" EntityType="ARMSTestModel.dayCycle" />
+    <EntitySet Name="app_vw_itemgroup" EntityType="ARMSTestModel.app_vw_itemgroup" />
+    <EntitySet Name="mtc_vw_User_Role_Details" EntityType="ARMSTestModel.mtc_vw_User_Role_Details" />
+    <EntitySet Name="SalesTargets" EntityType="ARMSTestModel.SalesTarget" />
+    <EntitySet Name="CoverageDataChanges" EntityType="ARMSTestModel.CoverageDataChanx" />
+    <EntitySet Name="CoverageLogChanges" EntityType="ARMSTestModel.CoverageLogChanx" />
+    <EntitySet Name="arms2_vw_inventoryAccounts" EntityType="ARMSTestModel.arms2_vw_inventoryAccounts" />
+    <EntitySet Name="armsII_vw_itemMasterFile" EntityType="ARMSTestModel.armsII_vw_itemMasterFile" />
+    <EntitySet Name="arms2_vw_AccountInCoverage" EntityType="ARMSTestModel.arms2_vw_AccountInCoverage" />
+    <EntitySet Name="TempUploadCoveragePlans" EntityType="ARMSTestModel.TempUploadCoveragePlan" />
+    <EntitySet Name="arms2_vw_LookupAccounts" EntityType="ARMSTestModel.arms2_vw_LookupAccounts" />
+    <EntitySet Name="arms2_vw_estAmount_actAmount" EntityType="ARMSTestModel.arms2_vw_estAmount_actAmount" />
+    <EntitySet Name="RouteRmrks" EntityType="ARMSTestModel.RouteRmrk" />
+    <EntitySet Name="CoverageDtl1" EntityType="ARMSTestModel.CoverageDtl1" />
+    <AssociationSet Name="CoverageHdr_CoverageDtl1" Association="ARMSTestModel.CoverageHdr_CoverageDtl1">
+      <End Role="CoverageHdr" EntitySet="CoverageHdrs" />
+      <End Role="CoverageDtl1" EntitySet="CoverageDtl1" />
+    </AssociationSet>
+    <FunctionImport Name="arms2_sp_PendingAccounts88" ReturnType="Collection(ARMSTestModel.arms2_sp_PendingAccounts88_Result)">
+      <Parameter Name="BPCode" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="CollectionPendingAccounts" EntityType="ARMSTestModel.CollectionPendingAccount" />
+    <EntitySet Name="CoverageDtls" EntityType="ARMSTestModel.CoverageDtl" />
+    <AssociationSet Name="CoverageDtls_CoverageDtl1" Association="ARMSTestModel.CoverageDtls_CoverageDtl1">
+      <End Role="CoverageDtl" EntitySet="CoverageDtls" />
+      <End Role="CoverageDtl1" EntitySet="CoverageDtl1" />
+    </AssociationSet>
+    <AssociationSet Name="CoverageHdr_CoverageDtls" Association="ARMSTestModel.CoverageHdr_CoverageDtls">
+      <End Role="CoverageHdr" EntitySet="CoverageHdrs" />
+      <End Role="CoverageDtl" EntitySet="CoverageDtls" />
+    </AssociationSet>
+    <EntitySet Name="Arms_vw_SOLookUps" EntityType="ARMSTestModel.Arms_vw_SOLookUps" />
+    <EntitySet Name="arms2_vw_lookUpOSLP" EntityType="ARMSTestModel.arms2_vw_lookUpOSLP" />
+    <EntitySet Name="arms2_vw_userheaderDetails" EntityType="ARMSTestModel.arms2_vw_userheaderDetails" />
+    <EntitySet Name="UploadedPricelists" EntityType="ARMSTestModel.UploadedPricelist" />
+    <EntitySet Name="arms2_vw_customerheader_lookup" EntityType="ARMSTestModel.arms2_vw_customerheader_lookup" />
+    <EntitySet Name="VisitLogs" EntityType="ARMSTestModel.VisitLog" />
+    <AssociationSet Name="CoverageDtls_VisitLogs" Association="ARMSTestModel.CoverageDtls_VisitLogs">
+      <End Role="CoverageDtl" EntitySet="CoverageDtls" />
+      <End Role="VisitLog" EntitySet="VisitLogs" />
+    </AssociationSet>
+    <AssociationSet Name="CoverageHdr_VisitLogs" Association="ARMSTestModel.CoverageHdr_VisitLogs">
+      <End Role="CoverageHdr" EntitySet="CoverageHdrs" />
+      <End Role="VisitLog" EntitySet="VisitLogs" />
+    </AssociationSet>
+    <EntitySet Name="arms2_vw_actveBusPrtnr" EntityType="ARMSTestModel.arms2_vw_actveBusPrtnr" />
+    <EntitySet Name="mtc_vw_inventoryCountlist" EntityType="ARMSTestModel.mtc_vw_inventoryCountlist" />
+    <FunctionImport Name="arms2_sp_ActivityLogsReport" ReturnType="Collection(ARMSTestModel.arms2_sp_ActivityLogsReport_Result)">
+      <Parameter Name="EmpId" Mode="In" Type="String" />
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="SalesTargetMaintenances" EntityType="ARMSTestModel.SalesTargetMaintenance" />
+    <EntitySet Name="arms2_vw_ActivityLogs" EntityType="ARMSTestModel.arms2_vw_ActivityLogs" />
+    <EntitySet Name="armsII_vw_itemMasterFile_srp" EntityType="ARMSTestModel.armsII_vw_itemMasterFile_srp" />
+    <EntitySet Name="SapItemsAvailableQties" EntityType="ARMSTestModel.SapItemsAvailableQty" />
+    <EntitySet Name="arms2_vw_CoverageHdrStatus" EntityType="ARMSTestModel.arms2_vw_CoverageHdrStatus" />
+    <EntitySet Name="mtc_vw_uploadsalesreport" EntityType="ARMSTestModel.mtc_vw_uploadsalesreport" />
+    <EntitySet Name="arms2_vw_coveragechanges" EntityType="ARMSTestModel.arms2_vw_coveragechanges" />
+    <EntitySet Name="mtc_vw_so_salesmonitoringdtl" EntityType="ARMSTestModel.mtc_vw_so_salesmonitoringdtl" />
+    <EntitySet Name="arms2_vw_asmViewSoCoverage" EntityType="ARMSTestModel.arms2_vw_asmViewSoCoverage" />
+    <EntitySet Name="MTC_vw_empListHRIS" EntityType="ARMSTestModel.MTC_vw_empListHRIS" />
+    <FunctionImport Name="armsmobile_proc_get_uploadattachment_Result" ReturnType="Collection(ARMSTestModel.armsmobile_proc_get_uploadattachment_Result6)">
+      <Parameter Name="filterterm" Mode="In" Type="String" />
+      <Parameter Name="sortindex" Mode="In" Type="Int32" />
+      <Parameter Name="sortdirection" Mode="In" Type="String" />
+      <Parameter Name="startrownum" Mode="In" Type="Int32" />
+      <Parameter Name="endrownum" Mode="In" Type="Int32" />
+      <Parameter Name="totalrowscount" Mode="InOut" Type="Int32" />
+      <Parameter Name="filteredrowscount" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="arms2_sp_InventoryCountSchedule_Result">
+    <Property Type="String" Name="ccaNum" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="acctCode" Nullable="true" MaxLength="140" />
+    <Property Type="String" Name="bussAdd" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="acctName" Nullable="true" MaxLength="140" />
+    <Property Type="String" Name="empId" Nullable="true" MaxLength="140" />
+    <Property Type="String" Name="empFirstName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="empLastName" Nullable="true" MaxLength="140" />
+  </ComplexType>
+  <ComplexType Name="arms2_sp_InventoryCountSchedule_Result1">
+    <Property Type="String" Name="ccaNum" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="acctCode" Nullable="true" MaxLength="140" />
+    <Property Type="String" Name="bussAdd" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="acctName" Nullable="true" MaxLength="140" />
+    <Property Type="String" Name="empId" Nullable="true" MaxLength="140" />
+    <Property Type="String" Name="empFirstName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="empLastName" Nullable="true" MaxLength="140" />
+    <Property Type="DateTime" Name="prevCountDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="startCountDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="area" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="pareto" Nullable="true" MaxLength="1" />
+  </ComplexType>
+  <EntityType Name="approvalState">
+    <Key>
+      <PropertyRef Name="counterID" />
+      <PropertyRef Name="roleID" />
+      <PropertyRef Name="docType" />
+    </Key>
+    <Property Type="Int32" Name="counterID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="roleID" Nullable="false" />
+    <Property Type="Int32" Name="docType" Nullable="false" />
+    <Property Type="Int32" Name="stateID" Nullable="false" />
+    <Property Type="String" Name="stateDesc" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="alternateStateID" Nullable="false" />
+    <Property Type="String" Name="isStart" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="isFinal" MaxLength="4" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="apprvrRole" Relationship="ARMSTestModel.apprvrRole_approvalState" FromRole="approvalState" ToRole="apprvrRole" />
+    <NavigationProperty Name="documentType" Relationship="ARMSTestModel.documentTypes_approvalState" FromRole="approvalState" ToRole="documentType" />
+    <Property Type="Int32" Name="NextStatusId" />
+    <Property Type="Int32" Name="CancelStatusId" />
+  </EntityType>
+  <EntityType Name="apprvrDesig">
+    <Key>
+      <PropertyRef Name="desigID" />
+      <PropertyRef Name="roleID" />
+    </Key>
+    <Property Type="Int32" Name="desigID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="roleID" Nullable="false" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="email" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="branch" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="counterId" />
+    <Property Type="String" Name="brand" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="channel" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="area" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="apprvrRole" Relationship="ARMSTestModel.apprvrRole_apprvrDesig" FromRole="apprvrDesig" ToRole="apprvrRole" />
+    <NavigationProperty Name="userHeader" Relationship="ARMSTestModel.userHeader_apprvrDesig" FromRole="apprvrDesig" ToRole="userHeader" />
+  </EntityType>
+  <EntityType Name="apprvrdesig_bak">
+    <Key>
+      <PropertyRef Name="desigID" />
+      <PropertyRef Name="roleID" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Type="Int32" Name="desigID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="roleID" Nullable="false" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="email" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="branch" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="counterId" />
+    <Property Type="String" Name="brand" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="channel" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="area" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="apprvrRole">
+    <Key>
+      <PropertyRef Name="roleID" />
+    </Key>
+    <Property Type="Int32" Name="roleID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="roleName" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="roleCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TAG" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="approvalStates" Relationship="ARMSTestModel.apprvrRole_approvalState" FromRole="apprvrRole" ToRole="approvalState" />
+    <NavigationProperty Name="apprvrDesigs" Relationship="ARMSTestModel.apprvrRole_apprvrDesig" FromRole="apprvrRole" ToRole="apprvrDesig" />
+  </EntityType>
+  <EntityType Name="ChannelGroup">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="area" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="channel" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="grp_name" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CoverageHdr">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpIdNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Year" Nullable="false" />
+    <Property Type="String" Name="Month" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DoctypeId" />
+    <Property Type="Int32" Name="DocumentStatusId" />
+    <NavigationProperty Name="CoverageDtl1" Relationship="ARMSTestModel.CoverageHdr_CoverageDtl1" FromRole="CoverageHdr" ToRole="CoverageDtl1" />
+    <NavigationProperty Name="CoverageDtls" Relationship="ARMSTestModel.CoverageHdr_CoverageDtls" FromRole="CoverageHdr" ToRole="CoverageDtl" />
+    <NavigationProperty Name="VisitLogs" Relationship="ARMSTestModel.CoverageHdr_VisitLogs" FromRole="CoverageHdr" ToRole="VisitLog" />
+  </EntityType>
+  <EntityType Name="custAttachment">
+    <Key>
+      <PropertyRef Name="attachID" />
+      <PropertyRef Name="ccaNum" />
+    </Key>
+    <Property Type="Int64" Name="attachID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ccaNum" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="attachType" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AttachPath" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctCode" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="customerHeader" Relationship="ARMSTestModel.customerHeader_custAttachment" FromRole="custAttachment" ToRole="customerHeader" />
+  </EntityType>
+  <EntityType Name="documentType">
+    <Key>
+      <PropertyRef Name="docType" />
+    </Key>
+    <Property Type="Int32" Name="docType" Nullable="false" />
+    <Property Type="String" Name="docDescription" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="approvalStates" Relationship="ARMSTestModel.documentTypes_approvalState" FromRole="documentType" ToRole="approvalState" />
+  </EntityType>
+  <EntityType Name="empInventory">
+    <Key>
+      <PropertyRef Name="InvID" />
+      <PropertyRef Name="ccaNum" />
+    </Key>
+    <Property Type="Int64" Name="InvID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ccaNum" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="position" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="numOfEmp" />
+    <Property Type="String" Name="acctCode" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="customerHeader" Relationship="ARMSTestModel.customerHeader_empInventory" FromRole="empInventory" ToRole="customerHeader" />
+  </EntityType>
+  <EntityType Name="EventDtl1">
+    <Key>
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="Day" />
+      <PropertyRef Name="AccountCode" />
+      <PropertyRef Name="ObjectiveCode" />
+    </Key>
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LineNum" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Day" Nullable="false" />
+    <Property Type="String" Name="AccountCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ObjectiveCode" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Brand" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Amount" Precision="18" Scale="6" />
+    <Property Type="String" Name="CounterClerk" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="EventDtl">
+    <Key>
+      <PropertyRef Name="LineNum" />
+    </Key>
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LineNum" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Day" Nullable="false" />
+    <Property Type="String" Name="AccountCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AccountName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AccountAddress" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AccountClass" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactPerson" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactPersonNo" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ObjectiveCode" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StoreCheckingResult" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProductPresentationResult" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="TotalAmount" Precision="18" Scale="6" />
+    <Property Type="String" Name="CompetitorActivities" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WithOrder" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="NextCallDate" />
+    <Property Type="String" Name="PONum" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IssuesAndConcerns" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Delivery" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Orders" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SummaryLackingItems" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobileNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Recommendation" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TimeTable" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cFullCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cPartialCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cNoCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OtherInformation" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="EventHdr">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpIdNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Year" Nullable="false" />
+    <Property Type="String" Name="Month" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DoctypeId" />
+    <Property Type="Int32" Name="DocumentStatusId" />
+  </EntityType>
+  <EntityType Name="InventoryCountAuditDtl">
+    <Key>
+      <PropertyRef Name="inventoryCountAuditId" />
+      <PropertyRef Name="itemCode" />
+    </Key>
+    <Property Type="String" Name="inventoryCountAuditId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="lineId" />
+    <Property Type="String" Name="itemCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="actualCount" />
+    <Property Type="String" Name="remarks" MaxLength="120" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="InventoryCountAuditHdr" Relationship="ARMSTestModel.InventoryCountAuditHdr_InventoryCountAuditDtl" FromRole="InventoryCountAuditDtl" ToRole="InventoryCountAuditHdr" />
+  </EntityType>
+  <EntityType Name="InventoryCountAuditHdr">
+    <Key>
+      <PropertyRef Name="inventoryCountAuditId" />
+    </Key>
+    <Property Type="String" Name="inventoryCountAuditId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="referenceInventoryCountId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="date" />
+    <Property Type="String" Name="remarks" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="auditedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="InventoryCountAuditDtls" Relationship="ARMSTestModel.InventoryCountAuditHdr_InventoryCountAuditDtl" FromRole="InventoryCountAuditHdr" ToRole="InventoryCountAuditDtl" />
+    <NavigationProperty Name="InventoryCountHdr" Relationship="ARMSTestModel.InventoryCountHdr_InventoryCountAuditHdr" FromRole="InventoryCountAuditHdr" ToRole="InventoryCountHdr" />
+  </EntityType>
+  <EntityType Name="InventoryCountDtl">
+    <Key>
+      <PropertyRef Name="inventoryCountId" />
+      <PropertyRef Name="itemCode" />
+    </Key>
+    <Property Type="String" Name="inventoryCountId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="lineId" />
+    <Property Type="String" Name="itemCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ssr" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="begNvPcs" />
+    <Property Type="Int32" Name="endNvPcs" />
+    <Property Type="Int32" Name="actualSellOutPcs" />
+    <Property Type="Decimal" Name="actualSellOutAmt" Precision="18" Scale="6" />
+    <Property Type="String" Name="remarks" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="variancePcs" />
+    <Property Type="Decimal" Name="varianceAmt" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="netSellIn" />
+    <Property Type="Int32" Name="salesForecastPcs0" />
+    <Property Type="Decimal" Name="salesForecastAmt0" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="salesForecastPcs1" />
+    <Property Type="Decimal" Name="salesForecastAmt1" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="salesForecastPcs2" />
+    <Property Type="Decimal" Name="salesForecastAmt2" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="salesForecastPcs3" />
+    <Property Type="Decimal" Name="salesForecastAmt3" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="netSellinOnHand" />
+    <NavigationProperty Name="InventoryCountHdr" Relationship="ARMSTestModel.InventoryCountHdr_InventoryCountDtl" FromRole="InventoryCountDtl" ToRole="InventoryCountHdr" />
+  </EntityType>
+  <EntityType Name="InventoryCountHdr">
+    <Key>
+      <PropertyRef Name="inventoryCountId" />
+    </Key>
+    <Property Type="String" Name="inventoryCountId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="docTypeId" />
+    <Property Type="String" Name="empId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctCode" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whsInchargeID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="prevCountDate" />
+    <Property Type="DateTime" Name="nextCountDate" />
+    <Property Type="Int32" Name="countRange" />
+    <Property Type="Decimal" Name="totalAmount" Precision="18" Scale="6" />
+    <Property Type="String" Name="remarks" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DocumentStatusId" />
+    <Property Type="String" Name="Audited" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="inventoryCountStatus" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="dateTimeStamp" />
+    <Property Type="DateTime" Name="actualCountDate" />
+    <Property Type="DateTime" Name="actualCountEndValidDate" />
+    <NavigationProperty Name="InventoryCountAuditHdrs" Relationship="ARMSTestModel.InventoryCountHdr_InventoryCountAuditHdr" FromRole="InventoryCountHdr" ToRole="InventoryCountAuditHdr" />
+    <NavigationProperty Name="InventoryCountDtls" Relationship="ARMSTestModel.InventoryCountHdr_InventoryCountDtl" FromRole="InventoryCountHdr" ToRole="InventoryCountDtl" />
+  </EntityType>
+  <EntityType Name="inventoryCountStatusDtl">
+    <Key>
+      <PropertyRef Name="in_statusId" />
+      <PropertyRef Name="custOutletsID" />
+      <PropertyRef Name="ch_empIDNo" />
+    </Key>
+    <Property Type="Int64" Name="in_statusId" Nullable="false" />
+    <Property Type="Int64" Name="custOutletsID" Nullable="false" />
+    <Property Type="String" Name="ch_empIDNo" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ch_status" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="inventoryCountId" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="inventoryCountStatusHdr" Relationship="ARMSTestModel.inventoryCountStatusHdr_inventoryCountStatusDtl" FromRole="inventoryCountStatusDtl" ToRole="inventoryCountStatusHdr" />
+  </EntityType>
+  <EntityType Name="inventoryCountStatusHdr">
+    <Key>
+      <PropertyRef Name="in_statusId" />
+    </Key>
+    <Property Type="Int64" Name="in_statusId" Nullable="false" />
+    <Property Type="DateTime" Name="monthyear" />
+    <NavigationProperty Name="inventoryCountStatusDtls" Relationship="ARMSTestModel.inventoryCountStatusHdr_inventoryCountStatusDtl" FromRole="inventoryCountStatusHdr" ToRole="inventoryCountStatusDtl" />
+  </EntityType>
+  <EntityType Name="InventoryProduct">
+    <Key>
+      <PropertyRef Name="ItemCode" />
+    </Key>
+    <Property Type="String" Name="ItemCode" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemDescription" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Brand" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProdGrp" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="amount" Precision="18" Scale="6" />
+  </EntityType>
+  <EntityType Name="LogChanx">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="DocTypeId" />
+    <Property Type="String" Name="DocId" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TimeStmp" />
+    <Property Type="String" Name="UserName" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Data" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="majorCustomer">
+    <Key>
+      <PropertyRef Name="mjrCustID" />
+      <PropertyRef Name="busTermsID" />
+      <PropertyRef Name="ccaNum" />
+    </Key>
+    <Property Type="Int64" Name="mjrCustID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="busTermsID" Nullable="false" />
+    <Property Type="String" Name="ccaNum" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="address" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="sellingTerms" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="estMonthPur" Precision="12" Scale="2" />
+  </EntityType>
+  <EntityType Name="nextInventoryCountDtl">
+    <Key>
+      <PropertyRef Name="lineId" />
+      <PropertyRef Name="itemCode" />
+    </Key>
+    <Property Type="String" Name="lineId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="itemCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="begNvPcs" />
+    <Property Type="Int32" Name="salesForecastPcs0" />
+    <Property Type="Decimal" Name="salesForecastAmt0" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="salesForecastPcs1" />
+    <Property Type="Decimal" Name="salesForecastAmt1" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="salesForecastPcs2" />
+    <Property Type="Decimal" Name="salesForecastAmt2" Precision="18" Scale="6" />
+    <Property Type="String" Name="ssr" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="nextInventoryCountHdr">
+    <Key>
+      <PropertyRef Name="lineId" />
+      <PropertyRef Name="acctCode" />
+    </Key>
+    <Property Type="String" Name="lineId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctCode" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="prevCountDate" />
+    <Property Type="DateTime" Name="startCountDate" />
+  </EntityType>
+  <EntityType Name="ObjectiveHdr">
+    <Key>
+      <PropertyRef Name="objectiveCode" />
+    </Key>
+    <Property Type="String" Name="objectiveCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="objectiveDesc" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="docTypeId" />
+    <NavigationProperty Name="Objectives" Relationship="ARMSTestModel.ObjectiveHdr_Objectives" FromRole="ObjectiveHdr" ToRole="Objective" />
+  </EntityType>
+  <EntityType Name="Objective">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="objectiveCode" />
+    </Key>
+    <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="objectiveCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FieldName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="isUsed" MaxLength="1" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ObjectiveHdr" Relationship="ARMSTestModel.ObjectiveHdr_Objectives" FromRole="Objective" ToRole="ObjectiveHdr" />
+  </EntityType>
+  <EntityType Name="RouteChanx">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="DocTypeId" />
+    <Property Type="String" Name="ActionType" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="DocStatusId" />
+    <Property Type="Int64" Name="PrevDocStatusId" />
+    <Property Type="String" Name="UserName" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Remarks" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TimeStamp" />
+    <Property Type="String" Name="DocId" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RoleCode" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="userHeader">
+    <Key>
+      <PropertyRef Name="counterId" />
+    </Key>
+    <Property Type="Int32" Name="counterId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="empIdNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="lastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="firstName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="position" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="emailAdd" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="status" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="area" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="territory" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="region" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="userName" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="userPass" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int64" Name="positionId" />
+    <Property Type="String" Name="channel" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SlpCode" />
+    <Property Type="Byte" Name="LoginAttemp" />
+    <Property Type="Byte" Name="ErrorAttemp" />
+    <Property Type="String" Name="LastFilter1" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="LastPasswordChange" />
+    <NavigationProperty Name="apprvrDesigs" Relationship="ARMSTestModel.userHeader_apprvrDesig" FromRole="userHeader" ToRole="apprvrDesig" />
+  </EntityType>
+  <EntityType Name="arm2_view_Userview">
+    <Key>
+      <PropertyRef Name="empIDNo" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="firstName" />
+      <PropertyRef Name="position" />
+      <PropertyRef Name="roleName" />
+    </Key>
+    <Property Type="String" Name="empIDNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="lastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="firstName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="position" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="branch" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="channel" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="area" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="brand" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="roleCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="roleName" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="SlpCode" />
+    <Property Type="String" Name="U_area" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="arms2_vw_asmListofSO">
+    <Key>
+      <PropertyRef Name="slpcode" />
+      <PropertyRef Name="empidno" />
+      <PropertyRef Name="slpname" />
+      <PropertyRef Name="EventId" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="statedesc" />
+    </Key>
+    <Property Type="Int16" Name="slpcode" Nullable="false" />
+    <Property Type="String" Name="empidno" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="slpname" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="u_position" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="U_area" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EventId" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Year" Nullable="false" />
+    <Property Type="String" Name="Month" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DoctypeId" />
+    <Property Type="Int32" Name="documentstatusId" />
+    <Property Type="String" Name="statedesc" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="arms2_vw_getInventoryAuditDetail">
+    <Key>
+      <PropertyRef Name="inventoryCountAuditId" />
+      <PropertyRef Name="itemCode" />
+    </Key>
+    <Property Type="String" Name="inventoryCountAuditId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="lineId" />
+    <Property Type="String" Name="itemCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="actualCount" />
+    <Property Type="String" Name="remarks" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="brand" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="prodgrp" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="itemdescription" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="srp" Precision="19" Scale="6" />
+  </EntityType>
+  <EntityType Name="arms2_vw_getInventoryAuditHeader">
+    <Key>
+      <PropertyRef Name="inventoryCountId" />
+      <PropertyRef Name="whsInchargeID" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="firstName" />
+      <PropertyRef Name="inventoryCountAuditId" />
+      <PropertyRef Name="referenceInventoryCountId" />
+    </Key>
+    <Property Type="String" Name="inventoryCountId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="empId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctCode" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whsInchargeID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="actualCountDate" />
+    <Property Type="String" Name="CardName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AreaName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TerritoryName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whsInchargeFirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whsInchargeMiddleName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whsInchargeLastName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whsInchargeContactNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="lastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="firstName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="totalActualCount" />
+    <Property Type="String" Name="Pareto" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctAddress" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="inventoryCountAuditId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="referenceInventoryCountId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="date" />
+    <Property Type="String" Name="remarks" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="auditedBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="auditedName" MaxLength="91" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="arms2_vw_getInventoryDetail">
+    <Key>
+      <PropertyRef Name="inventoryCountId" />
+      <PropertyRef Name="itemCode" />
+    </Key>
+    <Property Type="String" Name="inventoryCountId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="lineId" />
+    <Property Type="String" Name="itemCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ssr" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="begNvPcs" />
+    <Property Type="Int32" Name="endNvPcs" />
+    <Property Type="Int32" Name="actualSellOutPcs" />
+    <Property Type="Decimal" Name="actualSellOutAmt" Precision="18" Scale="6" />
+    <Property Type="String" Name="remarks" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="variancePcs" />
+    <Property Type="Decimal" Name="varianceAmt" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="netSellIn" />
+    <Property Type="Int32" Name="salesForecastPcs0" />
+    <Property Type="Decimal" Name="salesForecastAmt0" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="salesForecastPcs1" />
+    <Property Type="Decimal" Name="salesForecastAmt1" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="salesForecastPcs2" />
+    <Property Type="Decimal" Name="salesForecastAmt2" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="salesForecastPcs3" />
+    <Property Type="Decimal" Name="salesForecastAmt3" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="netSellinOnHand" />
+    <Property Type="String" Name="brand" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="prodgrp" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="itemdescription" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="srp" Precision="19" Scale="6" />
+  </EntityType>
+  <EntityType Name="arms2_vw_getInventoryHeader">
+    <Key>
+      <PropertyRef Name="inventoryCountId" />
+      <PropertyRef Name="whsInchargeID" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="firstName" />
+    </Key>
+    <Property Type="String" Name="inventoryCountId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="docTypeId" />
+    <Property Type="String" Name="empId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctCode" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whsInchargeID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="prevCountDate" />
+    <Property Type="DateTime" Name="nextCountDate" />
+    <Property Type="Int32" Name="countRange" />
+    <Property Type="Decimal" Name="totalAmount" Precision="18" Scale="6" />
+    <Property Type="String" Name="remarks" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DocumentStatusId" />
+    <Property Type="String" Name="Audited" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="inventoryCountStatus" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="dateTimeStamp" />
+    <Property Type="DateTime" Name="actualCountDate" />
+    <Property Type="DateTime" Name="actualCountEndValidDate" />
+    <Property Type="String" Name="CardName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AreaName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TerritoryName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whsInchargeFirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whsInchargeMiddleName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whsInchargeLastName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whsInchargeContactNo" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="lastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="firstName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="totalVarianceAmt" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="totalSalesForecastAmt0" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="totalSalesForecastAmt1" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="totalSalesForecastAmt2" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="totalSalesForecastAmt3" Precision="38" Scale="6" />
+    <Property Type="String" Name="Pareto" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctAddress" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="arms2_vw_inventoryScheduleAccounts">
+    <Key>
+      <PropertyRef Name="ccaNum" />
+      <PropertyRef Name="acctCode" />
+      <PropertyRef Name="acctName" />
+      <PropertyRef Name="empIdNo" />
+      <PropertyRef Name="firstName" />
+      <PropertyRef Name="lastName" />
+    </Key>
+    <Property Type="String" Name="ccaNum" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="acctCode" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="bussAdd" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="areaname" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="pareto" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="territoryName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="empIdNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="firstName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="lastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CntctPrsn" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone1" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="prevCountDate" />
+    <Property Type="DateTime" Name="startCountDate" />
+  </EntityType>
+  <EntityType Name="arms2_vw_nextInvDtl_itemMasterFile">
+    <Key>
+      <PropertyRef Name="lineId" />
+      <PropertyRef Name="itemCode" />
+    </Key>
+    <Property Type="String" Name="lineId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="itemCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="begNvPcs" />
+    <Property Type="Int32" Name="salesForecastPcs0" />
+    <Property Type="Decimal" Name="salesForecastAmt0" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="salesForecastPcs1" />
+    <Property Type="Decimal" Name="salesForecastAmt1" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="salesForecastPcs2" />
+    <Property Type="Decimal" Name="salesForecastAmt2" Precision="18" Scale="6" />
+    <Property Type="String" Name="ssr" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="U_PL_ITEMCODE" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="brand" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="prodgrp" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="itemdescription" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="srp" Precision="19" Scale="6" />
+  </EntityType>
+  <EntityType Name="arms2_vw_soCoverage">
+    <Key>
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="EmpIdNo" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="LineNum" />
+      <PropertyRef Name="Day" />
+      <PropertyRef Name="AccountCode" />
+    </Key>
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpIdNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Year" Nullable="false" />
+    <Property Type="String" Name="Month" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DoctypeId" />
+    <Property Type="Int32" Name="DocumentStatusId" />
+    <Property Type="String" Name="LineNum" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Day" Nullable="false" />
+    <Property Type="String" Name="AccountCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactPerson" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactPersonNo" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StoreChecking" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StoreCheckingResult" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProductPresentationResult" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="TotalAmount" Precision="18" Scale="6" />
+    <Property Type="String" Name="CompetitorActivities" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WithOrder" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="NextCallDate" />
+    <Property Type="String" Name="PONum" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IssuesAndConcerns" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Delivery" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Orders" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SummaryLackingItems" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobileNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Recommendation" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TimeTable" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cFullCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cPartialCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cNoCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OtherInformation" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ObjectiveCode" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Brand" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="PlannedAmount" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="ActualAmount" Precision="18" Scale="6" />
+    <Property Type="String" Name="CounterClerk" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="armsII_vw_CalendarUser">
+    <Key>
+      <PropertyRef Name="empIDNo" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="firstName" />
+      <PropertyRef Name="position" />
+      <PropertyRef Name="roleName" />
+    </Key>
+    <Property Type="String" Name="empIDNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="lastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="firstName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="position" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="branch" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="channel" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="area" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="brand" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="roleCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="roleName" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ASM_ID" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="armsII_vw_CallReport">
+    <Key>
+      <PropertyRef Name="EventId" />
+      <PropertyRef Name="EmpIdNo" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="LineNum" />
+      <PropertyRef Name="Day" />
+      <PropertyRef Name="AccountCode" />
+      <PropertyRef Name="ObjectiveCode" />
+    </Key>
+    <Property Type="String" Name="EventId" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpIdNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Year" Nullable="false" />
+    <Property Type="String" Name="Month" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DoctypeId" />
+    <Property Type="Int32" Name="DocumentStatusId" />
+    <Property Type="String" Name="LineNum" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Day" Nullable="false" />
+    <Property Type="String" Name="AccountCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AccountName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AccountAddress" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AccountClass" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactPerson" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactPersonNo" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ObjectiveCode" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StoreCheckingResult" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProductPresentationResult" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="TotalAmount" Precision="18" Scale="6" />
+    <Property Type="String" Name="CompetitorActivities" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WithOrder" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="NextCallDate" />
+    <Property Type="String" Name="PONum" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IssuesAndConcerns" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Delivery" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Orders" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SummaryLackingItems" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobileNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Recommendation" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TimeTable" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cFullCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cPartialCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cNoCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OtherInformation" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Brand" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Amount" Precision="18" Scale="6" />
+    <Property Type="String" Name="CounterClerk" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="armsII_vw_EventdtlsBySo">
+    <Key>
+      <PropertyRef Name="EventId" />
+      <PropertyRef Name="EmpIdNo" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="LineNum" />
+      <PropertyRef Name="Day" />
+      <PropertyRef Name="AccountCode" />
+      <PropertyRef Name="ObjectiveCode" />
+    </Key>
+    <Property Type="String" Name="EventId" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpIdNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Year" Nullable="false" />
+    <Property Type="String" Name="Month" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DoctypeId" />
+    <Property Type="Int32" Name="DocumentStatusId" />
+    <Property Type="String" Name="LineNum" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Day" Nullable="false" />
+    <Property Type="String" Name="AccountCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AccountName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AccountAddress" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AccountClass" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactPerson" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactPersonNo" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ObjectiveCode" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StoreCheckingResult" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProductPresentationResult" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="TotalAmount" Precision="18" Scale="6" />
+    <Property Type="String" Name="CompetitorActivities" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WithOrder" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="NextCallDate" />
+    <Property Type="String" Name="PONum" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IssuesAndConcerns" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Delivery" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Orders" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SummaryLackingItems" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobileNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Recommendation" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TimeTable" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cFullCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cPartialCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cNoCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Brand" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Amount" Precision="18" Scale="6" />
+    <Property Type="String" Name="CounterClerk" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="apprvrRole_approvalState">
+    <End Type="ARMSTestModel.apprvrRole" Role="apprvrRole" Multiplicity="1" />
+    <End Type="ARMSTestModel.approvalState" Role="approvalState" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apprvrRole">
+        <PropertyRef Name="roleID" />
+      </Principal>
+      <Dependent Role="approvalState">
+        <PropertyRef Name="roleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="documentTypes_approvalState">
+    <End Type="ARMSTestModel.documentType" Role="documentType" Multiplicity="1" />
+    <End Type="ARMSTestModel.approvalState" Role="approvalState" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="documentType">
+        <PropertyRef Name="docType" />
+      </Principal>
+      <Dependent Role="approvalState">
+        <PropertyRef Name="docType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="apprvrRole_apprvrDesig">
+    <End Type="ARMSTestModel.apprvrRole" Role="apprvrRole" Multiplicity="1" />
+    <End Type="ARMSTestModel.apprvrDesig" Role="apprvrDesig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apprvrRole">
+        <PropertyRef Name="roleID" />
+      </Principal>
+      <Dependent Role="apprvrDesig">
+        <PropertyRef Name="roleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="userHeader_apprvrDesig">
+    <End Type="ARMSTestModel.userHeader" Role="userHeader" Multiplicity="0..1" />
+    <End Type="ARMSTestModel.apprvrDesig" Role="apprvrDesig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userHeader">
+        <PropertyRef Name="counterId" />
+      </Principal>
+      <Dependent Role="apprvrDesig">
+        <PropertyRef Name="counterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="InventoryCountAuditHdr_InventoryCountAuditDtl">
+    <End Type="ARMSTestModel.InventoryCountAuditHdr" Role="InventoryCountAuditHdr" Multiplicity="1" />
+    <End Type="ARMSTestModel.InventoryCountAuditDtl" Role="InventoryCountAuditDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InventoryCountAuditHdr">
+        <PropertyRef Name="inventoryCountAuditId" />
+      </Principal>
+      <Dependent Role="InventoryCountAuditDtl">
+        <PropertyRef Name="inventoryCountAuditId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="InventoryCountHdr_InventoryCountAuditHdr">
+    <End Type="ARMSTestModel.InventoryCountHdr" Role="InventoryCountHdr" Multiplicity="1" />
+    <End Type="ARMSTestModel.InventoryCountAuditHdr" Role="InventoryCountAuditHdr" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InventoryCountHdr">
+        <PropertyRef Name="inventoryCountId" />
+      </Principal>
+      <Dependent Role="InventoryCountAuditHdr">
+        <PropertyRef Name="referenceInventoryCountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="InventoryCountHdr_InventoryCountDtl">
+    <End Type="ARMSTestModel.InventoryCountHdr" Role="InventoryCountHdr" Multiplicity="1" />
+    <End Type="ARMSTestModel.InventoryCountDtl" Role="InventoryCountDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InventoryCountHdr">
+        <PropertyRef Name="inventoryCountId" />
+      </Principal>
+      <Dependent Role="InventoryCountDtl">
+        <PropertyRef Name="inventoryCountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="inventoryCountStatusHdr_inventoryCountStatusDtl">
+    <End Type="ARMSTestModel.inventoryCountStatusHdr" Role="inventoryCountStatusHdr" Multiplicity="1" />
+    <End Type="ARMSTestModel.inventoryCountStatusDtl" Role="inventoryCountStatusDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="inventoryCountStatusHdr">
+        <PropertyRef Name="in_statusId" />
+      </Principal>
+      <Dependent Role="inventoryCountStatusDtl">
+        <PropertyRef Name="in_statusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ObjectiveHdr_Objectives">
+    <End Type="ARMSTestModel.ObjectiveHdr" Role="ObjectiveHdr" Multiplicity="1" />
+    <End Type="ARMSTestModel.Objective" Role="Objective" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObjectiveHdr">
+        <PropertyRef Name="objectiveCode" />
+      </Principal>
+      <Dependent Role="Objective">
+        <PropertyRef Name="objectiveCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="customerHeader">
+    <Key>
+      <PropertyRef Name="ccaNum" />
+    </Key>
+    <Property Type="String" Name="ccaNum" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="acctCode" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="status" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="acctType" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="acctClassfxn" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="Boolean" Name="keyAcct" Nullable="false" />
+    <Property Type="String" Name="acctName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctClass" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="acctOffcr" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="territory" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="area" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="region" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="emailAdd" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="telNum" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="faxNum" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="offceHrs" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="storeHrs" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="yrsInBusiness" />
+    <Property Type="Int32" Name="yrsWdMTC" />
+    <Property Type="String" Name="TIN" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="VATregNum" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="regBusName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="bussAdd" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="delAdd" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="TotalNumOfEmp" />
+    <Property Type="String" Name="SapAcctCode" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EncodedBy" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Canceled" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int64" Name="DocType" />
+    <Property Type="String" Name="Approved" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Status2" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SkipRoles1" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SkipASM" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SkipCHM" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="acctCategoryVal" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="acctBusinessClass" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="acctCategoryPrem" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="telNum2" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobileNum" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Pareto" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TAG1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="custAttachments" Relationship="ARMSTestModel.customerHeader_custAttachment" FromRole="customerHeader" ToRole="custAttachment" />
+    <NavigationProperty Name="empInventories" Relationship="ARMSTestModel.customerHeader_empInventory" FromRole="customerHeader" ToRole="empInventory" />
+    <Property Type="String" Name="TypeOfAccount" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="app_vw_itemBrand">
+    <Key>
+      <PropertyRef Name="TableID" />
+      <PropertyRef Name="FieldID" />
+      <PropertyRef Name="IndexID" />
+    </Key>
+    <Property Type="String" Name="TableID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="FieldID" Nullable="false" />
+    <Property Type="Int16" Name="IndexID" Nullable="false" />
+    <Property Type="String" Name="FldValue" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Descr" MaxLength="254" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FldDate" />
+  </EntityType>
+  <Association Name="customerHeader_custAttachment">
+    <End Type="ARMSTestModel.customerHeader" Role="customerHeader" Multiplicity="1" />
+    <End Type="ARMSTestModel.custAttachment" Role="custAttachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customerHeader">
+        <PropertyRef Name="ccaNum" />
+      </Principal>
+      <Dependent Role="custAttachment">
+        <PropertyRef Name="ccaNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="customerHeader_empInventory">
+    <End Type="ARMSTestModel.customerHeader" Role="customerHeader" Multiplicity="1" />
+    <End Type="ARMSTestModel.empInventory" Role="empInventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customerHeader">
+        <PropertyRef Name="ccaNum" />
+      </Principal>
+      <Dependent Role="empInventory">
+        <PropertyRef Name="ccaNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="custOutletIncharge">
+    <Key>
+      <PropertyRef Name="acctCode" />
+      <PropertyRef Name="whsInchargeID" />
+    </Key>
+    <Property Type="String" Name="acctCode" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whsInchargeID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whsInchargeFirstName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whsInchargeMiddleName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whsInchargeLastName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whsInchargeContactNo" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="custOutlet">
+    <Key>
+      <PropertyRef Name="custOutletsID" />
+      <PropertyRef Name="busTermsID" />
+      <PropertyRef Name="ccaNum" />
+    </Key>
+    <Property Type="Int64" Name="custOutletsID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="busTermsID" Nullable="false" />
+    <Property Type="String" Name="ccaNum" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="name" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="location" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="storeSize" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="wreHouseSize" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="status" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="inventoryIncharge" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="customerAccStatu">
+    <Key>
+      <PropertyRef Name="ccaNum" />
+    </Key>
+    <Property Type="String" Name="ccaNum" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Status" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dayCycle">
+    <Key>
+      <PropertyRef Name="DayCycleNo" />
+    </Key>
+    <Property Type="Int32" Name="DocTypeId" />
+    <Property Type="Int32" Name="DayCycleNo" Nullable="false" />
+    <Property Type="Int32" Name="rangeDayCycle" />
+    <Property Type="Int32" Name="startDayOfTheMonth" />
+  </EntityType>
+  <EntityType Name="app_vw_itemgroup">
+    <Key>
+      <PropertyRef Name="Code" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="U_CATEGORY" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="U_UOM" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="mtc_vw_User_Role_Details">
+    <Key>
+      <PropertyRef Name="empIDNo" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="firstName" />
+      <PropertyRef Name="position" />
+      <PropertyRef Name="roleName" />
+    </Key>
+    <Property Type="String" Name="empIDNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="lastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="firstName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="userName" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="userPass" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="position" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="branch" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="channel" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="area" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="brand" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="roleCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="roleName" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SalesTarget">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Amount" Precision="18" Scale="6" />
+    <Property Type="Int32" Name="DocTypeId" />
+  </EntityType>
+  <EntityType Name="CoverageDataChanx">
+    <Key>
+      <PropertyRef Name="CoverageDataChangesId" />
+    </Key>
+    <Property Type="Int64" Name="CoverageDataChangesId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="DocTypeId" Nullable="false" />
+    <Property Type="String" Name="DataChanges" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DocId" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CoverageLogChanx">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="DocTypeId" />
+    <Property Type="String" Name="DocId" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="TimeStmp" />
+    <Property Type="String" Name="UserName" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Data" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="arms2_vw_inventoryAccounts">
+    <Key>
+      <PropertyRef Name="ccaNum" />
+      <PropertyRef Name="acctCode" />
+      <PropertyRef Name="acctName" />
+      <PropertyRef Name="empIdNo" />
+      <PropertyRef Name="firstName" />
+      <PropertyRef Name="lastName" />
+    </Key>
+    <Property Type="String" Name="ccaNum" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="acctCode" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="bussAdd" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="areaname" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="pareto" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="territoryName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="empIdNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="firstName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="lastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CntctPrsn" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone1" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="armsII_vw_itemMasterFile">
+    <Key>
+      <PropertyRef Name="ITEMCODE" />
+    </Key>
+    <Property Type="String" Name="U_PL_ITEMCODE" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ITEMCODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Brand" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProdGrp" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemDescription" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="SRP" Precision="19" Scale="6" />
+    <Property Type="String" Name="U_PL_UOM" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LookUpItem" MaxLength="123" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="U_GThickness" Precision="19" Scale="6" />
+    <Property Type="Decimal" Name="U_GWidth" Precision="19" Scale="6" />
+    <Property Type="Decimal" Name="U_GLength" Precision="19" Scale="6" />
+    <Property Type="Decimal" Name="U_GMultiplier" Precision="19" Scale="6" />
+    <Property Type="String" Name="U_ItemClass" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="U_PL_NAME" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TempUploadCoveragePlan">
+    <Key>
+      <PropertyRef Name="counter_id" />
+    </Key>
+    <Property Type="Int64" Name="counter_id" Nullable="false" />
+    <Property Type="String" Name="DataChanges" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="uploadingType" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="arms2_vw_AccountInCoverage">
+    <Key>
+      <PropertyRef Name="AccountCode" />
+      <PropertyRef Name="EmpIdNo" />
+      <PropertyRef Name="Day" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="LineNum" />
+    </Key>
+    <Property Type="String" Name="AccountCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpIdNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Month" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Day" Nullable="false" />
+    <Property Type="Int32" Name="Year" Nullable="false" />
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DoctypeId" />
+    <Property Type="Int32" Name="DocumentStatusId" />
+    <Property Type="String" Name="LineNum" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactPerson" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactPersonNo" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StoreChecking" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StoreCheckingResult" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProductPresentationResult" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="TotalAmount" Precision="18" Scale="6" />
+    <Property Type="String" Name="CompetitorActivities" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WithOrder" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="NextCallDate" />
+    <Property Type="String" Name="PONum" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IssuesAndConcerns" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Delivery" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Orders" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SummaryLackingItems" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobileNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Recommendation" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TimeTable" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cFullCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cPartialCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cNoCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OtherInformation" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctClassfxn" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="bussAdd" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FileAttachment" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="HotelName" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="HotelContactNumber" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="arms2_vw_LookupAccounts">
+    <Key>
+      <PropertyRef Name="CardCode" />
+      <PropertyRef Name="acctClassfxn" />
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="EmpIdNo" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="day" />
+    </Key>
+    <Property Type="String" Name="CardCode" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CardName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctClassfxn" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Phone1" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CntctPrsn" MaxLength="90" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpIdNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Year" Nullable="false" />
+    <Property Type="String" Name="Month" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DoctypeId" />
+    <Property Type="Int32" Name="DocumentStatusId" />
+    <Property Type="Int32" Name="day" Nullable="false" />
+    <Property Type="String" Name="HotelName" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="HotelContactNumber" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="arms2_vw_estAmount_actAmount">
+    <Key>
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="LineNum" />
+      <PropertyRef Name="Day" />
+      <PropertyRef Name="ObjectiveCode" />
+    </Key>
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LineNum" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Day" Nullable="false" />
+    <Property Type="String" Name="ObjectiveCode" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="estPlannedAmount" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="estActualAmount" Precision="38" Scale="6" />
+  </EntityType>
+  <EntityType Name="RouteRmrk">
+    <Key>
+      <PropertyRef Name="CounterId" />
+    </Key>
+    <Property Type="Int32" Name="CounterId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="datelog" />
+  </EntityType>
+  <EntityType Name="CoverageDtl1">
+    <Key>
+      <PropertyRef Name="CounterId" />
+    </Key>
+    <Property Type="Int32" Name="CounterId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LineNum" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Day" Nullable="false" />
+    <Property Type="String" Name="ObjectiveCode" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Brand" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="PlannedAmount" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="ActualAmount" Precision="18" Scale="6" />
+    <Property Type="String" Name="CounterClerk" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProductPresented" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="isIncoverage" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CounterClerkNo" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IsDeleted" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="detailRemarks" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="inventoryCountId" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CoverageHdr" Relationship="ARMSTestModel.CoverageHdr_CoverageDtl1" FromRole="CoverageDtl1" ToRole="CoverageHdr" />
+    <NavigationProperty Name="CoverageDtl" Relationship="ARMSTestModel.CoverageDtls_CoverageDtl1" FromRole="CoverageDtl1" ToRole="CoverageDtl" />
+  </EntityType>
+  <Association Name="CoverageHdr_CoverageDtl1">
+    <End Type="ARMSTestModel.CoverageHdr" Role="CoverageHdr" Multiplicity="1" />
+    <End Type="ARMSTestModel.CoverageDtl1" Role="CoverageDtl1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoverageHdr">
+        <PropertyRef Name="EventID" />
+      </Principal>
+      <Dependent Role="CoverageDtl1">
+        <PropertyRef Name="EventID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="arms2_sp_PendingAccounts88_Result">
+    <Property Type="Int32" Name="transid" Nullable="false" />
+    <Property Type="String" Name="actdeldate" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="duedate" Nullable="true" MaxLength="30" />
+    <Property Type="Decimal" Name="Balance" Nullable="true" Precision="38" Scale="6" />
+    <Property Type="Int32" Name="docnum" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="CollectionPendingAccount">
+    <Key>
+      <PropertyRef Name="transid" />
+    </Key>
+    <Property Type="String" Name="transid" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="docnum" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cardcode" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="actdeldate" />
+    <Property Type="DateTime" Name="duedate" />
+    <Property Type="Decimal" Name="balance" Precision="18" Scale="6" />
+  </EntityType>
+  <EntityType Name="CoverageDtl">
+    <Key>
+      <PropertyRef Name="LineNum" />
+    </Key>
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LineNum" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Day" Nullable="false" />
+    <Property Type="String" Name="AccountCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactPerson" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactPersonNo" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StoreChecking" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StoreCheckingResult" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProductPresentationResult" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="TotalAmount" Precision="18" Scale="6" />
+    <Property Type="String" Name="CompetitorActivities" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WithOrder" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="NextCallDate" />
+    <Property Type="String" Name="PONum" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IssuesAndConcerns" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Delivery" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Orders" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SummaryLackingItems" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobileNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Recommendation" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TimeTable" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cFullCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cPartialCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cNoCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OtherInformation" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="isPlanned" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Tmein" />
+    <Property Type="DateTime" Name="Tmeout" />
+    <Property Type="Int32" Name="Numvisit" />
+    <Property Type="String" Name="HotelName" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="HotelContactNumber" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IsDeleted" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="AcctStatus" />
+    <Property Type="String" Name="IsAnEdit" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RmrkChanges" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FileAttachment" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="hasCallreport" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="AttachmentContent" MaxLength="Max" FixedLength="false" />
+    <Property Type="String" Name="AttachmentType" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CheckInAddress" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CheckInTime" />
+    <Property Type="String" Name="CheckOutAddress" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="CheckOutTime" />
+    <Property Type="String" Name="LatitudeInAddress" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LongitudeOutAddress" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LatitudeOutAddress" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LongitudeInAddress" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="ColPostDatedCheck" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="ColDatedCheck" Precision="18" Scale="6" />
+    <Property Type="Decimal" Name="ColTotal" Precision="18" Scale="6" />
+    <Property Type="String" Name="ColRemarks" MaxLength="40" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CoverageDtl1" Relationship="ARMSTestModel.CoverageDtls_CoverageDtl1" FromRole="CoverageDtl" ToRole="CoverageDtl1" />
+    <NavigationProperty Name="CoverageHdr" Relationship="ARMSTestModel.CoverageHdr_CoverageDtls" FromRole="CoverageDtl" ToRole="CoverageHdr" />
+    <NavigationProperty Name="VisitLogs" Relationship="ARMSTestModel.CoverageDtls_VisitLogs" FromRole="CoverageDtl" ToRole="VisitLog" />
+    <Property Type="DateTime" Name="DateEncoded" />
+    <Property Type="DateTime" Name="DateDeleted" />
+    <Property Type="String" Name="isUrgent" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="CashOrCredit" Precision="18" Scale="0" />
+    <Property Type="String" Name="FileAttachment2" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="AttachmentContent2" MaxLength="Max" FixedLength="false" />
+    <Property Type="String" Name="AttachmentType2" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FileAttachment3" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="AttachmentContent3" MaxLength="Max" FixedLength="false" />
+    <Property Type="String" Name="AttachmentType3" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FileAttachment4" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="AttachmentContent4" MaxLength="Max" FixedLength="false" />
+    <Property Type="String" Name="AttachmentType4" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="hasPOUpload" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="CoverageDtls_CoverageDtl1">
+    <End Type="ARMSTestModel.CoverageDtl" Role="CoverageDtl" Multiplicity="1" />
+    <End Type="ARMSTestModel.CoverageDtl1" Role="CoverageDtl1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoverageDtl">
+        <PropertyRef Name="LineNum" />
+      </Principal>
+      <Dependent Role="CoverageDtl1">
+        <PropertyRef Name="LineNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CoverageHdr_CoverageDtls">
+    <End Type="ARMSTestModel.CoverageHdr" Role="CoverageHdr" Multiplicity="1" />
+    <End Type="ARMSTestModel.CoverageDtl" Role="CoverageDtl" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoverageHdr">
+        <PropertyRef Name="EventID" />
+      </Principal>
+      <Dependent Role="CoverageDtl">
+        <PropertyRef Name="EventID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Arms_vw_SOLookUps">
+    <Key>
+      <PropertyRef Name="EmpidNo" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="position" />
+    </Key>
+    <Property Type="String" Name="EmpidNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="91" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="position" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="area" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="status" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="territory" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="region" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="arms2_vw_lookUpOSLP">
+    <Key>
+      <PropertyRef Name="SlpCode" />
+      <PropertyRef Name="SlpName" />
+      <PropertyRef Name="empIdNo" />
+    </Key>
+    <Property Type="Int16" Name="SlpCode" Nullable="false" />
+    <Property Type="String" Name="SlpName" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="U_ASM" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="U_ACTIVE" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="U_POSITION" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="U_AREA" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="U_SALES_TARGET" />
+    <Property Type="String" Name="empIdNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="arms2_vw_userheaderDetails">
+    <Key>
+      <PropertyRef Name="slpcode" />
+      <PropertyRef Name="slpname" />
+      <PropertyRef Name="empidno" />
+    </Key>
+    <Property Type="Int16" Name="slpcode" Nullable="false" />
+    <Property Type="String" Name="slpname" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="area" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="empidno" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UploadedPricelist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int64" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="FileAttachment" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="FileContent" MaxLength="Max" FixedLength="false" />
+    <Property Type="String" Name="AttachmentType" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DateTimeStamp" />
+    <Property Type="String" Name="UploadedBy" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FileDescription" MaxLength="260" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="arms2_vw_customerheader_lookup">
+    <Key>
+      <PropertyRef Name="ccaNum" />
+      <PropertyRef Name="acctcode" />
+      <PropertyRef Name="acctName" />
+    </Key>
+    <Property Type="String" Name="ccaNum" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctcode" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="bussAdd" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SapAcctCode" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Pareto" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctClassfxn" MaxLength="20" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VisitLog">
+    <Key>
+      <PropertyRef Name="CounterId" />
+    </Key>
+    <Property Type="Int32" Name="CounterId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LineNum" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Time" />
+    <Property Type="String" Name="Address" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Longitude" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Latitude" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="INOUT" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="isPlanned" MaxLength="1" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CoverageDtl" Relationship="ARMSTestModel.CoverageDtls_VisitLogs" FromRole="VisitLog" ToRole="CoverageDtl" />
+    <NavigationProperty Name="CoverageHdr" Relationship="ARMSTestModel.CoverageHdr_VisitLogs" FromRole="VisitLog" ToRole="CoverageHdr" />
+  </EntityType>
+  <Association Name="CoverageDtls_VisitLogs">
+    <End Type="ARMSTestModel.CoverageDtl" Role="CoverageDtl" Multiplicity="1" />
+    <End Type="ARMSTestModel.VisitLog" Role="VisitLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoverageDtl">
+        <PropertyRef Name="LineNum" />
+      </Principal>
+      <Dependent Role="VisitLog">
+        <PropertyRef Name="LineNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CoverageHdr_VisitLogs">
+    <End Type="ARMSTestModel.CoverageHdr" Role="CoverageHdr" Multiplicity="1" />
+    <End Type="ARMSTestModel.VisitLog" Role="VisitLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CoverageHdr">
+        <PropertyRef Name="EventID" />
+      </Principal>
+      <Dependent Role="VisitLog">
+        <PropertyRef Name="EventID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="arms2_vw_actveBusPrtnr">
+    <Key>
+      <PropertyRef Name="CardName" />
+      <PropertyRef Name="acctClassfxn" />
+      <PropertyRef Name="empIdNo" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="LastName" />
+      <PropertyRef Name="ccanum" />
+    </Key>
+    <Property Type="String" Name="CardCode" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CardName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Phone1" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CntctPrsn" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="acctClassfxn" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="U_ACCTTYPE" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="U_CHANNEL" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="U_AREA" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Territory" />
+    <Property Type="Int32" Name="SOCode" />
+    <Property Type="String" Name="empIdNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Pareto" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TerritoryName" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ccanum" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="mtc_vw_inventoryCountlist">
+    <Key>
+      <PropertyRef Name="inventoryCountId" />
+      <PropertyRef Name="firstName" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="roleid" />
+      <PropertyRef Name="stateDesc" />
+    </Key>
+    <Property Type="String" Name="inventoryCountId" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="empId" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="firstName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="lastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="acctCode" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="location" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="roleid" Nullable="false" />
+    <Property Type="String" Name="stateDesc" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="actualCountDate" />
+    <Property Type="String" Name="inventoryCountStatus" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DocumentStatusId" />
+    <Property Type="String" Name="audited" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="arms2_sp_ActivityLogsReport_Result">
+    <Property Type="String" Name="empName" Nullable="true" MaxLength="91" />
+    <Property Type="DateTime" Name="datetimestamp" Nullable="true" Precision="23" />
+    <Property Type="String" Name="field" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="activity" Nullable="false" MaxLength="7" />
+    <Property Type="String" Name="acctName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="acctcode" Nullable="true" MaxLength="40" />
+  </ComplexType>
+  <EntityType Name="SalesTargetMaintenance">
+    <Key>
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="Month" />
+      <PropertyRef Name="SlpCode" />
+    </Key>
+    <Property Type="Int32" Name="DocTypeId" />
+    <Property Type="Int32" Name="Year" Nullable="false" />
+    <Property Type="String" Name="Month" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="SlpCode" Nullable="false" />
+    <Property Type="Decimal" Name="Amount" Precision="18" Scale="6" />
+  </EntityType>
+  <EntityType Name="arms2_vw_ActivityLogs">
+    <Key>
+      <PropertyRef Name="field" />
+      <PropertyRef Name="activity" />
+      <PropertyRef Name="acctName" />
+    </Key>
+    <Property Type="String" Name="empName" MaxLength="91" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="datetimestamp" />
+    <Property Type="String" Name="field" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="activity" Nullable="false" MaxLength="17" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="acctName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="acctcode" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Location" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="bussAdd" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="armsII_vw_itemMasterFile_srp">
+    <Key>
+      <PropertyRef Name="ITEMCODE" />
+    </Key>
+    <Property Type="String" Name="U_PL_ITEMCODE" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ITEMCODE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Brand" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProdGrp" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemDescription" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="SRP" Precision="19" Scale="6" />
+    <Property Type="String" Name="U_PL_UOM" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LookUpItem" MaxLength="123" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SapItemsAvailableQty">
+    <Key>
+      <PropertyRef Name="ItemCode" />
+      <PropertyRef Name="whs" />
+      <PropertyRef Name="ProductGrp" />
+    </Key>
+    <Property Type="String" Name="ItemCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ItemName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="whs" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="qty" Precision="38" Scale="6" />
+    <Property Type="String" Name="U_Brand" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProductGrp" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DateAsOf" />
+  </EntityType>
+  <EntityType Name="arms2_vw_CoverageHdrStatus">
+    <Key>
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="EmpIdNo" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="firstname" />
+      <PropertyRef Name="lastname" />
+      <PropertyRef Name="statedesc" />
+      <PropertyRef Name="isFinal" />
+      <PropertyRef Name="isStart" />
+      <PropertyRef Name="roleid" />
+    </Key>
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpIdNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Year" Nullable="false" />
+    <Property Type="String" Name="Month" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DoctypeId" />
+    <Property Type="Int32" Name="DocumentStatusId" />
+    <Property Type="String" Name="branch" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="firstname" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="lastname" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="statedesc" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="nextStateDesc" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="isFinal" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="isStart" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="roleid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mtc_vw_uploadsalesreport">
+    <Key>
+      <PropertyRef Name="counterid" />
+      <PropertyRef Name="empidno" />
+      <PropertyRef Name="slpcode" />
+    </Key>
+    <Property Type="Int32" Name="counterid" Nullable="false" />
+    <Property Type="String" Name="empidno" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="slpcode" Nullable="false" />
+    <Property Type="String" Name="salesofficer" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="uploaddatetime" />
+    <Property Type="Decimal" Name="POSTED" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="CM" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="NET_POSTED" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="UNPOSTED" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="PICKLIST" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="SUBTOTAL" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="PENDING" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="BALANCE_ORDER" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="GROSS" Precision="38" Scale="6" />
+    <Property Type="Int32" Name="NoOfTransactingAccts" />
+  </EntityType>
+  <EntityType Name="arms2_vw_coveragechanges">
+    <Key>
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="EmpIdNo" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="firstname" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="stateDesc" />
+      <PropertyRef Name="LineNum" />
+      <PropertyRef Name="Day" />
+      <PropertyRef Name="AccountCode" />
+      <PropertyRef Name="roleid" />
+    </Key>
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpIdNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="lastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="firstname" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="branch" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Year" Nullable="false" />
+    <Property Type="String" Name="Month" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DoctypeId" />
+    <Property Type="Int32" Name="AcctStatus" />
+    <Property Type="String" Name="stateDesc" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LineNum" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Day" Nullable="false" />
+    <Property Type="String" Name="AccountCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AcctClassfxn" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="AcctName" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="bussAdd" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactPerson" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactPersonNo" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StoreChecking" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StoreCheckingResult" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProductPresentationResult" MaxLength="120" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="TotalAmount" Precision="18" Scale="6" />
+    <Property Type="String" Name="CompetitorActivities" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="WithOrder" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="NextCallDate" />
+    <Property Type="String" Name="PONum" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IssuesAndConcerns" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Delivery" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="orders" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SummaryLackingItems" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobileNo" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Recommendation" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TimeTable" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Remarks" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cFullCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cPartialCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="cNoCollection" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="OtherInformation" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="isPlanned" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Tmein" />
+    <Property Type="DateTime" Name="Tmeout" />
+    <Property Type="Int32" Name="Numvisit" />
+    <Property Type="String" Name="HotelName" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="HotelContactNumber" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IsDeleted" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IsAnEdit" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Coveragedate" />
+    <Property Type="Int32" Name="Interval" />
+    <Property Type="String" Name="ASM_ID" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CHM_ID" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="roleid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mtc_vw_so_salesmonitoringdtl">
+    <Key>
+      <PropertyRef Name="SOCode" />
+      <PropertyRef Name="Sales_Officer" />
+      <PropertyRef Name="DateAsOf" />
+    </Key>
+    <Property Type="String" Name="empIdNo" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SOCode" Nullable="false" />
+    <Property Type="String" Name="Sales_Officer" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="GrossAmt" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="CMAmt" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="UNPOSTEDAmt" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="PostedAmt" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="Pending_Order" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="BOAmt" Precision="38" Scale="6" />
+    <Property Type="Decimal" Name="NetPosted" Precision="38" Scale="6" />
+    <Property Type="Int32" Name="NoTransactingAccounts" />
+    <Property Type="DateTime" Name="DateAsOf" Nullable="false" />
+  </EntityType>
+  <EntityType Name="arms2_vw_asmViewSoCoverage">
+    <Key>
+      <PropertyRef Name="EventID" />
+      <PropertyRef Name="EmpIdNo" />
+      <PropertyRef Name="LastName" />
+      <PropertyRef Name="FirstName" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="roleId" />
+      <PropertyRef Name="stateDesc" />
+      <PropertyRef Name="position" />
+      <PropertyRef Name="RoleName" />
+    </Key>
+    <Property Type="String" Name="EventID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmpIdNo" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FirstName" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Year" Nullable="false" />
+    <Property Type="String" Name="Month" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DoctypeId" />
+    <Property Type="Int32" Name="DocumentStatusId" />
+    <Property Type="Int32" Name="roleId" Nullable="false" />
+    <Property Type="String" Name="stateDesc" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="position" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="branch" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="channel" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="U_area" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="brand" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RoleCode" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RoleName" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="SlpCode" />
+    <Property Type="String" Name="ASM_ID" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CHM_ID" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="VPSALES_ID" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MTC_vw_empListHRIS">
+    <Key>
+      <PropertyRef Name="in_emp_id" />
+      <PropertyRef Name="lastName" />
+      <PropertyRef Name="firstName" />
+    </Key>
+    <Property Type="String" Name="in_emp_id" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="lastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="firstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="emailadd" MaxLength="100" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="armsmobile_proc_get_uploadattachment_Result">
+    <Property Type="String" Name="eventid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="accountcodename" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="empidno" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="day" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="month" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="year" Nullable="true" MaxLength="50" />
+    <Property Type="Binary" Name="po" Nullable="true" MaxLength="Max" />
+    <Property Type="Binary" Name="warehouse" Nullable="true" MaxLength="Max" />
+    <Property Type="Binary" Name="selfie" Nullable="true" MaxLength="Max" />
+    <Property Type="Binary" Name="competition" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="armsmobile_proc_get_uploadattachment_Result1">
+    <Property Type="String" Name="eventid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="accountcodename" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="empidno" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="day" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="month" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="year" Nullable="true" MaxLength="50" />
+    <Property Type="Binary" Name="po" Nullable="true" />
+    <Property Type="Binary" Name="warehouse" Nullable="true" />
+    <Property Type="Binary" Name="selfie" Nullable="true" />
+    <Property Type="Binary" Name="competition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="armsmobile_proc_get_uploadattachment_Result2">
+    <Property Type="String" Name="eventid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="accountcodename" Nullable="true" />
+    <Property Type="String" Name="empidno" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="day" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="month" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="year" Nullable="true" MaxLength="50" />
+    <Property Type="Binary" Name="po" Nullable="true" />
+    <Property Type="Binary" Name="warehouse" Nullable="true" />
+    <Property Type="Binary" Name="selfie" Nullable="true" />
+    <Property Type="Binary" Name="competition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="armsmobile_proc_get_uploadattachment_Result3">
+    <Property Type="String" Name="eventid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="accountcodename" Nullable="true" />
+    <Property Type="String" Name="empidno" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="day" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="month" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="year" Nullable="true" MaxLength="50" />
+    <Property Type="Binary" Name="po" Nullable="true" />
+    <Property Type="Binary" Name="warehouse" Nullable="true" />
+    <Property Type="Binary" Name="selfie" Nullable="true" />
+    <Property Type="Binary" Name="competition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="armsmobile_proc_get_uploadattachment_Result4">
+    <Property Type="String" Name="eventid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="accountcodename" Nullable="true" />
+    <Property Type="String" Name="empidno" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="day" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="month" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="year" Nullable="true" MaxLength="50" />
+    <Property Type="Binary" Name="po" Nullable="true" />
+    <Property Type="Binary" Name="warehouse" Nullable="true" />
+    <Property Type="Binary" Name="selfie" Nullable="true" />
+    <Property Type="Binary" Name="competition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="armsmobile_proc_get_uploadattachment_Result5">
+    <Property Type="String" Name="eventid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="accountcodename" Nullable="true" />
+    <Property Type="String" Name="empidno" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="linenum" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="day" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="month" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="year" Nullable="true" MaxLength="50" />
+    <Property Type="Binary" Name="po" Nullable="true" />
+    <Property Type="Binary" Name="warehouse" Nullable="true" />
+    <Property Type="Binary" Name="selfie" Nullable="true" />
+    <Property Type="Binary" Name="competition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="armsmobile_proc_get_uploadattachment_Result6">
+    <Property Type="String" Name="eventid" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="accountcodename" Nullable="true" />
+    <Property Type="String" Name="empidno" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="linenum" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="day" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="month" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="year" Nullable="true" MaxLength="50" />
+    <Property Type="Binary" Name="po" Nullable="true" />
+    <Property Type="Binary" Name="warehouse" Nullable="true" />
+    <Property Type="Binary" Name="selfie" Nullable="true" />
+    <Property Type="Binary" Name="competition" Nullable="true" />
+    <Property Type="String" Name="pofiletype" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="warehousefiletype" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="selfiefiletype" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="competitionfiletype" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

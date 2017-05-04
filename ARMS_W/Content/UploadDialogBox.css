@@ -1,0 +1,16 @@
+﻿input[type=button], input[type=submit]
+{
+    height:24px;
+    background:url(../Images/btn_bkg.jpg);
+    border:2px solid #858585;
+    font-weight:bold;
+    font-family:arial;
+    padding:0px 8px 0px 8px;
+    font-size:12px;
+    cursor:pointer;
+}
+
+input[type=button]:hover, input[type=submit]:hover
+{
+    background:url(../Images/btn_bkg_hover.jpg);
+}
