@@ -601,32 +601,6 @@ namespace ARMS_W.Controllers
             }
             #endregion
 
-
-
-            DataTable deliveryAddress;
-            deliveryAddress = SqlDbHelper.getDataDT("SELECT ch_address FROM CustDelAddress WHERE cCanum='" + ccanum + "' order by ch_address");
-            #region LOAD DATA DELIVERY ADDRESS
-            acct_dtls.delAddresses = new List<SkelClass.Document.AccountDetails.delivery_addresses>();
-            foreach (DataRow itm in deliveryAddress.Rows)
-            {
-                acct_dtls.delAddresses.Add(new SkelClass.Document.AccountDetails.delivery_addresses()
-                {
-                    ch_address = StringHelper.CTJ(itm["ch_address"].ToString().Trim())
-                });
-            }
-
-            acct_dtls.proposedDelAddresses = new List<SkelClass.Document.AccountDetails.delivery_addresses>();
-            DataTable propDelAddDT;
-            propDelAddDT = SqlDbHelper.getDataDT("select ch_address from proposedaddress where cCanum='" + ccanum + "' order by ch_address");
-            foreach (DataRow itm in propDelAddDT.Rows)
-            {
-                acct_dtls.proposedDelAddresses.Add(new SkelClass.Document.AccountDetails.delivery_addresses()
-                {
-                    ch_address = StringHelper.CTJ(itm["ch_address"].ToString().Trim())
-                });
-            }
-
-            #endregion
             ViewData["AccountDetailsInfo"] = acct_dtls;
 
             return View();

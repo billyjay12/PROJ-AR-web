@@ -1596,7 +1596,7 @@ namespace ARMS_W.UserDefineFunctions
            {
                var DATABASE = new Models.ARMSTestEntities();
                ARMS_W.Models.userHeader username = DATABASE.userHeaders.Single(p => p.empIdNo == soID);
-               var qry = DATABASE.RouteChanges.Where(o => o.UserName == username.userName && o.Remarks.Contains("Batch")).Select(o => o.DocId).ToList();
+               var qry = DATABASE.RouteChanges.Where(o=> o.UserName==username.userName).Select(o => o.DocId).ToList();
                DATABASE.Dispose();
 
                return qry.LastOrDefault();

@@ -305,7 +305,9 @@ $(function () {
 
 
 
-
+    $("#btnRefresh").click(function () {
+        location.reload() = true;
+    });
 
 
 
@@ -337,9 +339,15 @@ $(function () {
     });
 
     btn_save_upload.click(function () {
-        if (confirm("Save uploaded data?")) {
+        var name = $("#soList option:selected").text();
+        var date = $(".fc-header-title").text();
+        var getDate = $("#calendar").fullCalendar('getDate');
+
+        if (confirm("You are about to perform a batch upload for " + name + " \n with choosen month and year: " + date)) {
             if ($("#soList option:selected").val() != "") {
-                save_uploaded_files();
+                if (confirm("Are you sure?")) {
+                    save_uploaded_files();
+                }
             }
             else {
                 alert("Please select SO Account");

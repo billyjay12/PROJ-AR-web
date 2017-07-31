@@ -2,11 +2,11 @@
 
 function Save_Doc() {
 
-    if (CheckCommisionAndDiscount() != "") {
-        alert(CheckCommisionAndDiscount());
-        return;
-    }
-    
+	if (CheckCommisionAndDiscount() != "") {
+		alert(CheckCommisionAndDiscount());
+		return;
+	}
+	
 	if (CheckRequiredFields()) {
 		Savedata();
 	}
@@ -14,229 +14,229 @@ function Save_Doc() {
 
 function CheckRequiredFields() {
 
-    var lacking_fields = "";
+	var lacking_fields = "";
 
-    // account code
-    if ($("#txt_acct_code").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Account Code"; } else { lacking_fields = "Account Code"; }
-    }
+	// account code
+	if ($("#txt_acct_code").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Account Code"; } else { lacking_fields = "Account Code"; }
+	}
 
-    // account name
-    if ($("#txt_acct_name").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Account Name"; } else { lacking_fields = "Account Name"; }
-    }
+	// account name
+	if ($("#txt_acct_name").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Account Name"; } else { lacking_fields = "Account Name"; }
+	}
 
-    // account officer
-    if ($("#txt_acct_officer").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Account Officer"; } else { lacking_fields = "Account Officer"; }
-    }
+	// account officer
+	if ($("#txt_acct_officer").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Account Officer"; } else { lacking_fields = "Account Officer"; }
+	}
 
-    // phone no
-    if ($("#txt_phone_no").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Phone Number"; } else { lacking_fields = "Phone Number"; }
-    }
+	// phone no
+	if ($("#txt_phone_no").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Phone Number"; } else { lacking_fields = "Phone Number"; }
+	}
 
-    // territory
-    if ($("#txt_acct_territory").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Territory"; } else { lacking_fields = "Territory"; }
-    }
+	// territory
+	if ($("#txt_acct_territory").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Territory"; } else { lacking_fields = "Territory"; }
+	}
 
-    // no. of years in the business
-    if ($("#txt_yrs_business").attr('value') != "") {
-        if (isNaN($("#txt_yrs_business").attr('value')) == true) {
-            if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "[No. of years in business] must be a number."; } else { lacking_fields = "[No. of years in business] must be a number."; }
-        }
-    }
+	// no. of years in the business
+	if ($("#txt_yrs_business").attr('value') != "") {
+		if (isNaN($("#txt_yrs_business").attr('value')) == true) {
+			if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "[No. of years in business] must be a number."; } else { lacking_fields = "[No. of years in business] must be a number."; }
+		}
+	}
 
-    // no. of years with matimco
-    if ($("#txt_yrs_matimco").attr('value') != "") {
-        if (isNaN($("#txt_yrs_matimco").attr('value')) == true) {
-            if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "[No. of years with Matimco] must be a number."; } else { lacking_fields = "[No. of years with Matimco] must be a number."; }
-        }
-    }
+	// no. of years with matimco
+	if ($("#txt_yrs_matimco").attr('value') != "") {
+		if (isNaN($("#txt_yrs_matimco").attr('value')) == true) {
+			if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "[No. of years with Matimco] must be a number."; } else { lacking_fields = "[No. of years with Matimco] must be a number."; }
+		}
+	}
 
-    // tax id
-    if ($("#txt_tax_id").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Tax ID"; } else { lacking_fields = "Tax ID"; }
-    }
+	// tax id
+	if ($("#txt_tax_id").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Tax ID"; } else { lacking_fields = "Tax ID"; }
+	}
 
 
-    // Vat Type
-    if ($("#txt_vat_no").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "VAT Type"; } else { lacking_fields = "VAT Type"; }
-    }
+	// Vat Type
+	if ($("#txt_vat_no").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "VAT Type"; } else { lacking_fields = "VAT Type"; }
+	}
 
-    // check if integer [ No of Employees]
-    if ($("#txt_no_employees").attr('value') != "") {
-        if (isNaN($("#txt_no_employees").attr('value')) == true) {
-            if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "No. of employee must be a number"; } else { lacking_fields = "No.of employee must be a number"; }
-        }
-    }
+	// check if integer [ No of Employees]
+	if ($("#txt_no_employees").attr('value') != "") {
+		if (isNaN($("#txt_no_employees").attr('value')) == true) {
+			if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "No. of employee must be a number"; } else { lacking_fields = "No.of employee must be a number"; }
+		}
+	}
 
-    // check if integer [ No of outlets]
-    if ($("#txt_no_of_outlets").attr('value') != "") {
-        if (isNaN($("#txt_no_of_outlets").attr('value')) == true) {
-            if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Number of outlets must be a number"; } else { lacking_fields = "No.. of outlets must be a number"; }
-        }
-    }
+	// check if integer [ No of outlets]
+	if ($("#txt_no_of_outlets").attr('value') != "") {
+		if (isNaN($("#txt_no_of_outlets").attr('value')) == true) {
+			if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Number of outlets must be a number"; } else { lacking_fields = "No.. of outlets must be a number"; }
+		}
+	}
 
-    /* Code added by Billy Jay (04/23/2015) */
+	/* Code added by Billy Jay (04/23/2015) */
 
   //  if ($("#txt_acct_territory").attr("grp_name_") == "GT") {
-        // Proposed credit terms
-    if ($("#txt_credit_terms_architectural_brand").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Architectural Brand Credit Terms"; } else { lacking_fields = "Architectural Brand Credit Terms"; }
-    }
+		// Proposed credit terms
+	if ($("#txt_credit_terms_architectural_brand").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Architectural Brand Credit Terms"; } else { lacking_fields = "Architectural Brand Credit Terms"; }
+	}
 
-    if ($("#txt_credit_terms_eco_lumber").attr("value") == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Ecofor Lumber Credit Terms"; } else { lacking_fields = "Ecofor Lumber Credit Terms"; }
-    }
+	if ($("#txt_credit_terms_eco_lumber").attr("value") == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Ecofor Lumber Credit Terms"; } else { lacking_fields = "Ecofor Lumber Credit Terms"; }
+	}
 
 //        if ($("#txt_credit_terms_eco_plywood").attr("value") == "") {
 //            if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Ecofor Plywood Credit Terms"; } else { lacking_fields = "Ecofor Plywood Credit Terms"; }
-    //        }
+	//        }
 
-    // ORDER LIMIT
-    if ($("#txt_order_limit_ab").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "AB Order Limit"; } else { lacking_fields = "AB Order Limit"; }
-    }
-    else if (isNumeric($("#txt_order_limit_ab").attr('value')) == false) {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "AB Order Limit Invalid"; } else { lacking_fields = "AB Order Limit Invalid"; }
-    }
+	// ORDER LIMIT
+	if ($("#txt_order_limit_ab").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "AB Order Limit"; } else { lacking_fields = "AB Order Limit"; }
+	}
+	else if (isNumeric($("#txt_order_limit_ab").attr('value')) == false) {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "AB Order Limit Invalid"; } else { lacking_fields = "AB Order Limit Invalid"; }
+	}
 
-    if ($("#txt_order_limit_tr").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "TR Order Limit"; } else { lacking_fields = "TR Order Limit"; }
-    }
-    else if (isNumeric($("#txt_order_limit_tr").attr('value')) == false) {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "TR Order Limit Invalid"; } else { lacking_fields = "TR Order Limit Invalid"; }
-    }
+	if ($("#txt_order_limit_tr").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "TR Order Limit"; } else { lacking_fields = "TR Order Limit"; }
+	}
+	else if (isNumeric($("#txt_order_limit_tr").attr('value')) == false) {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "TR Order Limit Invalid"; } else { lacking_fields = "TR Order Limit Invalid"; }
+	}
 
   //  }
 
-    /* End Code added (04/23/2015) */
+	/* End Code added (04/23/2015) */
 
-    // CREDIT LIMIT
-    if ($("#txt_credit_terms").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Credit Terms"; } else { lacking_fields = "Credit Terms"; }
-    }
+	// CREDIT LIMIT
+	if ($("#txt_credit_terms").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Credit Terms"; } else { lacking_fields = "Credit Terms"; }
+	}
 
-    // proposed credit limit
-    if ($("#txt_credit_limit").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Credit Limit"; } else { lacking_fields = "Credit Limit"; }
-    }
-    else if (isNumeric($("#txt_credit_limit").attr('value')) == false) {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Credit Limit Invalid"; } else { lacking_fields = "Credit Limit Invalid"; }
-    }
+	// proposed credit limit
+	if ($("#txt_credit_limit").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Credit Limit"; } else { lacking_fields = "Credit Limit"; }
+	}
+	else if (isNumeric($("#txt_credit_limit").attr('value')) == false) {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Credit Limit Invalid"; } else { lacking_fields = "Credit Limit Invalid"; }
+	}
 
-    // proposed price list code for matwood
-    if ($("#txt_mw_price_code").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "MW Price Code"; } else { lacking_fields = "MW Price Code"; }
-    }
+	// proposed price list code for matwood
+	if ($("#txt_mw_price_code").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "MW Price Code"; } else { lacking_fields = "MW Price Code"; }
+	}
 
-    // proposed price list code for weatherwood
-    if ($("#txt_ww_price_code").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "WW Price Code"; } else { lacking_fields = "WW Price Code"; }
-    }
+	// proposed price list code for weatherwood
+	if ($("#txt_ww_price_code").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "WW Price Code"; } else { lacking_fields = "WW Price Code"; }
+	}
 
-    // proposed price list code for pcw frames
-    if ($("#txt_pwf_price_code").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "PW Frames Price Code"; } else { lacking_fields = "PW Frames Price Code"; }
-    }
+	// proposed price list code for pcw frames
+	if ($("#txt_pwf_price_code").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "PW Frames Price Code"; } else { lacking_fields = "PW Frames Price Code"; }
+	}
 
-    // proposed price list code for pcw regular item
-    if ($("#txt_pwr_price_code").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "PW Regular Items Price Code"; } else { lacking_fields = "PW Regular Items Price Code"; }
-    }
+	// proposed price list code for pcw regular item
+	if ($("#txt_pwr_price_code").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "PW Regular Items Price Code"; } else { lacking_fields = "PW Regular Items Price Code"; }
+	}
 
-    // proposed price list code for gudwood
-    if ($("#txt_gw_price_code").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "GW Price Code"; } else { lacking_fields = "GW Price Code"; }
-    }
+	// proposed price list code for gudwood
+	if ($("#txt_gw_price_code").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "GW Price Code"; } else { lacking_fields = "GW Price Code"; }
+	}
 
-    // proposed price list code for gudwood
-    if ($("#txt_tw_price_code").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "TW Price Code"; } else { lacking_fields = "TW Price Code"; }
-    }
+	// proposed price list code for gudwood
+	if ($("#txt_tw_price_code").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "TW Price Code"; } else { lacking_fields = "TW Price Code"; }
+	}
 
-    // proposed price list code for muzuwood
-    if ($("#txt_mz_price_code").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "MZ Price Code"; } else { lacking_fields = "MZ Price Code"; }
-    }
+	// proposed price list code for muzuwood
+	if ($("#txt_mz_price_code").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "MZ Price Code"; } else { lacking_fields = "MZ Price Code"; }
+	}
 
-    // proposed price list code for nuwood
-    if ($("#txt_nw_price_code").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "NW Price Code"; } else { lacking_fields = "NW Price Code"; }
-    }
+	// proposed price list code for nuwood
+	if ($("#txt_nw_price_code").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "NW Price Code"; } else { lacking_fields = "NW Price Code"; }
+	}
 
-    // proposed price list code for ecofor treated
-    if ($("#txt_ec_price_code").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "EC Price Code"; } else { lacking_fields = "EC Price Code"; }
-    }
+	// proposed price list code for ecofor treated
+	if ($("#txt_ec_price_code").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "EC Price Code"; } else { lacking_fields = "EC Price Code"; }
+	}
 
-    // proposed price list code for ecofor untreated
-    if ($("#txt_ecu_price_code").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "ECU Price Code"; } else { lacking_fields = "ECU Price Code"; }
-    }
+	// proposed price list code for ecofor untreated
+	if ($("#txt_ecu_price_code").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "ECU Price Code"; } else { lacking_fields = "ECU Price Code"; }
+	}
 
-    //Account Category Value Brands
-    if ($("#txt_category_value").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Account Category Value Brands"; } else { lacking_fields = "Account Category Value Brands"; }
-    }
+	//Account Category Value Brands
+	if ($("#txt_category_value").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Account Category Value Brands"; } else { lacking_fields = "Account Category Value Brands"; }
+	}
 
-    //Account Category Premium Brands
-    if ($("#txt_category_prem").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Account Category Premium Brands"; } else { lacking_fields = "Account Category Premium Brands"; }
-    }
+	//Account Category Premium Brands
+	if ($("#txt_category_prem").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Account Category Premium Brands"; } else { lacking_fields = "Account Category Premium Brands"; }
+	}
 
-    //Business Classification
-    if ($("#txt_buss_class").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Business Classification"; } else { lacking_fields = "Business Classification"; }
-    }
+	//Business Classification
+	if ($("#txt_buss_class").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Business Classification"; } else { lacking_fields = "Business Classification"; }
+	}
 
-    //Type of Account
-    if ($("#txt_type_of_account").attr('value') == "") {
-        if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Type of Account"; } else { lacking_fields = "Type of Account"; }
-    }
+	//Type of Account
+	if ($("#txt_type_of_account").attr('value') == "") {
+		if (lacking_fields != "") { lacking_fields = lacking_fields + "\n" + "Type of Account"; } else { lacking_fields = "Type of Account"; }
+	}
 
-    if (lacking_fields != "") {
-        alert("PLEASE FILL IN THE FF. FIELDS: \n" + lacking_fields);
-        return false;
-    }
+	if (lacking_fields != "") {
+		alert("PLEASE FILL IN THE FF. FIELDS: \n" + lacking_fields);
+		return false;
+	}
 
-    return true;
+	return true;
 }
 
 function Savedata() {
 
-    DisplayPreloader();
+	DisplayPreloader();
 
 	var acct_business_type = "";
 	if (
-        $("#txt_sole_owner_name").attr('value') != "" ||
-        $("#txt_sole_nationality").attr('value') != "" ||
-        $("#txt_sole_gen_manager").attr('value') != "" ||
-        $("#txt_sole_fin_manager").attr('value') != ""
-    ) {
-	    acct_business_type = "SoleProprietorship";
+		$("#txt_sole_owner_name").attr('value') != "" ||
+		$("#txt_sole_nationality").attr('value') != "" ||
+		$("#txt_sole_gen_manager").attr('value') != "" ||
+		$("#txt_sole_fin_manager").attr('value') != ""
+	) {
+		acct_business_type = "SoleProprietorship";
 	} else if (
-        $("#txt_partner_gen_manager").attr('value') != "" ||
-        $("#txt_partner_fin_manager").attr('value') != "" ||
-        $("#tbl_partner_list tr").length > 2
-    ) {
-	    acct_business_type = "Partnership";
+		$("#txt_partner_gen_manager").attr('value') != "" ||
+		$("#txt_partner_fin_manager").attr('value') != "" ||
+		$("#tbl_partner_list tr").length > 2
+	) {
+		acct_business_type = "Partnership";
 	} else if (
-        $("#txt_corpo_inc_date").attr('value') != "" ||
-        $("#txt_corpo_auth_cap_stock").attr('value') != "" ||
-        $("#txt_corpo_subscb_cap_stock").attr('value') != "" ||
-        $("#txt_corpo_paidin_cap_stock").attr('value') != "" ||
-        $("#tbl_corpo_list tr").length > 2 ||
-        $("#txt_corpo_ceo").attr('value') != "" ||
-        $("#txt_corpo_vp_fin").attr('value') != "" ||
-        $("#txt_corpo_gen_man").attr('value') != ""
-    ) {
-	    acct_business_type = "Corporation";
+		$("#txt_corpo_inc_date").attr('value') != "" ||
+		$("#txt_corpo_auth_cap_stock").attr('value') != "" ||
+		$("#txt_corpo_subscb_cap_stock").attr('value') != "" ||
+		$("#txt_corpo_paidin_cap_stock").attr('value') != "" ||
+		$("#tbl_corpo_list tr").length > 2 ||
+		$("#txt_corpo_ceo").attr('value') != "" ||
+		$("#txt_corpo_vp_fin").attr('value') != "" ||
+		$("#txt_corpo_gen_man").attr('value') != ""
+	) {
+		acct_business_type = "Corporation";
 	} else {
-	    acct_business_type = "";
+		acct_business_type = "";
 	}
 
 	// added field
@@ -260,14 +260,14 @@ function Savedata() {
 		acct_type = "INDIRECT";
 	}
 
-    // key account
+	// key account
    
 	var acct_key_account = "";
 	if ($("#acc_key_yes").attr("checked") == "checked") {
 		acct_key_account = "1";
 	} else {
 		acct_key_account = "0";
-    }
+	}
 
 	// account code
 	var acct_code = "";
@@ -285,13 +285,13 @@ function Savedata() {
 	var acct_phone_no = "";
 	acct_phone_no = $("#txt_phone_no").attr('value');
 
-    // phone 2
-    var acct_phone_no_2 = "";
-    acct_phone_no_2 = $("#txt_phone_no_2").attr('value');
+	// phone 2
+	var acct_phone_no_2 = "";
+	acct_phone_no_2 = $("#txt_phone_no_2").attr('value');
 
-    // cellphone
-    var acct_cellphone = "";
-    acct_cellphone = $("#txt_cellphone").attr('value');
+	// cellphone
+	var acct_cellphone = "";
+	acct_cellphone = $("#txt_cellphone").attr('value');
 
 	// account officer
 	var acct_acct_officer = "";
@@ -379,20 +379,20 @@ function Savedata() {
 	//		 IF partnership
 	// [partner, nationality, contributed capital] - must be two entries
 	var list_of_partner = new Array();
-    row_count = $("#tbl_partner_list tr").length;
-    var loop_count = 0;
-    $("#tbl_partner_list tr").each(
-        function (index, element) {
-            loop_count++;
-            if (loop_count > 2 && loop_count < row_count) {
-                list_of_partner.push(
-                    $(element).find("td:nth-child(1) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(2) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(3) input[type=text]").attr('value')
-                );
-            }
-        }
-    );
+	row_count = $("#tbl_partner_list tr").length;
+	var loop_count = 0;
+	$("#tbl_partner_list tr").each(
+		function (index, element) {
+			loop_count++;
+			if (loop_count > 2 && loop_count < row_count) {
+				list_of_partner.push(
+					$(element).find("td:nth-child(1) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(2) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(3) input[type=text]").attr('value')
+				);
+			}
+		}
+	);
 
 	// gen. manager
 	var partner_gen_manager = "";
@@ -426,20 +426,20 @@ function Savedata() {
 
 	// [major stock holders, nationality, %owned] - at least two
 	var list_major_stockholder = new Array();
-    row_count = $("#tbl_corpo_list tr").length;
-    var loop_count = 0;
-    $("#tbl_corpo_list tr").each(
-        function (index, element) {
-            loop_count++;
-            if (loop_count > 2 && loop_count < row_count) {
-                list_major_stockholder.push(
-                    $(element).find("td:nth-child(1) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(2) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(3) input[type=text]").attr('value')
-                );
-            }
-        }
-    );
+	row_count = $("#tbl_corpo_list tr").length;
+	var loop_count = 0;
+	$("#tbl_corpo_list tr").each(
+		function (index, element) {
+			loop_count++;
+			if (loop_count > 2 && loop_count < row_count) {
+				list_major_stockholder.push(
+					$(element).find("td:nth-child(1) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(2) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(3) input[type=text]").attr('value')
+				);
+			}
+		}
+	);
 
 	// president
 	var corp_ceo = "";
@@ -459,19 +459,19 @@ function Savedata() {
 
 	// [position, no. of employees]
 	var list_of_employee_no = new Array();
-    row_count = $("#tbl_emp_pos_list tr").length;
-    var loop_count = 0;
-    $("#tbl_emp_pos_list tr").each(
-        function (index, element) {
-            loop_count++;
-            if (loop_count > 2 && loop_count < row_count) {
-                list_of_employee_no.push(
-                    $(element).find("td:nth-child(1) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(2) input[type=text]").attr('value')
-                );
-            }
-        }
-    );
+	row_count = $("#tbl_emp_pos_list tr").length;
+	var loop_count = 0;
+	$("#tbl_emp_pos_list tr").each(
+		function (index, element) {
+			loop_count++;
+			if (loop_count > 2 && loop_count < row_count) {
+				list_of_employee_no.push(
+					$(element).find("td:nth-child(1) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(2) input[type=text]").attr('value')
+				);
+			}
+		}
+	);
 
 	// FILE ATTACHMENTS
 	// articles of inc.
@@ -730,75 +730,75 @@ function Savedata() {
 
 	// [name of outlet, location, store size, warehouse size]
 	var list_of_outlets = new Array();
-    row_count = $("#tbl_outlet_list tr").length;
-    var loop_count = 0;
-    $("#tbl_outlet_list tr").each(
-        function (index, element) {
-            loop_count++;
-            if (loop_count > 1 && loop_count < row_count) {
-                list_of_outlets.push(
-                    $(element).find("td:nth-child(1) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(2) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(3) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(4) input[type=text]").attr('value')
-                );
-            }
-        }
-    );
+	row_count = $("#tbl_outlet_list tr").length;
+	var loop_count = 0;
+	$("#tbl_outlet_list tr").each(
+		function (index, element) {
+			loop_count++;
+			if (loop_count > 1 && loop_count < row_count) {
+				list_of_outlets.push(
+					$(element).find("td:nth-child(1) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(2) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(3) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(4) input[type=text]").attr('value')
+				);
+			}
+		}
+	);
 
-        // [name, event, date, contact number]
-    var list_of_events = new Array();
-    row_count = $("#tbl_birthday_events tr").length;
-    var loop_count = 0;
-    $("#tbl_birthday_events tr").each(
-        function (index, element) {
-            loop_count++;
-            if (loop_count > 1 && loop_count < row_count) {
-                list_of_events.push(
-                    $(element).find("td:nth-child(1) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(2) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(3) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(4) input[type=text]").attr('value')
-                    + "|" + "F"
-                );
-            }
-        }
-    );
-    // [name, event, date, contact number]
-    row_count = $("#tbl_specified_events tr").length;
-    var loop_count = 0;
-    $("#tbl_specified_events tr").each(
-        function (index, element) {
-            loop_count++;
-            if (loop_count > 1 && loop_count < row_count) {
-                list_of_events.push(
-                    $(element).find("td:nth-child(1) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(2) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(3) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(4) input[type=text]").attr('value')
-                    + "|" + "T"
-                );
-            }
-        }
-    );
+		// [name, event, date, contact number]
+	var list_of_events = new Array();
+	row_count = $("#tbl_birthday_events tr").length;
+	var loop_count = 0;
+	$("#tbl_birthday_events tr").each(
+		function (index, element) {
+			loop_count++;
+			if (loop_count > 1 && loop_count < row_count) {
+				list_of_events.push(
+					$(element).find("td:nth-child(1) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(2) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(3) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(4) input[type=text]").attr('value')
+					+ "|" + "F"
+				);
+			}
+		}
+	);
+	// [name, event, date, contact number]
+	row_count = $("#tbl_specified_events tr").length;
+	var loop_count = 0;
+	$("#tbl_specified_events tr").each(
+		function (index, element) {
+			loop_count++;
+			if (loop_count > 1 && loop_count < row_count) {
+				list_of_events.push(
+					$(element).find("td:nth-child(1) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(2) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(3) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(4) input[type=text]").attr('value')
+					+ "|" + "T"
+				);
+			}
+		}
+	);
 
 	// [name, address, selling terms, est. monthly purchases]
 	var list_of_major_customer = new Array();
-    row_count = $("#tbl_mjcust_list tr").length;
-    var loop_count = 0;
-    $("#tbl_mjcust_list tr").each(
-        function (index, element) {
-            loop_count++;
-            if (loop_count > 1 && loop_count < row_count) {
-                list_of_major_customer.push(
-                    $(element).find("td:nth-child(1) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(2) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(3) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(4) input[type=text]").attr('value')
-                );
-            }
-        }
-    );
+	row_count = $("#tbl_mjcust_list tr").length;
+	var loop_count = 0;
+	$("#tbl_mjcust_list tr").each(
+		function (index, element) {
+			loop_count++;
+			if (loop_count > 1 && loop_count < row_count) {
+				list_of_major_customer.push(
+					$(element).find("td:nth-child(1) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(2) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(3) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(4) input[type=text]").attr('value')
+				);
+			}
+		}
+	);
 
 	// major line
 	var acct_major_prod_line = "";
@@ -843,43 +843,43 @@ function Savedata() {
 
 	// [supplier, monthly vol., contact person, contact number, products usually purchased, credit terms, other deals offerd]
 	var list_of_other_wood_suppliers = new Array();
-    row_count = $("#tbl_wood_supplier tr").length;
-    var loop_count = 0;
-    $("#tbl_wood_supplier tr").each(
-        function (index, element) {
-            loop_count++;
-            if (loop_count > 1 && loop_count < row_count) {
-                list_of_other_wood_suppliers.push(
-                    $(element).find("td:nth-child(1) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(2) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(3) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(4) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(5) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(6) input[type=text]").attr('value')
-                    + "|" + $(element).find("td:nth-child(7) input[type=text]").attr('value')
-                );
-            }
-        }
-    );
+	row_count = $("#tbl_wood_supplier tr").length;
+	var loop_count = 0;
+	$("#tbl_wood_supplier tr").each(
+		function (index, element) {
+			loop_count++;
+			if (loop_count > 1 && loop_count < row_count) {
+				list_of_other_wood_suppliers.push(
+					$(element).find("td:nth-child(1) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(2) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(3) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(4) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(5) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(6) input[type=text]").attr('value')
+					+ "|" + $(element).find("td:nth-child(7) input[type=text]").attr('value')
+				);
+			}
+		}
+	);
 
-    var acct_iniPODetails = "";
-    acct_iniPODetails = $("#txt_ini_po_details").attr("value");
+	var acct_iniPODetails = "";
+	acct_iniPODetails = $("#txt_ini_po_details").attr("value");
 
 	var params = {
-        acct_classification: "WALKIN",
-        acct_category_value: acct_category_value,
-        acct_category_prem: acct_category_prem,
-        acct_business_class: acct_business_class,
-        acct_type_of_account: acct_type_of_account,
-        acct_type: acct_type,
+		acct_classification: "WALKIN",
+		acct_category_value: acct_category_value,
+		acct_category_prem: acct_category_prem,
+		acct_business_class: acct_business_class,
+		acct_type_of_account: acct_type_of_account,
+		acct_type: acct_type,
 		acct_key_account: acct_key_account,
 		acct_code: acct_code,
 		acct_class: acct_class,
 		acct_name: acct_name,
 		acct_phone_no: acct_phone_no,
 
-        acct_phone_no_2: acct_phone_no_2,
-        acct_cellphone: acct_cellphone,
+		acct_phone_no_2: acct_phone_no_2,
+		acct_cellphone: acct_cellphone,
 
 		acct_acct_officer: acct_acct_officer,
 		acct_fax_no: acct_fax_no,
@@ -941,52 +941,52 @@ function Savedata() {
 		/* End Code added by Billy Jay (04/23/2015) */
 		acct_prop_credit_term: acct_prop_credit_term,
 		acct_prop_credit_limit: acct_prop_credit_limit,
-        acct_prop_credit_term_remarks: acct_prop_credit_term_remarks,
+		acct_prop_credit_term_remarks: acct_prop_credit_term_remarks,
 		acct_prop_credit_limit_remarks: acct_prop_credit_limit_remarks,
 		acct_mw_price_code: acct_mw_price_code,
 		acct_mw_price_desc: acct_mw_price_desc,
-        acct_mw_price_commision_disc: acct_mw_price_commision_disc,
+		acct_mw_price_commision_disc: acct_mw_price_commision_disc,
 		acct_mw_price_remarks: acct_mw_price_remarks,
 		acct_ww_price_code: acct_ww_price_code,
 		acct_ww_price_desc: acct_ww_price_desc,
-        acct_ww_price_commision_disc: acct_ww_price_commision_disc,
+		acct_ww_price_commision_disc: acct_ww_price_commision_disc,
 		acct_ww_price_remarks: acct_ww_price_remarks,
-        acct_pwf_price_code: acct_pwf_price_code,
-        acct_pwf_price_desc: acct_pwf_price_desc,
-        acct_pwf_price_commision_disc: acct_pwf_price_commision_disc,
-        acct_pwf_price_remarks: acct_pwf_price_remarks,
-        acct_pwr_price_code: acct_pwr_price_code,
-        acct_pwr_price_desc: acct_pwr_price_desc,
-        acct_pwr_price_commision_disc: acct_pwr_price_commision_disc,
-        acct_pwr_price_remarks: acct_pwr_price_remarks,
+		acct_pwf_price_code: acct_pwf_price_code,
+		acct_pwf_price_desc: acct_pwf_price_desc,
+		acct_pwf_price_commision_disc: acct_pwf_price_commision_disc,
+		acct_pwf_price_remarks: acct_pwf_price_remarks,
+		acct_pwr_price_code: acct_pwr_price_code,
+		acct_pwr_price_desc: acct_pwr_price_desc,
+		acct_pwr_price_commision_disc: acct_pwr_price_commision_disc,
+		acct_pwr_price_remarks: acct_pwr_price_remarks,
 		acct_gw_price_code: acct_gw_price_code,
 		acct_gw_price_desc: acct_gw_price_desc,
-        acct_gw_price_commision_disc: acct_gw_price_commision_disc,
+		acct_gw_price_commision_disc: acct_gw_price_commision_disc,
 		acct_gw_price_remarks: acct_gw_price_remarks,
-        acct_tw_price_code: acct_tw_price_code,
+		acct_tw_price_code: acct_tw_price_code,
 		acct_tw_price_desc: acct_tw_price_desc,
-        acct_tw_price_commision_disc: acct_tw_price_commision_disc,
-        acct_tw_price_remarks: acct_tw_price_remarks,
+		acct_tw_price_commision_disc: acct_tw_price_commision_disc,
+		acct_tw_price_remarks: acct_tw_price_remarks,
 
-        acct_mz_price_code: acct_mz_price_code,
-        acct_mz_price_desc: acct_mz_price_desc,
-        acct_mz_price_commision_disc: acct_mz_price_commision_disc,
-        acct_mz_price_remarks: acct_mz_price_remarks,
+		acct_mz_price_code: acct_mz_price_code,
+		acct_mz_price_desc: acct_mz_price_desc,
+		acct_mz_price_commision_disc: acct_mz_price_commision_disc,
+		acct_mz_price_remarks: acct_mz_price_remarks,
 
-        acct_nw_price_code: acct_nw_price_code,
-        acct_nw_price_desc: acct_nw_price_desc,
-        acct_nw_price_commision_disc: acct_nw_price_commision_disc,
-        acct_nw_price_remarks: acct_nw_price_remarks,
+		acct_nw_price_code: acct_nw_price_code,
+		acct_nw_price_desc: acct_nw_price_desc,
+		acct_nw_price_commision_disc: acct_nw_price_commision_disc,
+		acct_nw_price_remarks: acct_nw_price_remarks,
 
-        acct_ec_price_code: acct_ec_price_code,
-        acct_ec_price_desc: acct_ec_price_desc,
-        acct_ec_price_commision_disc: acct_ec_price_commision_disc,
-        acct_ec_price_remarks: acct_ec_price_remarks,
+		acct_ec_price_code: acct_ec_price_code,
+		acct_ec_price_desc: acct_ec_price_desc,
+		acct_ec_price_commision_disc: acct_ec_price_commision_disc,
+		acct_ec_price_remarks: acct_ec_price_remarks,
 
-        acct_ecu_price_code: acct_ecu_price_code,
-        acct_ecu_price_desc: acct_ecu_price_desc,
-        acct_ecu_price_commision_disc: acct_ecu_price_commision_disc,
-        acct_ecu_price_remarks: acct_ecu_price_remarks,
+		acct_ecu_price_code: acct_ecu_price_code,
+		acct_ecu_price_desc: acct_ecu_price_desc,
+		acct_ecu_price_commision_disc: acct_ecu_price_commision_disc,
+		acct_ecu_price_remarks: acct_ecu_price_remarks,
 
 		acct_socio_eco_class: acct_socio_eco_class,
 		acct_num_outlets: acct_num_outlets,
@@ -1006,28 +1006,28 @@ function Savedata() {
 		list_of_other_wood_suppliers: list_of_other_wood_suppliers,
 
 		acct_ini_po_details: acct_iniPODetails //added line by BJD 05/31/2016
-    };
+	};
 
 	// send through ajx
 	$.ajax({
-	    type: "POST", url: baseUrl + "Customer/AddCustomer",
-	    data: $.param(params, true),
+		type: "POST", url: baseUrl + "Customer/AddCustomer",
+		data: $.param(params, true),
 		success: function (res) {
 
-		    if (SrvResultMsg.GetMsgType(res) != "error") {
+			if (SrvResultMsg.GetMsgType(res) != "error") {
 				// success
-			    alert("SUCCESSFULLY SAVED!");
+				alert("SUCCESSFULLY SAVED!");
 
-			    // open the document?
-			    window.location = baseUrl + "Document/AccountsDetails?ccanum=" + SrvResultMsg.GetMessage(res);
+				// open the document?
+				window.location = baseUrl + "Document/AccountsDetails?ccanum=" + SrvResultMsg.GetMessage(res);
 			} else {
 				// error
-			    alert(SrvResultMsg.GetMessage(res));
+				alert(SrvResultMsg.GetMessage(res));
 			}
-            HidePreloader();
+			HidePreloader();
 		},
 		error: function (xhr, ajaxOptions, thrownError) {
-		    alert(xhr.status); alert(thrownError); HidePreloader();
+			alert(xhr.status); alert(thrownError); HidePreloader();
 		}
 	});
 
@@ -1039,92 +1039,92 @@ function DelCurrRow(tbl_id, r_id) {
 }
 
 function isRowIDExist(table, rowid) {
-    var exist = false;
-    $(table + " tr").each(function () {
-        if ($(this).attr("RowId") != undefined && $(this).attr("RowId") == rowid) exist = true;
-    }
-    );
+	var exist = false;
+	$(table + " tr").each(function () {
+		if ($(this).attr("RowId") != undefined && $(this).attr("RowId") == rowid) exist = true;
+	}
+	);
 
-    return exist;
+	return exist;
 }
 
 function AddEntryCommon(obj_list) {
-    var obj = obj_list;
-    var values = new Array();
+	var obj = obj_list;
+	var values = new Array();
 
-    values.push($("#" + obj + " tr:last td:nth-child(1) input[type=text]").attr("value"));
-    values.push($("#" + obj + " tr:last td:nth-child(2) input[type=text]").attr("value"));
-    values.push($("#" + obj + " tr:last td:nth-child(3) input[type=text]").attr("value"));
-    values.push($("#" + obj + " tr:last td:nth-child(4) input[type=text]").attr("value"));
-    values.push($("#" + obj + " tr:last td:nth-child(5) input[type=text]").attr("value"));
-    values.push($("#" + obj + " tr:last td:nth-child(6) input[type=text]").attr("value"));
-    values.push($("#" + obj + " tr:last td:nth-child(7) input[type=text]").attr("value"));
-    values.push($("#" + obj + " tr:last td:nth-child(8) input[type=text]").attr("value"));
+	values.push($("#" + obj + " tr:last td:nth-child(1) input[type=text]").attr("value"));
+	values.push($("#" + obj + " tr:last td:nth-child(2) input[type=text]").attr("value"));
+	values.push($("#" + obj + " tr:last td:nth-child(3) input[type=text]").attr("value"));
+	values.push($("#" + obj + " tr:last td:nth-child(4) input[type=text]").attr("value"));
+	values.push($("#" + obj + " tr:last td:nth-child(5) input[type=text]").attr("value"));
+	values.push($("#" + obj + " tr:last td:nth-child(6) input[type=text]").attr("value"));
+	values.push($("#" + obj + " tr:last td:nth-child(7) input[type=text]").attr("value"));
+	values.push($("#" + obj + " tr:last td:nth-child(8) input[type=text]").attr("value"));
 
-    var toskip = new Array("NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO");
+	var toskip = new Array("NO", "NO", "NO", "NO", "NO", "NO", "NO", "NO");
 
-    // skip
-    if (obj == "tbl_partner_list") {
-        toskip[2] = "YES";
-    }
+	// skip
+	if (obj == "tbl_partner_list") {
+		toskip[2] = "YES";
+	}
 
-    if (obj == "tbl_wood_supplier") {
-        toskip[6] = "YES";
-    }
+	if (obj == "tbl_wood_supplier") {
+		toskip[6] = "YES";
+	}
 
-    for (var i = 0; i < values.length; i++) {
-        if (values[i] != undefined) {
-            if (values[i] == "" && toskip[i] == "NO") {
-                alert("FIELD CANNOT BE EMPTY!");
-                return;
-            }
-        }
-    }
+	for (var i = 0; i < values.length; i++) {
+		if (values[i] != undefined) {
+			if (values[i] == "" && toskip[i] == "NO") {
+				alert("FIELD CANNOT BE EMPTY!");
+				return;
+			}
+		}
+	}
 
-    // additional checking
-    if (obj == "tbl_mjcust_list") {
-        if (isNaN(values[3]) == true) {
-            alert("ESTIMATED MONTHLY PURCHASES MUST BE A NUMBER.");
-            return;
-        }
-    }
+	// additional checking
+	if (obj == "tbl_mjcust_list") {
+		if (isNaN(values[3]) == true) {
+			alert("ESTIMATED MONTHLY PURCHASES MUST BE A NUMBER.");
+			return;
+		}
+	}
 
-    if (obj == "tbl_asset_list") {
-        if (isNaN(values[3]) == true) {
-            alert("% OF OWNERSHIP MUST BE A NUMBER.");
-            return;
-        }
-    }
+	if (obj == "tbl_asset_list") {
+		if (isNaN(values[3]) == true) {
+			alert("% OF OWNERSHIP MUST BE A NUMBER.");
+			return;
+		}
+	}
 
-    if (obj == "tbl_vehicle_list") {
-        if (isNaN(values[2]) == true) {
-            alert("QUANTITY FIELD MUST BE A NUMBER.");
-            return;
-        }
-    }
+	if (obj == "tbl_vehicle_list") {
+		if (isNaN(values[2]) == true) {
+			alert("QUANTITY FIELD MUST BE A NUMBER.");
+			return;
+		}
+	}
 
-    var last_id = $("#" + obj + " tr:last").prev().attr("RowId");
-    var new_id = 0;
-    if (last_id != undefined) {
-        new_id = parseInt(last_id) + 1;
-    }
+	var last_id = $("#" + obj + " tr:last").prev().attr("RowId");
+	var new_id = 0;
+	if (last_id != undefined) {
+		new_id = parseInt(last_id) + 1;
+	}
 
-    var str_tbl_row = "<tr RowId=\"" + (parseInt(new_id)) + "\">";
-    for (var i = 0; i < values.length; i++) {
-        if (values[i] != undefined) {
-            if (obj == "tbl_bank_list" && i == 7) {
-                str_tbl_row = str_tbl_row + "<td><input style=\"width:98%;\" type=\"text\" value=\"" + values[i] + "\" readonly=readonly class=\"readonly_fields\" tobubble=\"tobubble\" /></td>";
-            } else {
-                str_tbl_row = str_tbl_row + "<td><input style=\"width:98%;\" type=\"text\" value=\"" + values[i] + "\" readonly=readonly class=\"readonly_fields\" /></td>";
-            }
-        } else {
-            break;
-        }
-    }
-    str_tbl_row = str_tbl_row + "<td><a href=\"javascript:DelCurrRow('" + obj + "'," + (parseInt(new_id)) + " );\"><img src=\"" + baseUrl + "Images/delete.png\" style=\"border:0;\" /></a></td>";
+	var str_tbl_row = "<tr RowId=\"" + (parseInt(new_id)) + "\">";
+	for (var i = 0; i < values.length; i++) {
+		if (values[i] != undefined) {
+			if (obj == "tbl_bank_list" && i == 7) {
+				str_tbl_row = str_tbl_row + "<td><input style=\"width:98%;\" type=\"text\" value=\"" + values[i] + "\" readonly=readonly class=\"readonly_fields\" tobubble=\"tobubble\" /></td>";
+			} else {
+				str_tbl_row = str_tbl_row + "<td><input style=\"width:98%;\" type=\"text\" value=\"" + values[i] + "\" readonly=readonly class=\"readonly_fields\" /></td>";
+			}
+		} else {
+			break;
+		}
+	}
+	str_tbl_row = str_tbl_row + "<td><a href=\"javascript:DelCurrRow('" + obj + "'," + (parseInt(new_id)) + " );\"><img src=\"" + baseUrl + "Images/delete.png\" style=\"border:0;\" /></a></td>";
 
-    $("#" + obj + " tr:last").prev().after(str_tbl_row);
-    $("#" + obj + " tr:last").find("td input[type=text]").attr("value", "");
+	$("#" + obj + " tr:last").prev().after(str_tbl_row);
+	$("#" + obj + " tr:last").find("td input[type=text]").attr("value", "");
 }
 
 function AddEntryEmployeePos() {
@@ -1132,14 +1132,14 @@ function AddEntryEmployeePos() {
 	/* first field */
 	var val_one = $("#tbl_emp_pos_list tr:last td:nth-child(1) input[type=text]").attr("value");
 	if (val_one == "") {
-	    alert("FIELD CANNOT BE EMPTY!");
+		alert("FIELD CANNOT BE EMPTY!");
 		return;
 	}
 
 	/* second field */
 	var val_two = $("#tbl_emp_pos_list tr:last td:nth-child(2) input[type=text]").attr("value");
 	if (val_two == "") {
-	    alert("FIELD CANNOT BE EMPTY!");
+		alert("FIELD CANNOT BE EMPTY!");
 		return;
 	} else {
 		// check if integer
@@ -1149,9 +1149,9 @@ function AddEntryEmployeePos() {
 		}
 	}
 
-    var rowid = 0;
-    do rowid++;
-    while (isRowIDExist("#tbl_emp_pos_list", rowid))
+	var rowid = 0;
+	do rowid++;
+	while (isRowIDExist("#tbl_emp_pos_list", rowid))
 
 	$("#tbl_emp_pos_list tr:last").prev().after(
 		"<tr RowId=\"" + parseInt(rowid) + "\">" +
@@ -1169,18 +1169,18 @@ function AddEntryEmployeePos() {
 /* for browsing data for a certain field */
 /* should only display two column */
 function LookUpData(obj_id_to_store, str_data, par1) {
-    DisplayPreloader();
+	DisplayPreloader();
 
-    if (par1 == undefined) par1 = "";
+	if (par1 == undefined) par1 = "";
 
 	$.ajax({
-	    type: "POST", url: baseUrl + "Customer/GetFilteredList",
+		type: "POST", url: baseUrl + "Customer/GetFilteredList",
 		data: "_str_data=" + str_data + "&par1=" + par1,
 		success: function (res) {
 			if (IsError(res)) {
 				CreateDialogBox(obj_id_to_store, StrResultTags(res));
 			}
-            HidePreloader();
+			HidePreloader();
 		},
 		error: function (xhr, ajaxOptions, thrownError) { alert(xhr.status); alert(thrownError); }
 	});
@@ -1212,7 +1212,7 @@ function CreateDialogBox(obj_id_to_position, data_to_add) {
 		var res_cols = res_rows[i].split("|");
 		if (res_cols[1] != null) {
 			if (res_cols[1] != "") {
-			    w = w + "<option valterritory = \"" + res_cols[1] + "\" price_desc=\"" + res_cols[2] + "\" val_area=\"" + res_cols[2] + "\" val_region=\"" + res_cols[3] + "\"  grp_name=\"" + res_cols[4] + "\" value=\"" + res_cols[0] + "\">" + res_cols[1] + "</option>";
+				w = w + "<option valterritory = \"" + res_cols[1] + "\" price_desc=\"" + res_cols[2] + "\" val_area=\"" + res_cols[2] + "\" val_region=\"" + res_cols[3] + "\"  grp_name=\"" + res_cols[4] + "\" value=\"" + res_cols[0] + "\">" + res_cols[1] + "</option>";
 			}
 		}
 	}
@@ -1242,7 +1242,7 @@ function SaveToTextBox(txt_box) {
 	$("#id_content_upload").hide("fast");
 	$("#id_bkg_upload").hide();
 
-    $("#id_content_upload").remove();
+	$("#id_content_upload").remove();
 	$("#id_bkg_upload").remove();
 }
 
@@ -1276,312 +1276,312 @@ function CreateUploadingBox(obj_id_to_position) {
 
 function SetValueFromSelect(obj) {
 
-    $("#" + obj).attr("value", $("#id_content select option:selected").text());
-    $("#" + obj).attr("value_id", $("#id_content select option:selected").attr('value'));
+	$("#" + obj).attr("value", $("#id_content select option:selected").text());
+	$("#" + obj).attr("value_id", $("#id_content select option:selected").attr('value'));
 
-    if (obj == "txt_acct_territory") {
-        $("#" + obj).attr("value", $("#id_content select option:selected").attr("valterritory"));
+	if (obj == "txt_acct_territory") {
+		$("#" + obj).attr("value", $("#id_content select option:selected").attr("valterritory"));
 
-        /* Code added by Billy Jay (05/05/2015) */
-        $("#" + obj).attr("grp_name_", $("#id_content select option:selected").attr("grp_name"));
+		/* Code added by Billy Jay (05/05/2015) */
+		$("#" + obj).attr("grp_name_", $("#id_content select option:selected").attr("grp_name"));
 
-        if ($("#id_content select option:selected").attr("grp_name") == "GT") {
-            $("#txt_credit_terms_architectural_brand").addClass("required_fields");
-            $("#txt_credit_terms_eco_lumber").addClass("required_fields");
+		if ($("#id_content select option:selected").attr("grp_name") == "GT") {
+			$("#txt_credit_terms_architectural_brand").addClass("required_fields");
+			$("#txt_credit_terms_eco_lumber").addClass("required_fields");
 
-            $("#txt_order_limit_ab").addClass("required_fields");
-            $("#txt_order_limit_tr").addClass("required_fields");
-            // $("#txt_credit_terms_eco_plywood").addClass("required_fields");
-        }
-        else {
-            $("#txt_credit_terms_architectural_brand").removeClass("required_fields");
-            $("#txt_credit_terms_eco_lumber").removeClass("required_fields");
+			$("#txt_order_limit_ab").addClass("required_fields");
+			$("#txt_order_limit_tr").addClass("required_fields");
+			// $("#txt_credit_terms_eco_plywood").addClass("required_fields");
+		}
+		else {
+			$("#txt_credit_terms_architectural_brand").removeClass("required_fields");
+			$("#txt_credit_terms_eco_lumber").removeClass("required_fields");
 
-            $("#txt_order_limit_ab").removeClass("required_fields");
-            $("#txt_order_limit_tr").removeClass("required_fields");
-            // $("#txt_credit_terms_eco_plywood").removeClass("required_fields");
-        }
+			$("#txt_order_limit_ab").removeClass("required_fields");
+			$("#txt_order_limit_tr").removeClass("required_fields");
+			// $("#txt_credit_terms_eco_plywood").removeClass("required_fields");
+		}
 
-        /* End  Code added by Billy Jay (05/05/2015) */
+		/* End  Code added by Billy Jay (05/05/2015) */
 
-        $("#txt_area").attr("value", GetValue($("#id_content select option:selected").attr("val_area")));
-        $("#txt_area").attr("value_id", GetId($("#id_content select option:selected").attr("val_area")));
+		$("#txt_area").attr("value", GetValue($("#id_content select option:selected").attr("val_area")));
+		$("#txt_area").attr("value_id", GetId($("#id_content select option:selected").attr("val_area")));
 
-        $("#txt_region").attr("value", GetValue($("#id_content select option:selected").attr("val_region")));
-        $("#txt_region").attr("value_id", GetId($("#id_content select option:selected").attr("val_region")));
+		$("#txt_region").attr("value", GetValue($("#id_content select option:selected").attr("val_region")));
+		$("#txt_region").attr("value_id", GetId($("#id_content select option:selected").attr("val_region")));
 
-        if ($("#txt_region").attr("value").toUpperCase().search("VISMIN") > -1) {
-            $("#txt_tax_id").attr("value", "000 000 000 002");
-        } else {
-            $("#txt_tax_id").attr("value", "000 000 000 001");
-        }
-    }
+		if ($("#txt_region").attr("value").toUpperCase().search("VISMIN") > -1) {
+			$("#txt_tax_id").attr("value", "000 000 000 002");
+		} else {
+			$("#txt_tax_id").attr("value", "000 000 000 001");
+		}
+	}
 
-    if (obj == "txt_mw_price_code") {
-        $("#txt_mw_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
-    }
+	if (obj == "txt_mw_price_code") {
+		$("#txt_mw_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
+	}
 
-    if (obj == "txt_ww_price_code") {
-        $("#txt_ww_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
-    }
+	if (obj == "txt_ww_price_code") {
+		$("#txt_ww_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
+	}
 
-    if (obj == "txt_pwf_price_code") {
-        $("#txt_pwf_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
-    }
+	if (obj == "txt_pwf_price_code") {
+		$("#txt_pwf_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
+	}
 
-    if (obj == "txt_pwr_price_code") {
-        $("#txt_pwr_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
-    }
+	if (obj == "txt_pwr_price_code") {
+		$("#txt_pwr_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
+	}
 
-    if (obj == "txt_gw_price_code") {
-        $("#txt_gw_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
-    }
+	if (obj == "txt_gw_price_code") {
+		$("#txt_gw_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
+	}
 
-    if (obj == "txt_tw_price_code") {
-        $("#txt_tw_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
-    }
+	if (obj == "txt_tw_price_code") {
+		$("#txt_tw_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
+	}
 
-    if (obj == "txt_mz_price_code") {
-        $("#txt_mz_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
-    }
+	if (obj == "txt_mz_price_code") {
+		$("#txt_mz_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
+	}
 
-    if (obj == "txt_nw_price_code") {
-        $("#txt_nw_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
-    }
+	if (obj == "txt_nw_price_code") {
+		$("#txt_nw_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
+	}
 
-    if (obj == "txt_ec_price_code") {
-        $("#txt_ec_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
-    }
+	if (obj == "txt_ec_price_code") {
+		$("#txt_ec_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
+	}
 
-    if (obj == "txt_ecu_price_code") {
-        $("#txt_ecu_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
-    }
+	if (obj == "txt_ecu_price_code") {
+		$("#txt_ecu_price_desc").attr("value", GetValue($("#id_content select option:selected").attr("price_desc")));
+	}
 
 
 	$("#id_content").hide("fast");
 	$("#id_bkg").hide();
 
-    $("#id_content").remove();
+	$("#id_content").remove();
 	$("#id_bkg").remove();
 }
 
 function GetId(strVal) {
-    var tmp_str = strVal.substring(0, strVal.indexOf('-'));
-    return tmp_str.replace(/^\s*|\s*$/gi, "");
+	var tmp_str = strVal.substring(0, strVal.indexOf('-'));
+	return tmp_str.replace(/^\s*|\s*$/gi, "");
 }
 
 function GetValue(strVal) {
-    if (strVal.indexOf('-') > -1) {
-        return strVal.substring(strVal.indexOf('-') + 2, 200);
-    } else {
-        return strVal;
-    }
+	if (strVal.indexOf('-') > -1) {
+		return strVal.substring(strVal.indexOf('-') + 2, 200);
+	} else {
+		return strVal;
+	}
 }
 
 function hide_dialog_box() {
 	$("#id_content").hide("fast");
 	$("#id_bkg").hide();
 
-    $("#id_content").remove();
+	$("#id_content").remove();
 	$("#id_bkg").remove();
 }
 
 function DeleteFileAttachment(attch_type) {
 
-    var ccanum = "";
-    var filename = "";
-    var obj = "";
+	var ccanum = "";
+	var filename = "";
+	var obj = "";
 
-    DisplayPreloader();
+	DisplayPreloader();
 
-    if (attch_type == "AOI") { obj = "txt_articles_of_inc"; }
-    if (attch_type == "FS") { obj = "txt_financial_statement"; }
-    if (attch_type == "ITR") { obj = "txt_ITR"; }
-    if (attch_type == "BIR") { obj = "txt_bir_reg"; }
-    if (attch_type == "BP") { obj = "txt_business_permit"; }
-    if (attch_type == "OTHER") { obj = "txt_attch_other"; }
+	if (attch_type == "AOI") { obj = "txt_articles_of_inc"; }
+	if (attch_type == "FS") { obj = "txt_financial_statement"; }
+	if (attch_type == "ITR") { obj = "txt_ITR"; }
+	if (attch_type == "BIR") { obj = "txt_bir_reg"; }
+	if (attch_type == "BP") { obj = "txt_business_permit"; }
+	if (attch_type == "OTHER") { obj = "txt_attch_other"; }
 
-    // get ccaNum
-    if ($("#txt_acct_ccanum").length > 0) {
-        ccanum = $("#txt_acct_ccanum").attr('value');
-    }
+	// get ccaNum
+	if ($("#txt_acct_ccanum").length > 0) {
+		ccanum = $("#txt_acct_ccanum").attr('value');
+	}
 
-    // get filename
-    filename = $("#" + obj).attr('value');
+	// get filename
+	filename = $("#" + obj).attr('value');
 
-    if (filename == "") {
-        HidePreloader();
-        return;
-    }
+	if (filename == "") {
+		HidePreloader();
+		return;
+	}
 
-    if (filename != "") {
-        $.ajax({
-            type: "POST", url: baseUrl + "SQL/DeleteFileAttachment",
-            data:
+	if (filename != "") {
+		$.ajax({
+			type: "POST", url: baseUrl + "SQL/DeleteFileAttachment",
+			data:
 			"attachment_type=" + attch_type + "&" +
-            "acct_ccanum=" + ccanum + "&" +
-            "filename=" + filename +
+			"acct_ccanum=" + ccanum + "&" +
+			"filename=" + filename +
 			""
 			,
-            success: function (res) {
+			success: function (res) {
 
-                if (SrvResultMsg.GetMsgType(res) != "error") {
-                    // clear the value in textbox
-                    $("#" + obj).attr('value', '');
+				if (SrvResultMsg.GetMsgType(res) != "error") {
+					// clear the value in textbox
+					$("#" + obj).attr('value', '');
 
-                    // success
-                    alert("ATTACHMENT DELETED!");
-                } else {
-                    // error
-                    alert(SrvResultMsg.GetMessage(res));
-                }
-                HidePreloader();
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status); alert(thrownError); HidePreloader();
-            }
-        });
-    }
+					// success
+					alert("ATTACHMENT DELETED!");
+				} else {
+					// error
+					alert(SrvResultMsg.GetMessage(res));
+				}
+				HidePreloader();
+			},
+			error: function (xhr, ajaxOptions, thrownError) {
+				alert(xhr.status); alert(thrownError); HidePreloader();
+			}
+		});
+	}
 
 }
 
 function Cancel() {
-    var isCancelled = confirm("ARE YOU SURE YOU WANT TO CANCEL?");
-    if (isCancelled) {
-        window.history.back()
-    }
+	var isCancelled = confirm("ARE YOU SURE YOU WANT TO CANCEL?");
+	if (isCancelled) {
+		window.history.back()
+	}
 }
 
 function CheckAcctcode() {
-    // account code
-    var acct_code = "";
-    acct_code = $("#txt_acct_code").attr('value');
+	// account code
+	var acct_code = "";
+	acct_code = $("#txt_acct_code").attr('value');
 
-    if (acct_code == "") { return; }
+	if (acct_code == "") { return; }
 
-    $.ajax({
-        type: "POST", url: baseUrl + "Customer/CheckAcctcode",
-        data:
+	$.ajax({
+		type: "POST", url: baseUrl + "Customer/CheckAcctcode",
+		data:
 			"acct_code=" + acct_code,
-        success: function (res) {
-            if (SrvResultMsg.GetMsgType(res) != "error") {
-                // success
-                alert(SrvResultMsg.GetMessage(res));
-            } else {
-                // error
-                alert(SrvResultMsg.GetMessage(res));
-            }
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            alert(xhr.status); alert(thrownError);
-        }
-    });
+		success: function (res) {
+			if (SrvResultMsg.GetMsgType(res) != "error") {
+				// success
+				alert(SrvResultMsg.GetMessage(res));
+			} else {
+				// error
+				alert(SrvResultMsg.GetMessage(res));
+			}
+		},
+		error: function (xhr, ajaxOptions, thrownError) {
+			alert(xhr.status); alert(thrownError);
+		}
+	});
 }
 
 function txt_tax_id_onkeypress(e) {
-    var keycode = (e.keyCode) ? e.keyCode : e.which;
+	var keycode = (e.keyCode) ? e.keyCode : e.which;
 
-    if (keycode == 8) return true;
+	if (keycode == 8) return true;
 
-    if (!(keycode > 47 && keycode < 58) || $("#txt_tax_id").attr('value').length == 15) {
-        return false;
-    }
-    else {
-        if ($("#txt_tax_id").attr('value').length == 3 || $("#txt_tax_id").attr('value').length == 7 || $("#txt_tax_id").attr('value').length == 11) {
-            $("#txt_tax_id").attr('value', $("#txt_tax_id").attr('value') + '-');
-        }
-    }
-    return true;
+	if (!(keycode > 47 && keycode < 58) || $("#txt_tax_id").attr('value').length == 15) {
+		return false;
+	}
+	else {
+		if ($("#txt_tax_id").attr('value').length == 3 || $("#txt_tax_id").attr('value').length == 7 || $("#txt_tax_id").attr('value').length == 11) {
+			$("#txt_tax_id").attr('value', $("#txt_tax_id").attr('value') + '-');
+		}
+	}
+	return true;
 }
 
 function BindToTextFormatting(text_object) {
-    $("#" + text_object).css("text-align", "right");
+	$("#" + text_object).css("text-align", "right");
 
-    $("#" + text_object).bind("click",
+	$("#" + text_object).bind("click",
 		function (e) {
-		    $("#" + text_object).select();
+			$("#" + text_object).select();
 		}
 	);
 
-    $("#" + text_object).bind("keypress",
+	$("#" + text_object).bind("keypress",
 		function (e) {
-		    if (($(this).attr("value").length == 0 || $(this).attr("value").indexOf(".") > -1) && e.which == 46) return false;
-		    if ($(this).attr("value").length == 0 && e.which == 48) return false;
-		    if ((e.which >= 48 && e.which <= 57) || e.which == 46) return true;
-		    if (e.which == 8 || e.which == 46) return true;
-		    return false;
+			if (($(this).attr("value").length == 0 || $(this).attr("value").indexOf(".") > -1) && e.which == 46) return false;
+			if ($(this).attr("value").length == 0 && e.which == 48) return false;
+			if ((e.which >= 48 && e.which <= 57) || e.which == 46) return true;
+			if (e.which == 8 || e.which == 46) return true;
+			return false;
 		}
 	);
 
-    $("#" + text_object).bind("keyup",
+	$("#" + text_object).bind("keyup",
 		function (e) {
-		    if ((e.which >= 48 && e.which <= 57) || (e.which >= 96 && e.which <= 105)) {
-		        var reversed_result = ""; var tmp_result = "";
-		        var prev_val = $(this).attr("value").replace(/,/g, "");
-		        var pos_of_dot = prev_val.indexOf(".");
-		        if (pos_of_dot == -1) pos_of_dot = prev_val.length;
-		        var no_decimal_val = prev_val.substring(0, pos_of_dot);
+			if ((e.which >= 48 && e.which <= 57) || (e.which >= 96 && e.which <= 105)) {
+				var reversed_result = ""; var tmp_result = "";
+				var prev_val = $(this).attr("value").replace(/,/g, "");
+				var pos_of_dot = prev_val.indexOf(".");
+				if (pos_of_dot == -1) pos_of_dot = prev_val.length;
+				var no_decimal_val = prev_val.substring(0, pos_of_dot);
 
-		        var icounter = 0;
-		        for (var i = no_decimal_val.length - 1; i >= 0; i = i - 1) {
-		            icounter++; reversed_result = reversed_result + no_decimal_val.substring(i, i + 1); if (icounter % 3 == 0 && i > 0) reversed_result = reversed_result + ",";
-		        }
-		        for (var i = reversed_result.length - 1; i >= 0; i--) { tmp_result = tmp_result + reversed_result.substring(i, i + 1); }
-		        $(this).attr("value", tmp_result + prev_val.substring(pos_of_dot, pos_of_dot + 100));
-		    }
+				var icounter = 0;
+				for (var i = no_decimal_val.length - 1; i >= 0; i = i - 1) {
+					icounter++; reversed_result = reversed_result + no_decimal_val.substring(i, i + 1); if (icounter % 3 == 0 && i > 0) reversed_result = reversed_result + ",";
+				}
+				for (var i = reversed_result.length - 1; i >= 0; i--) { tmp_result = tmp_result + reversed_result.substring(i, i + 1); }
+				$(this).attr("value", tmp_result + prev_val.substring(pos_of_dot, pos_of_dot + 100));
+			}
 		}
 	);
 
 }
 
 function isNumeric(n) {
-    n = n.replace(/,/g, "");
-    return !isNaN(parseFloat(n)) && isFinite(n);
+	n = n.replace(/,/g, "");
+	return !isNaN(parseFloat(n)) && isFinite(n);
 }
 
 function CheckCommisionAndDiscount() {
-    var error_message = "";
+	var error_message = "";
 
-    if ($("#txt_mw_price_commision_disc").attr("value") != "" && $("#txt_mw_price_remarks").attr("value") == "") {
-        if (error_message != "") { error_message = error_message + "REMARKS ON MATWOOD PRICELIST IS EMPTY\n"; } else { error_message = "REMARKS ON MATWOOD PRICELIST IS EMPTY\n"; }
-    }
+	if ($("#txt_mw_price_commision_disc").attr("value") != "" && $("#txt_mw_price_remarks").attr("value") == "") {
+		if (error_message != "") { error_message = error_message + "REMARKS ON MATWOOD PRICELIST IS EMPTY\n"; } else { error_message = "REMARKS ON MATWOOD PRICELIST IS EMPTY\n"; }
+	}
 
-    if ($("#txt_ww_price_commision_disc").attr("value") != "" && $("#txt_ww_price_remarks").attr("value") == "") {
-        if (error_message != "") { error_message = error_message + "REMARKS ON WEATHERWOOD PRICELIST IS EMPTY\n"; } else { error_message = "REMARKS ON WEATHERWOOD PRICELIST IS EMPTY\n"; }
-    }
+	if ($("#txt_ww_price_commision_disc").attr("value") != "" && $("#txt_ww_price_remarks").attr("value") == "") {
+		if (error_message != "") { error_message = error_message + "REMARKS ON WEATHERWOOD PRICELIST IS EMPTY\n"; } else { error_message = "REMARKS ON WEATHERWOOD PRICELIST IS EMPTY\n"; }
+	}
 
-    if ($("#txt_pwf_price_commision_disc").attr("value") != "" && $("#txt_pwf_price_remarks").attr("value") == "") {
-        if (error_message != "") { error_message = error_message + "REMARKS ON PCW FRAMES PRICELIST IS EMPTY\n"; } else { error_message = "REMARKS ON PCW FRAMES PRICELIST IS EMPTY\n"; }
-    }
+	if ($("#txt_pwf_price_commision_disc").attr("value") != "" && $("#txt_pwf_price_remarks").attr("value") == "") {
+		if (error_message != "") { error_message = error_message + "REMARKS ON PCW FRAMES PRICELIST IS EMPTY\n"; } else { error_message = "REMARKS ON PCW FRAMES PRICELIST IS EMPTY\n"; }
+	}
 
-    if ($("#txt_pwr_price_commision_disc").attr("value") != "" && $("#txt_pwr_price_remarks").attr("value") == "") {
-        if (error_message != "") { error_message = error_message + "REMARKS ON PCW REGULAR PRICELIST IS EMPTY\n"; } else { error_message = "REMARKS ON PCW REGULAR PRICELIST IS EMPTY\n"; }
-    }
+	if ($("#txt_pwr_price_commision_disc").attr("value") != "" && $("#txt_pwr_price_remarks").attr("value") == "") {
+		if (error_message != "") { error_message = error_message + "REMARKS ON PCW REGULAR PRICELIST IS EMPTY\n"; } else { error_message = "REMARKS ON PCW REGULAR PRICELIST IS EMPTY\n"; }
+	}
 
-    if ($("#txt_gw_price_commision_disc").attr("value") != "" && $("#txt_gw_price_remarks").attr("value") == "") {
-        if (error_message != "") { error_message = error_message + "REMARKS ON GUDWOOD PRICELIST IS EMPTY\n"; } else { error_message = "REMARKS ON GUDWOOD PRICELIST IS EMPTY\n"; }
-    }
+	if ($("#txt_gw_price_commision_disc").attr("value") != "" && $("#txt_gw_price_remarks").attr("value") == "") {
+		if (error_message != "") { error_message = error_message + "REMARKS ON GUDWOOD PRICELIST IS EMPTY\n"; } else { error_message = "REMARKS ON GUDWOOD PRICELIST IS EMPTY\n"; }
+	}
 
-    if ($("#txt_tw_price_commision_disc").attr("value") != "" && $("#txt_tw_price_remarks").attr("value") == "") {
-        if (error_message != "") { error_message = error_message + "REMARKS ON TRUSSWOOD PRICELIST IS EMPTY\n"; } else { error_message = "REMARKS ON TRUSSWOOD PRICELIST IS EMPTY\n"; }
-    }
+	if ($("#txt_tw_price_commision_disc").attr("value") != "" && $("#txt_tw_price_remarks").attr("value") == "") {
+		if (error_message != "") { error_message = error_message + "REMARKS ON TRUSSWOOD PRICELIST IS EMPTY\n"; } else { error_message = "REMARKS ON TRUSSWOOD PRICELIST IS EMPTY\n"; }
+	}
 
-    return error_message;
+	return error_message;
 }
 
 
 function undoAddComma(str) {
-    var amount = new String(str);
-    for (var i = 0; i < amount.length - 1; i++) {
-        if (amount.indexOf(",") != -1) {
-            amount = amount.replace(",", "");
-        }
-        else
-            break;
-    }
-    return amount;
+	var amount = new String(str);
+	for (var i = 0; i < amount.length - 1; i++) {
+		if (amount.indexOf(",") != -1) {
+			amount = amount.replace(",", "");
+		}
+		else
+			break;
+	}
+	return amount;
 }
 
 function addDeliveryAddress() {
-    
+	
 }

@@ -227,6 +227,7 @@
                             <a href="<%:ResolveUrl("~/") %>Template/monthly coverage template.xlsx" id="lnk_excel_template" class="cls_excel_file">Download Excel template</a>&nbsp;|
                         <% } %>
                             <a href="javascript:display_transaction_logs('calendar');" id="lnk_transaction_logs">Transaction Logs</a>
+                            <button id="btnRefresh">Refresh</button>
                     </td>
                     <td align="right" valign="middle">
                         <span class="style4"><b><span id="doc_stat_msg" style="color: #da4707; font-size: medium;">

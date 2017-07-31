@@ -1185,7 +1185,7 @@ namespace ARMS_W.Controllers
             table_builder.Append("<td style=\"" + a_style + "\"> Action </td>");
             table_builder.Append("<td style=\"" + a_style + "\"> Remarks </td>");
             table_builder.Append("</tr>");
-            foreach (var itm in route_changes.Where(p=>p.Remarks.Contains("Batch")))
+            foreach (var itm in route_changes.Where(p=>p.Remarks.Contains("Batch") || p.Remarks.Contains("MCP")))
             {
                 // user name and time stamp
                 table_builder.Append("<tr>");

@@ -89,7 +89,7 @@ namespace ARMS_W.Class
             else if (docstatus == "10") { return "For TMG"; }
             else if (docstatus == "11") { return "For FSP"; }
             /* also for fnm */
-            else if (docstatus == "1008") { return "For Customer Code Creation"; }
+            else if (docstatus == "1008") { return "For Customer Code Creation"; }  
             
             /* disapprovals */
             else if (docstatus == "-1") { return "Request Cancelled by CSR"; }
@@ -187,7 +187,7 @@ namespace ARMS_W.Class
             else  { return "Close"; }
         }
         
-        public static string GetAccDocStatusMessage(string status1, string status2, string ccanum = "", string hasmodified = "", string proposedchanges_issentback = "" ) {
+        public static string GetAccDocStatusMessage(string status1/*customerheader*/, string status2/*propca*/, string ccanum = "", string hasmodified = "", string proposedchanges_issentback = "" ) {
             
             System.Data.DataTable quickFix = null;
             
@@ -397,7 +397,7 @@ namespace ARMS_W.Class
             try 
             {
                 mt_trans.StartTransaction();
-
+                
                 mt_trans.InsertTo("document_history", new Dictionary<string, object>() { 
                     {"DocType", doctype}
                     ,{"DocId", docid}
@@ -412,6 +412,7 @@ namespace ARMS_W.Class
                     ,{"TAG", tag}
                 });
 
+                //mt_trans.RollbackTransaction();
                 mt_trans.Committransaction();
             }
             catch (Exception ex) 
@@ -423,6 +424,11 @@ namespace ARMS_W.Class
         public static string GetAccWalkInNextStep(string cur_docstatus) {
             // cheat code
             if (cur_docstatus == AppHelper.GetUserPositionId("csr")) { return "1008"; }
+
+            else if (cur_docstatus == AppHelper.GetUserPositionId("cnc")) { return "8"; }
+            else if (cur_docstatus == AppHelper.GetUserPositionId("fnm")) { return "9"; }
+            else if (cur_docstatus == AppHelper.GetUserPositionId("vptfi")) { return "1008"; }
+            
 
             // to finance
             if (cur_docstatus == "1008") { return "1000"; }
@@ -502,7 +508,7 @@ namespace ARMS_W.Class
             m_tr = null;
         }
 
-        public static string Arms_Url = "http://122.2.21.110/arms";
+        public static string Arms_Url = "http://122.53.100.210/arms";
         public static string ArmsDB = "ARMS";
 
     }

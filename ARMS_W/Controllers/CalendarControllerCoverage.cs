@@ -2293,15 +2293,17 @@ namespace ARMS_W.Controllers
                             }
                             
                         }
-                        else
-                        {
-                            var excludecurrdate = page_param.list.Where(p => !Convert.ToString(curr_Date.Day).Contains(Convert.ToString(Convert.ToDateTime(p.start).Day))).ToList();
-                            foreach (var itm in excludecurrdate)
-                            {
-                                sql_trans.InsertTo("CoverageDtls", new Dictionary<string, object>(){
+                    }
+
+                    var excludecurrdate = page_param.list.Where(p => !Convert.ToString(curr_Date.Day).Contains(Convert.ToString(Convert.ToDateTime(p.start).Day))).ToList();
+
+                    foreach (var itm in excludecurrdate)
+                    {
+                        DateTime EventDates = Convert.ToDateTime(itm.start);
+                        sql_trans.InsertTo("CoverageDtls", new Dictionary<string, object>(){
                                 {"EventID",EventID},
                                 {"LineNum",LineNum},
-                                {"Day",EventDate.Day},
+                                {"Day",EventDates.Day},
                                 {"AccountCode",itm.account_code},
                                 {"ContactPerson",itm.contact_person},
                                 {"ContactPersonNo",itm.contact_person_no},
@@ -2315,11 +2317,11 @@ namespace ARMS_W.Controllers
                                 {"IsDeleted","F"},
                                 {"hasCallreport","F"}});
 
-                                foreach (var objectives in itm.list_objectives)
-                                {
-                                    if (objectives.objective_code != null)
-                                    {
-                                        sql_trans.InsertTo("CoverageDtl1", new Dictionary<string, object>(){
+                        foreach (var objectives in itm.list_objectives)
+                        {
+                            if (objectives.objective_code != null)
+                            {
+                                sql_trans.InsertTo("CoverageDtl1", new Dictionary<string, object>(){
                                         {"EventID",EventID},
                                         {"LineNum",LineNum},
                                         {"Day",EventDate.Day},
@@ -2331,17 +2333,20 @@ namespace ARMS_W.Controllers
                                         {"PlannedAmount",Convert.ToDecimal(removeComma(objectives.planned_amount))},
                                         {"ProductPresented",objectives.product_presented},
                                         {"detailRemarks", objectives.details_remark}});
-                                    }
-                                }
-                                LineNum = GenerateNewCode(LineNum);
                             }
-                            
                         }
                         LineNum = GenerateNewCode(LineNum);
                     }
 
                 if (ajx_res.iserror == false)
-                    SaveRouteChanges(sql_trans, Globals.DocActionType.Created, user, 0, 4, EventID, "Batch Upload for "+account_owner.firstName+" "+account_owner.lastName+"", role);
+                    if (!isExist)
+                    {
+                        SaveRouteChanges(sql_trans, Globals.DocActionType.Created, user, 0, 4, EventID, "Batch Upload for " + account_owner.firstName + " " + account_owner.lastName + "", role);
+                    }
+                    else
+                    {
+                        SaveRouteChanges(sql_trans, Globals.DocActionType.Update, user, 0, 4, EventID, "MCP Revise for " + account_owner.firstName + " " + account_owner.lastName + "", role);
+                    }
                 //sql_trans.RollbackTransaction();
                 sql_trans.Committransaction();
                 ajx_res.iserror = false;

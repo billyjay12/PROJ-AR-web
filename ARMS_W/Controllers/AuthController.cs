@@ -204,7 +204,6 @@ namespace ARMS_W.Controllers
                     DataTable apprvrDesig = null;
                     apprvrDesig = SqlDbHelper.getDataDT("select distinct(email) from dbo.apprvrDesig where roleid=14");
 
-
                     var subject = "[ARMS] Request Unlock Account";
                     string mail_body = "USERNAME: " + usrname + "\nDetails: " + dtls + "\nClick here to unlock this account ---> " + AppHelper.Arms_Url + "?id=1&doctype=listusers";
 
